@@ -2,15 +2,147 @@
 \begin{document}
 
 \section{Introduction}
-        \lipsum[2]
 
 \section{Methods}
-        \lipsum[2]
-        
+
+    We created a pre-workshop student self-assessment survey (i.e., persona survey)
+    where results were clustered to create and identify learner personas.
+    Only complete survey responses were used for the analysis;
+    there was no data imputation for missing or incomplete responses.
+    The survey was validated with factor analysis and calculating Cronbach's alpha.
+    Questions with high factor loadings were used in the clustering analysis for persona identification.
+    The factor analysis results were not used to shorten the survey questions.
+    Any duplicate response IDs were dropped.
+
+    \subsection{Survey Creation}
+
+        Survey questions were adapted from
+        ``How Learning Works'',
+        ``Teaching Tech Together'', and
+        The Carpentries pre, post, and long-term workshop survey questions.
+        We also added in additional questions, including demographic questions,
+        for a total of 33 questions across 8 topics:
+        (1) Demographics, 5
+        (2) Programs used in the past, 1
+        (3) Programming experience, 6
+        (4) Data cleaning and processing experience, 4
+        (5) Project and data management, 2
+        (6) Statistics, 4
+        (7) Data and programming likert table, 7.
+        (8) Workshop framing and motivation, 3
+        Two (2) of the workshop framing questions were free-response questions that asked about
+        what learners hoped to learn in a workshop,
+        and what they would they want to be able to do after the workshop they cannot do right now.
+
+        Most questions were ordinal likert responses, however,
+        expect for the actual likert table questions,
+        we tried to make the choices more concrete,
+        e.g., instead of asking to rate their abilities on completing a task as
+        ``disagree'', ``neither'', or ``agree'', etc,
+        we framed them as ``I wouldn't know where to start'',
+        ``I could struggle through, but not confident I could do it'',
+        ``I could struggle through by trial and error with a lot of web searches'',
+        and
+        ``I could do it quickly with little or no use of external help''.
+
+        This survey is apart of a larger workshop longitudinal study.
+        In order to protect privacy and not collect identifying information (e.g., names, email addresses, phone number, etc),
+        we had users create a unique identifier that was generated based on their results to demographic questions.
+        The IRB approved surveys can be found here: % TODO link this in bibliography https://github.com/chendaniely/dissertation-irb/tree/master/irb-20-537-data_science_workshops/survey
+
+    \subsection{Survey Dissemination}
+
+        Surveys were created using the Qualtrics system and emailed out in two (2) rounds.
+        The first round was only sent out directly on biomedical relevant university listservs or to departmental administrators to post on our behalf at Virginia Tech.
+        The second round included the same listservs and contacts from the first round,
+        in addition to slack groups (The Carpentries, R/Medicine, Nursing \& Data Science Collaboration),
+        emails collected from teaching 2 Carpentries instructor workshops one of them for the National Network of Libraries of Medicine (NNLM),
+        and
+        Claude Moore Health Science Library at the University of Virginia.
+
+    \subsection{Survey Validation}
+
+    % TODO add some text here, i don't like stacked headings
+    % TODO maybe use the reference to the R packages her
+
+        \subsubsection{Face Validity}
+
+            We structured the survey around many data literacy concepts and asked question around
+            programming, data, and statistics experience.
+            We assumed people had some familiarity with spreadsheet programs (i.e., Excel),
+            and focused the questions around Excel proficiency before asking questions
+            around ``tidy data'' principles and more specific statistics analysis questions.
+            These were all topics we were hoping to cover in preparing workshops materials,
+            and the questions from the survey provided a place on where we would potentially start the workshop.
+            These questions and their use case provided the face validity for the survey.
+
+        \subsubsection{Factor Analysis}
+
+            The ``psych'' R package was used for factor analysis.
+            The demographic, free-response, and prior programming languages used questions
+            were dropped and the rest of the responses were scaled prior to running the analysis.
+            The scree plot from the R ``nFactors'' package suggested to try 1-factor to 5-factor models.
+            We used varimax rotation with a maximum likelihood factoring method and
+            the best model was picked based on the
+            TLI, RMSEA, and BIC scores, in addition to model interoperability.
+
+        \subsubsection{Internal Consistency}
+
+            The ``psych'' R package was also used to calculate Cronbach's alpha for internal consistency.
+            To ensure unidirectionality,
+            a separate Cronbach's alpha measure was calculated for each set of questions that loaded into each factor.
+
+    \subsection{Survey Clustering}
+
+        Hierarchical clustering with euclidean distance and Ward's clustering method was used to identify respondent groups. % TODO cite R packages
+        These groups were then combined with demographic information and survey responses to create the learner personas.
+
+    \subsection{Learner Personas}
+
+        Results from hierarchical clustering and survey responses was used to create the
+        fictional learner persona characters.
+        To make the character more complete,
+        we combined the empirical results to write the
+        background,
+        relevant prior knowledge and experience,
+        perception of needs,
+        and special considerations
+        for each persona.
+        The background and special consideration sections were not backed by empirical data,
+        but they were needed to create a complete persona.
+
 \section{Results}
-        \lipsum[2]
-        
+
+    % TODO calculate and fill in these numbers
+    There were a total of ***** responses to the persona survey.
+    **** were over 18 years old and also consented to being apart of the research study.
+    **** complete observations were used for the factor analysis, Cronbach's alpha, and clustering analysis.
+    of the ***** incomplete responses,
+    **** completed ****\% of the survey.
+    The persona survey had **** set of responses that shared a duplicate ID.
+    Looking at the individual responses,
+    It was determined that this particular set of IDs came from the same person,
+    and only the initial set of responses were kept for analysis.
+    Overall, we used the 3-factor model and the clustering results yielded 3 clusters for our personas.
+
+    \subsection{Survey Descriptives}
+
+    \begin{figure}
+        % TODO this figure does not seem like it looked at only the results from validation + clustering.
+        % TODO: i think the actual validation and clustering data only had upper 50 num of respondants
+        % TODO: remake this figure without the N and num Responses subtitle values
+        \centering
+        \includegraphics[width=0.7\linewidth]{survey/01-self\_assessment/grouped\_demographics.png}
+        \caption[Grouped demographics for persona survey respondents]
+            {Total number of survey respondents from the persona study and their self reported occupation.
+                This particular survey question was a ``select all that apply''
+                question with the ability to type in an ``other'' response.
+                The responses were then grouped together into the 4 major occupation groups.
+            }
+        \label{fig:groupeddemographics}
+    \end{figure}
+
+
 \section{Discussion}
-        \lipsum[2]
 
 \end{document}

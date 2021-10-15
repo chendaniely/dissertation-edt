@@ -2,20 +2,32 @@
 %     Created: Thu Mar 24 11:00 AM 2016 EDT
 %     Last Change: Thursday, December 19, 2019
 %     Author: Alan M. Lattimer, VT
-%	  With modifications by Carrie Cross, Robert Browder, and LianTze Lim. 
+%	  With modifications by Carrie Cross, Robert Browder, and LianTze Lim.
 %
 % This template is designed to operate with XeLaTeX.
 %
 % All elements in the Title, Abstract, and Keywords MUST be formatted as text and NOT as math.
 %
-%Further instructions for using this template are embedded in the document. Additionally, there are comments at the end of the file that give suggestions on writing your thesis.  
+%Further instructions for using this template are embedded in the document. Additionally, there are comments at the end of the file that give suggestions on writing your thesis.
 %
-%In addition to the standard formatting options, the following options are defined for the VTthesis class: proposal, prelim, doublespace, draft. 
+%In addition to the standard formatting options, the following options are defined for the VTthesis class: proposal, prelim, doublespace, draft.
 
+%SCRIPT
+var tl = editor.document().textLines();
+for (var i=tl.length-1;i>=0;i--)
+tl[i] = tl[i].replace(/\s+$/, '');
+editor.setText(tl.join("\n"));
+
+
+\RequirePackage[final]{graphicx} % the do before documentclass and final makes the image show up in draft mode
 \documentclass[doublespace,draft,nopageskip]{VTthesis} % nopageskip - Removes arbitrary blank pages.
 
-\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{nomencl}  % for nomenclature
+%\usepackage[]{graphicx} % if you set final here you'll get option clash error
 \usepackage{subfiles}
+
+\graphicspath{{./}{figs/}{../dissertation-analysis/output/}}
 
 % Using the following header instead will create a draft copy of your thesis
 %\documentclass[doublespace,draft]{VTthesis}
@@ -33,18 +45,18 @@
 \author{Daniel Y. Chen}
 
 % Change this to your program, e.g. Physics, Civil Engineering, etc.
-\program{Genetics, Bioinformatics, and Computational Biology} 
+\program{Genetics, Bioinformatics, and Computational Biology}
 
 % Change this to your degree, e.g. Master of Science, Master of Art, etc.
-\degree{Doctor of Philosophy} 
+\degree{Doctor of Philosophy}
 
 % This should be your defense date:
-\submitdate{December 42, 2021} 
+\submitdate{December 42, 2021}
 
 % Committee members. Only have five readers and one chair available.
 % Only use the ones you need and don't include the ones you don't need.
 % You can also declare a Co-advisor. If you do, the principal and co-advisors
-% will be listed as co-advisors on the title page.  Per the VT ETD standards, 
+% will be listed as co-advisors on the title page.  Per the VT ETD standards,
 % you should not include titles or educational qualifications such as PhD or Dr.
 % You should, however, include middle initials if possible.
 \principaladvisor{Anne M. Brown}
@@ -67,7 +79,7 @@
 \abstractgenaud{You are also required as of Spring 2016 to include a general audience abstract. This should be geared towards individuals outside of your field that may be reading seeking information about your work. You should avoid language that is particular to your field and clearly define any terms that may have special meaning in your discipline.}
 
 \begin{document}
-% The following lines set up the front matter of your thesis or dissertation and are required to ensure proper formatting per the VT ETD standards. 
+% The following lines set up the front matter of your thesis or dissertation and are required to ensure proper formatting per the VT ETD standards.
   \frontmatter
   \maketitle
   \tableofcontents
@@ -75,16 +87,25 @@
 % The list of figures and tables are now optional per the official ETD standards.  Unless you have a very good reason for removing them, you should leave these lists in the document. Comment them out to remove them.
 	\listoffigures
 	\listoftables
-    \printnomenclature %Creates a list of abbreviations. Comment out to remove it. 
+    \printnomenclature %Creates a list of abbreviations. Comment out to remove it.
 
 % sample text for abbreviations:
-NLP is a field of computer science, artificial intelligence, and linguistics concerned with the interactions between computers and human (natural) languages.
- 
-\nomenclature{NLP}{Natural Language Processing}
- 
-$\sigma$ is the eighteenth letter of the Greek alphabet, and carries the 's' sound. In the system of Greek numerals, it has a value of 200. 
- 
-\nomenclature{$\sigma$}{The total mass of angels per unit area}
+%NLP is a field of computer science, artificial intelligence, and linguistics concerned with the interactions between computers and human (natural) languages.
+%
+%\nomenclature{NLP}{Natural Language Processing}
+%
+%$\sigma$ is the eighteenth letter of the Greek alphabet, and carries the 's' sound. In the system of Greek numerals, it has a value of 200.
+%
+%\nomenclature{$\sigma$}{The total mass of angels per unit area}
+
+The IRB is an administrative body that reviews research proposals that involve human subjects to protect the rights and welfare of
+research participants.
+
+\nomenclature{IRB}{Institutional Review Board}
+
+The NNLM is ... % TODO define NNLM
+
+\nomenclature{NNLM}{National Network of Libraries of Medicine}
 
 % The following sets up the document for the main part of the thesis or dissertation. Do not comment out or remove this line.
 	\mainmatter
@@ -95,17 +116,17 @@ $\sigma$ is the eighteenth letter of the Greek alphabet, and carries the 's' sou
 
     \chapter{Persona Identification and Survey Validation} \label{ch:persona_validation}
         \subfile{020-persona_validation/020-persona_validation}
-        
+
     \chapter{Workshop} \label{ch:workshop}
         \subfile{030-workshop/030-workshop}
-        
+
     \chapter{Assessment} \label{ch:assessment}
         \subfile{040-assessment/040-assessment}
 
 	% This is the standard bibtex file. Do not include the .bib extension in <bib_file_name>.
-	% Uncomment the following lines to include your bibliography: 
+	% Uncomment the following lines to include your bibliography:
 	%\bibliography{<bib_file_name>}
-	%\bibliographystyle{plainnat}   
+	%\bibliographystyle{plainnat}
 
 	% This formats the chapter name to appendix to properly define the headers:
 	\appendix
@@ -143,11 +164,11 @@ $\sigma$ is the eighteenth letter of the Greek alphabet, and carries the 's' sou
 %     		eq: Equations
 %
 % 2. The VTthesis class provides for natbib citations. You should upload
-%	 one or more *.bib bibtex files. Suppose you have two bib files: some_refs.bib and 
+%	 one or more *.bib bibtex files. Suppose you have two bib files: some_refs.bib and
 %    other_refs.bib.  Then your bibliography line to include them
 %    will be:
 %      \bibliography{some_refs, other_refs}
-%    where multiple files are separated by commas. In the body of 
+%    where multiple files are separated by commas. In the body of
 %    your work, you can cite your references using natbib citations.
 %    Examples:
 %      Citation                     Output
@@ -162,7 +183,7 @@ $\sigma$ is the eighteenth letter of the Greek alphabet, and carries the 's' sou
 % 3. Here is a sample table. Notice that the caption is centered at the top. Also
 %    notice that we use booktabs formatting. You should not use vertical lines
 %    in your tables.
-% 
+%
 %				\begin{table}[htb]
 %					\centering
 %					\caption{Approximate computation times in hh:mm:ss for full order 						versus reduced order models.}
@@ -181,15 +202,15 @@ $\sigma$ is the eighteenth letter of the Greek alphabet, and carries the 's' sou
 %					\end{tabular}
 %					\label{tab:time_rom}
 %				\end{table}
-% 
+%
 % 4. Below are some sample figures. Notice the caption is centered below the
 %    figure.
 %    a. Single centered figure:
 %					\begin{figure}[htb]
 %						\centering
 %						\includegraphics[scale=0.5]{my_figure.eps}
-%						\caption{Average outlet velocity magnitude given an average  
-%				        input velocity magnitude of 0.88 m/s.} 
+%						\caption{Average outlet velocity magnitude given an average
+%				        input velocity magnitude of 0.88 m/s.}
 %						\label{fig:output_rom}
 %					\end{figure}
 %    b. Two by two grid of figures with subcaptions
@@ -229,19 +250,19 @@ $\sigma$ is the eighteenth letter of the Greek alphabet, and carries the 's' sou
 % The following is a list of definitions and packages provided by VTthesis:
 %
 % A. The following packages are provided by the VTthesis class:
-%      amsmath, amsthm, amssymb, enumerate, natbib, hyperref, graphicx, 
+%      amsmath, amsthm, amssymb, enumerate, natbib, hyperref, graphicx,
 %      tikz (with shapes and arrows libraries), caption, subcaption,
 %      listings, verbatim
 %
 % B. The following theorem environments are defined by VTthesis:
 %      theorem, proposition, lemma, corollary, conjecture
-% 
+%
 % C. The following definition environments are defined by VTthesis:
 %      definition, example, remark, algorithm
 %
 %----------------------------------------------------------------------------
 %
-%  I hope this template file and the VTthesis class will keep you from having 
+%  I hope this template file and the VTthesis class will keep you from having
 %  to worry about the formatting and allow you to focus on the actual writing.
 %  Good luck, and happy writing.
 %    Alan Lattimer, VT, 2016
