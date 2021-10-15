@@ -12,12 +12,12 @@
 %
 %In addition to the standard formatting options, the following options are defined for the VTthesis class: proposal, prelim, doublespace, draft.
 
-%\RequirePackage[final]{graphicx} % the do before documentclass and final makes the image show up in draft mode
+\RequirePackage[final]{graphicx} % the do before documentclass and final makes the image show up in draft mode
 \documentclass[doublespace,draft,nopageskip]{VTthesis} % nopageskip - Removes arbitrary blank pages.
 
 \usepackage{amsmath, amssymb}
 \usepackage{nomencl}  % for nomenclature
-\usepackage[]{graphicx} % if you set final here you'll get option clash error
+%\usepackage[]{graphicx} % if you set final here you'll get option clash error
 \usepackage{subfiles}
 
 \graphicspath{{./}{figs/}{../dissertation-analysis/output/}}
