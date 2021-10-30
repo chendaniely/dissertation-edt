@@ -1,0 +1,123 @@
+\documentclass[020-persona_validation.tex]{subfiles}
+
+\begin{document}
+
+    % TODO stacked heading
+
+    \subsection{Persona Survey}
+
+        There was a relatively even balance between the 3 main occupation groups: students, researchers, and clinicians.
+        The student group mainly clustered into their own persona,
+        which also happened to be the most experienced persona.
+        The programming experience can be because higher education is beginning to incorporate data science courses and
+        into existing programs,
+        from students learning skills doing their own research.
+        If the more experienced students come from a self-taught programming background,
+        then a more formalized class can solidify their existing mental model,
+        and build the way for more connections to progress their learning.
+
+        Gender, race, and ethnicity demographic information was collected for these surveys.
+        However, these results were not used for the persona clustering.
+        Future iterations of this survey should not include them since they are not relevant to creating the personas.
+
+        The survey had 23 items with 57 responses for analysis.
+        We performed a correlation analysis to reduce the number of items down to 14, for factor analysis
+        but these values may change with more respondents.
+        The main motivation to drop items from the factor analysis was due to the low number of responses.
+        A general rule of thumb is to have 10 observations per item,
+        and the correlation analysis to select items was one way to mitigate the effects of having a low number of observations.
+
+        One of the assumptions for the ML factoring method is the items need to be normally distributed.
+        Our analysis showed that our data was not normal,
+        and many of the other factoring methods did not seem relevant for our data.
+        The PA factoring method was selected because it does not assume the normality of data.
+        This method better suited the data distribution and
+        while it did not meet every cutoff value,
+        we felt this was enough to show some validity for the survey,
+        and can be used in a future study to collect more data.
+        The Cronbah's alpha results gave us more confidence that our survey was adequately consistent and
+        can be a useful took for researchers moving forward.
+
+    \subsection{Learner Personas}
+
+        The demographic information was a main contributor on how the personas were named.
+        It is possible that the names and number of personas will change with more responses.
+        The benefits of creating these explicit learner personas are for future educators
+        can have a more concrete understanding of their audience.
+        These personas can be used to cater and focus learning materials and better serve learners' needs.
+        The personas were primiarly named by their occupation demographics.
+        The overall differences between the personas are listed in Table \ref{tab:persona-summary-table}.
+        In theory, combination of differences in Table \ref{tab:persona-summary-table} would be its own learner persona,
+        but not every combination would require a different set of learner needs.
+
+        \begin{table}[]
+            \centering
+            \caption[Persona Data Science Skill Rating]
+            {How each persona differs from one another. In terms of data science and data literacy skills.
+             Results come from persona surevy results
+            }
+            \begin{tabular}{lllll}
+            \hline
+            Group & Programming & Statistics & Data Programming & Finding Technical Help \\
+            \hline
+            1     & Low         & Medium     & Medium           &                        \\
+            2     & High        & High       & High             & High                   \\
+            3     & Low         & Low        & Low              &                        \\
+            \hline
+            \end{tabular}
+            \label{tab:persona-summary-table}
+        \end{table}
+
+        \subsubsection{Samir Student (Group 2)}
+
+            Samir Student (Group 2) is indicative of many introductory programming classes.
+            They serve as the more experienced individuals who have previously seen the materials
+            or have experience with data programming (Table \ref{tab:persona-summary-table}).
+            These students may find some of the materials too simple for their needs,
+            and can cause a distraction in the classroom by asking questions that are too complicated
+            for the intended audience to understand.
+            There are a few ways to manage these students in the classroom.
+            Overly technical questions outside the scope of the lesson materials
+            can be answered during a break or after the class as to not confuse the rest of the learners.
+            These more experienced learners can also provide help to other learners around them.
+            This will also reinforce their own understanding of the materials being covered,
+            while keeping them engaged in the class.
+            In a virtual setting,
+            these students can provide help and answer questions in the text chat.
+
+            This bimodal learner experince is also confirmed when comparing the
+            2-cluster model with the 3-cluster model. % TODO put an image here
+            Samir Student was also the first clustering split with survey responses showing
+            they had the most experience with data science concepts.
+            The 3-cluster model partitioned the less experienced programmers.
+
+            Making the lessons modular and publically availiable
+            gives these types of learners the chance to judge if the materials are suited for their needs
+            and experience levels.
+
+        \subsubsection{Clare Clinician (Group 3)}
+
+            Groups 1 and 3 are mainly ``never'' programmers.
+            What distinshishes group 3 from the rest, is they are also not confident in
+            their ablity to perform a statistical analysis,
+            and may not agree that programming makes anaysies easier to reproduce (Table \ref{tab:persona-summary-table}).
+
+        \subsubsection{Ash Academic (Group 1)}
+
+            Group 1 was also mainly in the ``never'' programmers group.
+            This group was also a catch-all for all the other occupations.
+            Group 1 is more confident in their abilities to do statistical analysis.
+            They also lean slighlt toward programming languages being helpeful for reproducible analysis.
+
+    \subsection{More Data for Personas}
+
+        The persona survey was given in 2 waves.
+        The results in the first wave had 4 clusters: Expert, Clinician, Adademic, and Student.
+        The expert and student clusters combined into a single group with the addition of wave 2 data.
+        We feel that as more data gets collected and the persona survey gets distributed to more
+        instructors, we better stratify the respodants and more accurately identify learner personas and
+        needs.
+
+    \subsection{Conclusion}
+
+\end{document}

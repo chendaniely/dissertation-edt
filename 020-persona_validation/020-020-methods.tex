@@ -1,0 +1,129 @@
+\documentclass[020-persona\_validation.tex]{subfiles}
+
+\begin{document}
+
+    We created a pre-workshop student self-assessment survey (i.e., persona survey)
+    and clustered the results to create and identify learner personas.
+    Only complete survey responses were used for the analysis;
+    there was no data imputation for missing or incomplete responses.
+    The survey was validated with factor analysis and calculating Cronbach's alpha.
+    Clustering used all the questions in the survey,
+    regardless of factor analysis results,
+    for persona identification.
+    The factor analysis results were not used to shorten the survey questions.
+    All duplicate response IDs were identified as coming from the same person.
+    These responses were coalesced and only the first set of responses were kept for analysis.
+
+    \subsection{Survey Creation}
+
+        Survey questions were adapted from
+        ``How Learning Works'',
+        ``Teaching Tech Together'', and
+        The Carpentries pre, post, and long-term workshop survey questions. % TODO citations needed
+        We also added in additional questions, including demographic questions,
+        for a total of 33 questions across eight (8) topics:
+        (1) Demographics, 5
+        (2) Programs used in the past, 1
+        (3) Programming experience, 6
+        (4) Data cleaning and processing experience, 4
+        (5) Project and data management, 2
+        (6) Statistics, 4
+        (7) Data and programming Likert table, 7.
+        (8) Workshop framing and motivation, 3
+        Two (2) of the workshop framing questions were free-response questions that asked about
+        what learners hoped to learn in a workshop,
+        and what they would they want to be able to do after the workshop they cannot do right now.
+
+        Most questions were ordinal Likert responses, however,
+        expect for the actual Likert table questions,
+        we tried to make the choices more concrete,
+        e.g., instead of asking to rate their abilities on completing a task as
+        ``disagree'', ``neither'', or ``agree'', etc,
+        we framed them as ``I wouldn't know where to start'',
+        ``I could struggle through, but not confident I could do it'',
+        ``I could struggle through by trial and error with a lot of web searches'',
+        and
+        ``I could do it quickly with little or no use of external help''.
+
+        This survey is a part of a larger workshop longitudinal study.
+        In order to protect participant privacy and not collect identifying information
+        (e.g., names, email addresses, phone numbers, etc),
+        we had users create a unique identifier that was generated based on their results to demographic questions.
+        The IRB approved surveys can be found here:
+        % TODO link this in bibliography https://github.com/chendaniely/dissertation-irb/tree/master/irb-20-537-data_science_workshops/survey
+
+    \subsection{Survey Dissemination}
+
+        Surveys were created using the Qualtrics system and emailed out in two (2) rounds.
+        The first round was only sent to biomedical relevant university listservs
+        or to departmental administrators to post on our behalf at Virginia Tech.
+        The second round included the same listservs and contacts from the first round,
+        in addition to slack groups (The Carpentries, R/Medicine, Nursing \& Data Science Collaboration),
+        emails collected from teaching two (2) Carpentries instructor workshops,
+        one of them for the National Network of Libraries of Medicine (NNLM),
+        and
+        Claude Moore Health Science Library at the University of Virginia.
+
+    \subsection{Survey Validation}
+
+        % TODO maybe use the reference to the R packages her
+        The surveys were created with the goal of becoming a tool for future instructors
+        to help identify the learning audience.
+        The only domain-specific questions involve the statistics related questions
+        where the example uses a health-related research question.
+        All of the other questions do not assume any particular domain,
+        and the statistics questions are framed in a way where domain knowledge is not needed.
+
+    \subsubsection{Face Validity}
+
+       The survey was structured around many data literacy concepts and asked questions around
+        programming, data processes, and statistics experience.
+        We assumed people had some familiarity with spreadsheet programs (i.e., Excel),
+        and focused the questions around spreadsheet proficiency before asking questions
+        around ``tidy data'' principles and more specific statistics analysis questions.
+        These were all topics we were hoping to cover in preparing workshops materials,
+        and the questions from the survey provided a starting point for the workshop material content.
+        These questions and their use case provided the face validity for the survey.
+
+    \subsubsection{Factor Analysis}
+
+        The ``psych'' R package was used for factor analysis.
+        The demographic, free-response, and prior programming languages used questions
+        were not used and the rest of the responses were scaled prior to running the analysis.
+        Items for factor analysis were picked based on how many other items they were significantly correlated with.
+        The scree plot from the R ``nFactors'' package suggested trying 1-factor to 5-factor models.
+        Different rotations and factoring methods were tested,
+        and the best model was picked based on
+        TLI, RMSEA, and BIC scores, in addition to model interoperability.
+
+
+    \subsubsection{Internal Consistency}
+
+        The ``psych'' R package was also used to calculate Cronbach's alpha for internal consistency.
+        A separate Cronbach's alpha measure was calculated for each set of questions that loaded into each factor.
+        Kendall's kappa was not calculated because survey results were not paired.
+
+    \subsection{Survey Clustering}
+
+        All survey questions were used for clustering;
+        results from factor analysis did not select which questions would be used for clustering.
+        Hierarchical clustering with Euclidean distance and
+        Ward's clustering method was used to identify respondent groups.
+        % TODO cite R packages
+        These groups were then combined with demographic information and survey responses to create learner personas.
+
+    \subsection{Learner Personas}
+
+        Results from hierarchical clustering and survey responses were used to create the
+        fictional learner persona characters.
+        To make the character more complete,
+        we combined the empirical survey results for the
+        background,
+        relevant prior knowledge and experience,
+        perception of needs,
+        and special considerations
+        for each persona.
+        The background and special consideration sections were not backed by empirical data,
+        but they were needed to create a complete persona.
+
+\end{document}

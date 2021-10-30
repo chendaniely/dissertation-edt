@@ -1,0 +1,145 @@
+\documentclass[030-workshop.tex]{subfiles}
+
+\begin{document}
+
+
+  \subsection{Creating Learning Objectives}
+
+    The initial persona survey showed that many of the potential learners who do not
+    have existing data programming experience use Excel for basic calculations.
+    We used the information from the persona survey to create a roadmap of topics
+    to get learners from zero programming experience to fit a logistic regression model.
+    These learning objectives were used to write the lesson materials
+    and used as a Likert scale question in the pre-workshop and post-workshop surveys.
+
+  \subsection{Workshop Materials: ds4biomed}
+
+    Results from the survey pre-workshop learner self-assessment survey (i.e., persona survey)
+    were used to create the workshop materials.
+    The survey results from the first round of respondents were used to create the initial
+    learning materials.
+    Prioritizing data literacy concepts was the main goal of the learning materials.
+    We used the framing from Data Carpentry lessons to frame the first spreadsheet chapter.
+    The authors felt that this provided the most tangible connection from existing knowledge
+    working in spreadsheets, mainly Excel,
+    where common ``tidy data'' issues are discussed and why learners may encounter difficulties
+    doing data analysis after data collection.
+
+  \subsection{Workshop Surveys}
+
+    Workshop effectiveness was assessed using a series of pre-workshop, post-workshop, and long-term workshop surveys.
+    Some of the questions in the surveys were paired to perform a longitudinal analysis.
+
+  \subsubsection{Pre-Workshop Survey}
+
+      The pre-workshop survey had 6 main sections:
+      (1) demographics,
+      (2) persona,
+      (3) Prior and background knowledge
+      (4) Workshop Framing and Motivation
+
+      The ``Persona'' questions presented participants with 4 learner personas:
+      (1) Alex Academic,
+      (2) Clare Clinician,
+      (3) Patricia Programmer, and
+      (4) Samir Student
+      These personas were created using only data from the first of two waves of survey responses from the learner persona survey.
+      Participants were asked to pick which one of the personas most resonated with them.
+      The initial 4-persona text can be found in Appendix ****. % TODO put in all 4 personas somewhere
+      Subsequent persona analysis clustered into 3 groups, where Patricia Programmer was removed.
+
+      The ``prior and background knowledge'' questions were taken from
+      a 3-factor model from the first wave of the persona survey. % TODO put in original 3 factor model results into this paper? or previous?
+      These questions were the highest loaded items in each factor.
+      Later results from the persona factor analysis had a different set of item loadings,
+      but the new items were still captured in the ``Workshop Framing and Motivation'' questions.
+
+  \subsubsection{Post-Workshop Survey}
+
+      The post-workshop survey had 6 main sections:
+      (1) demographics,
+      (2) workshop environment,
+      (3) workshop framing and motivation,
+      (4) summative assessment,
+      (5) workshop content
+      (6) open feedback.
+
+      Questions around workshop environment, content, and open feedback
+      were not used to assess workshop efficiency,
+      rather, they served as feedback to the instructor for things they may need to change while teaching.
+      The full survey can be found in Appendix \ref{ase:long-term-survey}.
+
+      \paragraph{Workshop Framing and Motivation}
+
+          There was 2 Likert tables of questions for workshop framing and motivation.
+          Both sets of questions were on a 7-point Likert scale from
+          ``Strongly Disagree'' to ``Strongly Agree'' and
+          included a ``Neither Agree nor Disagree'' neutral term in the center.
+
+          The first set of questions asked respondents on their level agreement with the following 7 statements:
+          (1) I believe having access to the original, raw data is important to be able to repeat analysis,
+          (2) I can write a small program, script, or macro to address a problem in my own work,
+          (3) I know how to search for answers to my technical questions online,
+          (4) While working on a programming project, if I got stuck, I can find ways of overcoming the problem,
+          (5) I am confident in my ability to make use of programming software to work with data,
+          (6) Using a programming language (like R or Python) can make my analyses easier to reproduce, and
+          (7) Using a programming language (like R or Python) can make me more efficient at working with data.
+
+          The second set of questions used the same 7-point scale,
+          and asked respondents to rate their agreement about their ability to perform the following tasks:
+          (1) Name the features of a tidy/clean dataset,
+          (2) Transform data for analysis,
+          (3) Identify when spreadsheets are useful,
+          (4) Assess when a task should not be done in spreadsheet software,
+          (5) Break down data processing into smaller individual (and more manageable) steps,
+          (6) Construct a plot and table for exploratory data analysis,
+          (7) Build a data processing pipeline that can be used in multiple programs, and
+          (8) Calculate, interpret, and communicate an appropriate statistical analysis of the data
+
+          These 2 sets of likert scale questions were asked in both the pre-workshop and post-workshop survey.
+          The second set of questions asked each participant on how they would self-rate their ability
+          to meet each of the learning objectives the learning materials sought after.
+          These self-reported confidence reports served as a proxy for learning and meeting learning objectives.
+
+      \paragraph{Summative Assessment}
+
+          The post-workshop survey also had a summative assessment question
+          where an ``untidy'' dataset is presented along with a ``tidy'' version of the same dataset
+          and asked participants if they were able to
+          (1) load the ``untidy'' dataset into R/Python,
+          (2) Filter the data for a particular set of observations,
+          (3) Save the filtered dataset to send to a colleague,
+          (4) Tidy the dataset into the format presented,
+          (5) Plot a histogram of one of the variables, and
+          (6) Fit a logistic regression model with the dataset.
+          Each of the tasks were presented as a Likert scale question,
+          and respondents were asked to rate their ability to accomplish each task:
+          (1) I wouldn't know where to start,
+          (2) I could struggle through, but not confident I could do it,
+          (3) I could struggle through by trial and error with a lot of web searchers, and
+          (4) I could do it quickly with little or no use of external help.
+
+  \subsubsection{Long-term Workshop Survey}
+
+
+
+  \subsection{Workshop Survey Analysis}
+
+    Participants provided a unique identifier that would be used to track their results across the 3 longitudinal surveys.
+    Since participants were not forced to take any of the surveys,
+    2 sets of analyses were performed:
+    (1) just looking at survey responses between paired responses, and
+    (2) dropped the paired survey participants and only compared unpaired survey responses.
+    Composite scores for each type of analysis were created by summing up survey Likert scale responses;
+    None of the survey questions analysed were reverse-coded.
+
+  \subsubsection{Paired Responses}
+
+      A mixed model was performed for paired results.
+
+  \subsubsection{Un-Paired Responses}
+
+      The non-parametric alternative to the t-test, Wilcoxon Rank Sum Test,
+      was performed on the unpaired survey responses between pre-workshop and post-workshop results.
+
+\end{document}
