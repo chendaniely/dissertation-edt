@@ -1,0 +1,22 @@
+# Replace " " quotations with LaTeX `` ''
+Find:
+"(.*?)"
+
+Replace:
+``$1''
+
+# Replace markdown citation with latex format:
+[@ref] to \cite{ref}
+
+find:
+\[@(.*?)\]
+
+replace:
+\cite{$1}
+
+# Replace markdown `code` with \lstinline{code}
+Find:
+`(.*?)`
+
+Replace:
+\\lstinline{$1}

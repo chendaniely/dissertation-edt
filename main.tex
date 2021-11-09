@@ -21,6 +21,8 @@
 \usepackage{multirow} % for subfigure
 \usepackage{hyperref}
 \usepackage{subfiles}
+\usepackage{csquotes} % for block quotes (displayquote)
+\usepackage{listings} % inline "code"
 
 \graphicspath{{./}{figs/}}
 
@@ -107,10 +109,75 @@
     \chapter{Assessment} \label{ch:assessment}
         \subfile{040-assessment/040-assessment}
 
+    \chapter{Conclusion} \label{ch:conclusion}
+
+        The work in this dissertation started out exploring how to create better data science educational materials
+        by creating and using learning personas.
+        The learning materials provided the ability to self-study,
+        but the research component focused on the in-class (virtual or in-person) learning.
+        We discovered that the workshop was beneficial when looking at self-reported conficence of competing learning objective tasks.
+        Having more instruction and guidance can help with getting over the activation energy to get started and learn these skills.
+        The learning personas and relevant teaching examples can help with internal motivation
+        to get over the initial learning curve.
+
+        However, we also discovered that there was a drop in conficence of competing learning objective tasks
+        in the long-term study (at least 4 months later).
+        This has lead us to conclude that more efforts should be spend on long-term learning,
+        rather than creating more training materials in an already crowded market.
+        For our audiance of interest, working professionals in the medical field,
+        this points to a problem costs to attending workshops and classes are wasted.
+        These costs can be monetary (i.e., paying for the instruction), but there is also a time cost.
+        The decrease in long-term confidence suggests that the value of these data sciences courses are short-term.
+
+        One hypothesis is from the lack of using and practing the skills from the workshop.
+        This plays into Malcolm Gladwell's "1,000 hour rule" but instead of simply providing datasets for examples,
+        the personas we identified can be used to create and curate examples.
+        This can help with deliberate and focused practice to actually maintain and build on knowledge and skills.
+
+        Providing datasets to work on data skills is one mechanism where learners can practice skills.
+        However, these datasets need to be curated as learners may not always know where to find them let alone loading them for practice.
+        The OpenX community can help with the curation of datasets,
+        and communities like TidyTuesday publish weekly datasets where particiapants can explore datasets on their own.
+        However, the personas we identified in this dissertation work can be used to refine these public datasets
+        by providing different levels of questions to explore in a dataset.
+
+        While the work in this dissertation did create its own introductory workshop materials,
+        it is possible that the effort in curating the leraning materials could have been better served creating exercise questions
+        to be used during and after the actual workshop.
+        It may be possible that the materials used to teach need not be domain focused,
+        especially at the introductory level,
+        and motivation to learners would come in the form of exercise questions.
+        New materials can link to existing materials and create a learning path,
+        rather than re-creating the same materials.
+        This leverages the plethora of existing data science materials,
+        and puts a long-term focus for specific domains by working on domain-specific exercises.
+
+        What may be more important for new learners is focusing on long-term learning.
+        This can be done with exercise questions and case-studies.
+        Having a centralized location where datasets and exercise questions tagged with what skills are being practiced,
+        extend the current work with the TidyTuesday project,
+        and can be more beneficial to educators and learners without having to recreate yet another
+        introductory text.
+        These suggestions are mainly focused on the population of working adults.
+        K-12, university, and higher education programs typically explose their students
+        over the degree program to new topics and knowledge to build skills.
+
+        Communities of practice are one mechanism to help balance the amount of resouces needed to teach.
+        Auto-graders can help aleviate resources to check example solutions.
+        Learning materials can be published in an open source platform,
+        and communities can work on the long-term maintence of these materials.
+        These communities can also be centralized hubs where exercises can be posted.
+        If these exercises were taged with skill and domain information,
+        educators can bettter filter teaching exercise for learners,
+        and learners can explore examples on their own.
+
+
+
+
 	% This is the standard bibtex file. Do not include the .bib extension in <bib_file_name>.
 	% Uncomment the following lines to include your bibliography:
-	%\bibliography{<bib_file_name>}
-	%\bibliographystyle{plainnat}
+	\bibliography{bib}
+	\bibliographystyle{plainnat}
 
 	% This formats the chapter name to appendix to properly define the headers:
 	\appendix
