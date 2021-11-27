@@ -1,0 +1,251 @@
+\documentclass[040-assessment.tex]{subfiles}
+
+\begin{document}
+
+Two (2) separate workshops were run.
+All data and access to the exercises were conducted through Qualtrics.
+Participants consented at the start of the study and provided a unique user identifier
+(Appendix \ref{app:participant-id}).
+The identifier was used to randomize participants into one (1) of four (4) treatment arms.
+All exercise questions were created using R \code{learnr} documents,
+depending on the treatment arm, each exercise question was paired with or without
+the \code{gradethis} auto code grader.
+
+The workshop began with a pre-workshop exercise.
+During the workshop, three (3) 3 topics were covered and a short exercise (i.e., formative assessment)
+was presented at the end of each topic.
+The exercises fall into one of the four treatment arms for how the exercise is presented.
+The end of the main workshop content was followed up with a final summative assessment question.
+The amount of time to access the exercise and submit solution code was collected
+along with user identifier and code solution for all of the coding questions.
+Time to completion and code solutions were analysed and graded with a rubric.
+
+\subsection{Treatment Arms}
+
+    The study created 4 treatment arms to look at exercise type and whether or not an auto-grader for
+    real-time feedback helps with student learning:
+    (1) blank exercise + no auto grader,
+    (2) faded example + no auto grader,
+    (3) blank exercise + auto grader, and
+    (4) faded example + auto grader.
+
+    Blank exercises only contained the programming question and a space for participants to type and execute R code.
+    Faded exercises contained the same programming question,
+    but the space participants would type and execute R code would be pre-populated with the solution with
+    function calls and arguments blanked out with a ``\_\_''
+    (e.g., if the solution was ``read\_csv(`mydata.csv')'',
+    the faded example would look like ``\_\_(\_\_)'').
+
+\subsection{Randomization}
+
+    Block randomization was used to randomize participants.
+    A randomization list was pre-generated with a
+    seed of 42, 4 treatment groups, block size of 8, and no stratification factors
+    \cite{sealedenvelopeltdCreateBlockedRandomisation2021}.
+    The second workshop re-generated the randomization list,
+    but allocation ratios were adjusted for the second workshop due to varying amounts of participation
+    and attrition after initial randomization from the workshop sign-in from the first workshop.
+    Group 3 had 0 responses from the workshop
+    The second randomization doubled the weight for Group 3,
+    effectively creating a 5th treatment group, and used a block size of 10 for randomization.
+    Participants were asked to sign-in at the start of the workshop,
+    and their unique identifer was used for randomization.
+
+\subsection{Workshop Content}
+
+    The workshop was just the ``Tidy Data'' portion of the ds4biomed materials %todo add citation.
+    It starts with the understanding that learners know about
+    (1) spreadsheets,
+    (2) loading data into R,
+    (3) subsetting columns and rows of data,
+    (4) calculating grouped aggregate summary statistics.
+    The workshop for this study started off with a pre-workshop survey that served as an assessment of
+    prerequisite knowledge.
+    The content workshop remained exactly the same as previous workshops and studies
+    that covered tidy data principles.
+    The only major change was forcing time for the formative and summative assessment questions.
+    Participants were givben 5 minutes to work on the pre-workshop and formative assessment questions
+    and the solution was reviewed before continuing to the next topic.
+    The summative assessment question solution was provided after the workshop to fit within the
+    90-minute time limit for the workshop.
+
+\subsection{Exercise Questions}
+
+There was a total of 5 exercises presented to participants for this study:
+(1) one pre-workshop exercise that asks participants to perform a small data pipeline task that they would
+    have been taught by now in the full 6-hour workshop version,
+(2) three formative exercise questions, and
+(3) one final summative assessment question.
+Each exercise question had a space for the participant to enter and run the existing R code.
+
+\subsubsection{Pre-workshop Exercise}
+
+    The pre-workshop exercise question is used as a baseline example since participants should
+    be able to accomplish these tasks by this point of the workshop.
+    The summative assessment example also uses concepts here during its data processing example.
+    Participants were asked the following question:
+
+    \begin{displayquote}
+
+        Please write the code for the following pipeline steps:
+
+        \begin{enumerate}
+            \item Load the \code{tidyverse} and \code{readxl} libraries.
+            \item Read in the Excel file located in:
+                  \code{"data/medicaldata\_tumorgrowth.xlsx"} into a variable \code{tumor}.
+            \item Select the all the columns except \code{Grp},
+                  and filter the rows such that \code{Day} is \code{0} or \code{20}.
+                  Save this data subset into a variable \code{tumor\_subset}.
+            \item We want to compare baseline tumor sizes (Day 0) with tumor sizes at Day 20 between each of the groups.
+                  Using \code{tumor\_subset},
+                  calculate the average tumor \code{Size} for each \code{Grp} and \code{Day}.
+            \item Save \code{tumor\_subset} into a CSV file located in \code{"data/tumorsubset.csv"}.
+        \end{enumerate}
+
+    \end{displayquote}
+
+\subsubsection{Formative Assessment Exercise 1}
+
+    \begin{displayquote}
+        Take a look at the \code{ebola} dataset.
+        %TODO HEAD EBOLA
+        \begin{enumerate}
+            \item Tidy the dataset such that you get the dataset below.
+            \item You can use the \code{last\_col()} to select the last column of the dataset.
+            \item Remember to drop missing values as the last step.
+        \end{enumerate}
+
+    \end{displayquote}
+
+\subsubsection{Formative Assessment Exercise 2}
+    \begin{displayquote}
+
+        This is a different version of the \code{ebola} dataset.
+
+        \begin{enumerate}
+            \item Tidy the dataset such that you get the dataset below
+            \item Remember to drop missing values as the last step
+        \end{enumerate}
+
+    \end{displayquote}
+
+\subsubsection{Formative Assessment Exercise 3}
+
+    \begin{displayquote}
+
+        This is a different version of the \code{ebola} dataset.
+
+        \begin{enumerate}
+            \item Tidy the dataset such that you get the dataset below
+            \item Remember to drop missing values as the last step
+        \end{enumerate}
+
+    \end{displayquote}
+
+\subsubsection{Summative Assessment}
+
+    The summative assessment question is the same question from the post-workshop and long-term survey question
+    given to participants who participated in the full workshop sessions.
+    The question given in the previous studies did not ask participants to code up the solution,
+    rather it asked how confident participants are in their ability to complete a set of data tasks.
+    This study asks the participants to actually code up the results that will be graded.
+
+    \begin{displayquote}
+
+        This is the cmv dataset you will load:
+
+        \begin{enumerate}
+            \item Use the \code{readxl} library to load the \code{"data/cmv.xlsx"} into a variable, \code{cmv}
+            \item Filter the \code{cmv} dataset such that only $\text{age} > 65$ are remaining.
+                  Save this to a variable, \code{cmv\_subset}.
+            \item Save the \code{cmv\_subset} variable to a csv file in \code{"data/cmv\_subset.csv"}.
+        \end{enumerate}
+
+        \begin{enumerate}
+            \item Tidy the \code{cmv} dataset such that it looks like the clean dataset below.
+                  Save the tidy dataset into a variable, \code{cmv\_tidy}.
+        \end{enumerate}
+
+        \begin{enumerate}
+            \item In the \code{cmv\_tidy} dataset, calculate the average age for each value of cmv.
+        \end{enumerate}
+
+    \end{displayquote}
+
+\subsection{Grading Rubric}
+
+    A grading rubric was created to score the participant-submitted code solutions.
+    A composite score for each exercise solution was created based on multiple factors.
+    1 point was awareded for each correct function call or similar function that achieves the same results.
+    Grading was done with the actual treatment group blinded to the grader,
+    scores were then combinded with the rest of the full data for analysis.
+
+    \paragraph{Pre-Workshop Exercise}
+
+        7 points total.
+        Submission was graded on:
+        (1) loading library packages using the \code{library} function,
+        (2) loading data using the \code{read\_excel} function,
+        (3) subsetting columns using the \code{select} function,
+        (4) subsetting rows based on a condition using the \code{filter} function,
+        (5) aggregating summary statistics with the \code{group\_by} function,
+        (6) calculating the mean on grouped variables with the \code{summarize} function, and
+        (7) writing out results to an external file with the \code{read\_csv} function.
+
+
+    \paragraph{Exercise 1}
+
+        4 points total.
+        Submission was graded on:
+        (1) reshaping the dataset with the the \code{pivot\_longer} function,
+        (2) correctly selecting the columns for the \code{pivot\_longer} function,
+        (3) correctly specifying the new columns after the \code{pivot\_longer} function call, and
+        (4) dropping missing values with \code{drop\_na} function.
+
+    \paragraph{Exercise 2}
+
+        6 points total.
+        Submission was graded on:
+        (1) reshaping the dataset with the the \code{pivot\_longer} function,
+        (2) correctly selecting the columns for the \code{pivot\_longer} function,
+        (3) splitting column values with the the \code{separate} function,
+        (4) selecting the correct column to separate,
+        (5) using the correct separating delimiter, and
+        (6) ping missing values with \code{drop\_na} function.
+
+    \paragraph{Exercise 3}
+
+        3 points total.
+        Submission was graded on:
+        (1) reshaping the dataset with the the \code{pivot\_longer} function,
+        (2) reshaping the dataset with the the \code{pivot\_wider} function, and
+        (3) dropping missing values with \code{drop\_na} function.
+
+    \paragraph{Summative Assessment Exercise}
+
+        7 points total.
+        Submission was graded on:
+        (1) loading data using the \code{read\_excel} function,
+        (2) subsetting rows based on a condition using the \code{filter} function,
+        (3) saving the filtered dataset to a file with the \code{read\_csv} function,
+        (4) reshaping and tidying the dataset with the the \code{pivot\_longer} function,
+        (5) aggregating summary statistics with the \code{group\_by} function,
+        (6) calculating the mean on grouped variables with the \code{summarize} function, and
+        (7) writing out results to an external file with the \code{read\_csv} function.
+
+\subsection{Analysis}
+
+    Three (3) different sets of values were compared across each of the 4 treatment arms:
+    (1) continuous variable of exercise solution score based on the grading rubric,
+    (2) continuous variable of time to exercise completion, and
+    (3) binary variable of whether the solution submitted is correct.
+    The final results did not include the binary variable analysis due to sample size.
+
+    Non-code solutions were dropped (e.g., pasted in a URL instead of solution code)
+    and not graded, as opposed to a score of 0.
+    Participants who attended both workshop sessions had their responses removed from the repeat session.
+    Participants who attempted the exercise questions more than once had the higher score kept for analysis,
+    in the event of a score tie, the first submission was used for analysis,
+    and other responses were dropped.
+
+\end{document}

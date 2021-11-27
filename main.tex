@@ -16,13 +16,21 @@
 \documentclass[doublespace,draft,nopageskip]{VTthesis} % nopageskip - Removes arbitrary blank pages.
 
 \usepackage{amsmath, amssymb}
+
+% remember to run makeindex for nomenclature / abbreviation list to show:
+% https://tex.stackexchange.com/questions/27824/using-package-nomencl
 \usepackage{nomencl}  % for nomenclature
+\makenomenclature
+
 %\usepackage[]{graphicx} % if you set final here you'll get option clash error
 \usepackage{multirow} % for subfigure
 \usepackage{hyperref}
 \usepackage{subfiles}
 \usepackage{csquotes} % for block quotes (displayquote)
 \usepackage{listings} % inline "code"
+
+% https://tex.stackexchange.com/questions/36030/how-to-make-a-single-word-look-as-some-code
+\newcommand{\code}[1]{\lstinline{#1}}
 
 \graphicspath{{./}{figs/}}
 
@@ -49,7 +57,7 @@
 \degree{Doctor of Philosophy}
 
 % This should be your defense date:
-\submitdate{December 42, 2021}
+\submitdate{December 14, 2021}
 
 % Committee members. Only have five readers and one chair available.
 % Only use the ones you need and don't include the ones you don't need.
@@ -90,7 +98,6 @@
 	\listoffigures
 	\listoftables
     \printnomenclature %Creates a list of abbreviations. Comment out to remove it.
-
     \subfile{005-frontmatter/050-abbreviations}
 
 % The following sets up the document for the main part of the thesis or dissertation. Do not comment out or remove this line.
@@ -184,10 +191,14 @@
 
 	% Add your appendices here. You must leave the appendices enclosed in the appendices environment in order for the table of contents to be correct.
 	\begin{appendices}
+        \chapter{Participant Unique Identifier} \label{app:participant-id}
+            \subfile{090-appendix/005-participant_id}
 		\chapter{Persona Validation and Creation} \label{app:persona_validation_creation}
             \subfile{090-appendix/010-persona_validation_creation}
 		\chapter{Workshop Efficacy} \label{app:workshop_efficacy}
             \subfile{090-appendix/020-workshop_pre_post_long}
+        \chapter{Assessment Study} \label{app:exercises}
+            \subfile{090-appendix/030-exercises}
 	\end{appendices}
 
 \end{document}

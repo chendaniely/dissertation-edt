@@ -4,9 +4,9 @@
     \subfile{010-010-intro}
 
     \section{History of Data Science}
+        \label{se:intro-ds-history}
 
-        Figure **xxxxx not yet made** gives an overview of how
-        statistics, data science, and computational programming and education
+        Statistics, data science, computational programming education
         have co-evolved in the last half-century.
 
         \subfile{010-020-ds_history}
@@ -19,16 +19,98 @@
         % TODO stacked heading
         \subfile{010-060-computing_education}
         \subfile{010-070-data_science_education}
+        \subfile{010-080-statistics_education}
 
-    \section{Domain pecificity}
+    \section{Domain specificity}
+
+        Incorporating computing skills and domain knowledge can be thought of
+        $\text{computing} + x$ and $x + \text{computing}$ (where $x$ is a knowledge domain)
+        \cite{cc2020}.
+        In `computing + x`, computing systems extend to non-computing disciplines.
+        These fields usually have "informatics" in the term
+        e.g., medical infomatics, bioinformatics, health informatics, legal informatics, etc [@CC2020].
+        In `x + computing`,
+        computing systems are extensions to an already existing and established field of study.
+        One promonent example is in computational biology,
+        where established laboratory methods expanded to computing.
+        Both mechanisms of combining computing and a discipline allow for the discovery of transformatinal relationships,
+        only thst starting point is different [@CC2020].
+
+
+        [@shortliffe1993adolescence]
+        The creation of this kind of infrastructure will require vision and resources from leaders who realize that the practice of medicine is inherently an information-management task and that biomedicine must make the same kind of coordinated commitment to computing technologies as have other segments of our society in which the importance of information management is well understood.
+
+        This dissertation focus around the core and fundamental skills
+        of computing, and how computing skills can better areas in the biomedical sciences (`x + computing`).
+        By combining domain, computing, and integrative knowledge and skills,
+        non-computing individuals can make the connections from their domain to the transformative opporunities
+        created by using computing [@CC2020].
 
     \section{Gaps in Data Science Education}
 
     \section{Personas}
+        \label{se:intro-personas}
+
+        \subfile{010-110-personas}
 
     \section{Best Practices in Teaching Data Science}
 
+        learning objectives, formative assessmsents, summative assessments, blooms taxonomy,
+        cognitive load theory
+        \cite{DonaldClarkPlan2020}.
+
+        Graduates with university computing degrees are having difficulities in workplace settings.
+        This is from the discrepetency between teaching teaching a knowledge-based learning paradigm and an application-based curriculum.
+        The latter incorporates more practical skills that apply knowledge
+        \cite{cc2005}.
+
+        While modern students have grown up with computers and know how to use the internet for help,
+        more advanced programming skills should not precidnce over data analysis skills or statistical thinking
+        \cite{gaise2016}.
+        Additionally, more advanced programming skills would make the course more intimidating for novices [TODO Citation Needed].
+        While modern students do have the skills to search for help,
+        they may not know the correct jargon to search for help effectively,
+        if they do manage to find ax solution,
+        many of the solutions novices would find online would be incomprehensible [TODO Citation Needed].
+        Parsing and reading error messages is also difficult for novices which would make asking questions online difficult [TODO Citation Needed].
+
+        The work in this dissertation is not around creating a full curriculum,
+        so many of the KAs from a data science curriculum guideline does not need to be explicitly taught.
+        As a set of learning materials for novices,
+        it is important to set a good foundation to learn additional data science concepts.
+        As a domain-specific course primarily aimed at new learners who are working professionals,
+        It's even more important to meet learners where they are, as they are not going to be primarily in a classroom environment
+        [TODO: citation needed].
+
+        The GAISE 2016 report mentions that ``basic computer skills'' can be assumed,
+        however ``basic'' was not defined.
+        Modern technologies have made the filesystem more abstract,
+        file sharing and cloud services (e.g., Dropbox, OneDrive, iCloud) does not always make it clear where files may be stored on the filesystem [TODO citation needed].
+        This obfuscation of the file system does make it confusing when trying to point to datasets around the file system.
+        The workshop materials created for this dissertation address this skills gap by starting with spreadsheets and learning about how to load them into a programming langauage
+        by understanding a working directory and loading data using absolute and relative paths.
+
+        The Computing Competencies for Undergraduate Data Science Curricula 2021 report's
+        Data Cleaning Tier 1 knowledge in data transformation does not talk about tidy data principles.
+        However, that knowledge tier does discuss data standardization and normalization,
+        which is related to tidy data principles as it is the data processing needed to store data for databases and
+        usually comes from tidy data
+        \cite{wickhamTidyData2014}.
+
     \section{Need for Pedagogically Backed Curriculum}
+    \label{se:intro-curriculum}
+
+    Industry and government can play a special role in generating modern programs through
+    professional advisory boards, work-study programs, and internships.
+    Academic institutions must also be proactive in
+    supporting strong, contemporary computing programs for the benefit of its graduates. [@cc2020]
+
+    ``Many students of data science
+    go on to teach, but it is rare to find a course in university cumcula on pedagogy.
+    A
+    rigorous evaluation
+    of tools and their development applies to data science that which statisticians routinely advocate for
+    process improvement in other disciplines'' [@clevelandDataScienceAction2001]
 
     \section{Routes for Creating Interdisciplinary Data Science Education}
 
@@ -40,5 +122,7 @@
     Best Practices in Teaching Data Science,
     Need for Pedagogically Backed Curriculum,
     Routes for Creating Interdisciplinary Data Sci Education
+
+    \section{Ethics}
 
 \end{document}

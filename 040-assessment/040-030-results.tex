@@ -1,0 +1,155 @@
+\documentclass[040-assessment.tex]{subfiles}
+
+\begin{document}
+
+The interpretations of the results from this study are limited due to attrition and low response rates.
+The results are presented as preliminary data.
+Due to the low sample size, treating the final summative assessment question as a binary variable of
+correctness was not performed.
+In general, none of the results had any statistical significance.
+
+\subsection{Participants and Randomization}
+
+    Two (2) workshop sessions that covered the same materials and exercise content were given.
+    There were a total of 92 registrants (43 for session 1, and 49 for session 2)
+    and 44 workshop attendees (25 for session 1, and 19 for session 2).
+    30 participants were randomized across 4 arms
+    (Group 1: 8, Group 2: 7, Group 3: 8, Group 4: 7).
+
+    One (1) participant attended both workshops;
+    Any data from the second workshop was dropped from analysis.
+    One (1) participant attempted a question twice,
+    since the graded scores were the same for both attempts,
+    the first submission was kept for analysis.
+    One (1) code solution appeared to be code for a different question and was not scored and counted in the analysis.
+    A total of 16 randomized participants submitted at least 1 of the 5 exercises for analysis:
+    1 participant only took 1 exercise,
+    5 participants took 2 of the exercises,
+    2 participants took 3 of the exercises,
+    4 partitipants took 4 of the exercises, and
+    4 participants took all 5 exercises.
+    Table \ref{tab:exercise-treatment-response-counts} shows the number of
+    responses for each exercise and treatment group.
+
+    % from: 030-exercise_submission_descriptives.Rmd
+    % latex table generated in R 4.1.1 by xtable 1.8-4 package
+    % Thu Nov 25 23:34:34 2021
+    \begin{table}[ht]
+        \centering
+        \caption[Number of responses by group and exercise]
+        {Number of code submissions for each group and exercise.
+         There were a total of 16 randomized participants submitted at least 1 of the 5 exercises for analysis.
+         The values listed in the \code{Total} column are the exercise response counts,
+         and the values listed in the \code{sum} column are the group counts.
+         The columns represent the
+         treatment group,
+         exercise 1 (ex1), exercise 2 (ex2), exercise 3 (ex3),
+         pre-workshop exercise (pre), and
+         post-workshop summative assessment (sum).
+        }
+        \begin{tabular}{rlrrrrr}
+            \hline
+           & treatment & ex1 & ex2 & ex3 & pre & sum \\
+            \hline
+            1 & Group 1 &   1 &   3 &   3 &   4 &   4 \\
+            2 & Group 2 &   3 &   4 &   2 &   3 &   2 \\
+            3 & Group 3 &   1 &   1 &   1 &   2 &   1 \\
+            4 & Group 4 &   5 &   4 &   3 &   3 &   3 \\
+            5 & Total &  10 &  12 &   9 &  12 &  10 \\
+             \hline
+          \end{tabular}
+          \label{tab:exercise-treatment-response-counts}
+    \end{table}
+
+\subsection{Exercise Scores}
+
+    The pre-workshop exercise was given out as a means to cover pre-requisite knowledge for the
+    summative assessment question.
+    Otherwise, the summative assessment would be no different from any of the other exercise
+    questions.
+    Since the summative assessment exercise relied on knowledge that was covered in the
+    pre-workshop exercise,
+    the 5 participants who recieved a full score of 7 in the pre-workshop exercise were analysed first.
+    Participants who scored well on the pre-workshop exercise also did well in all the other exercises
+    (Figure \ref{fig:exercise-scores-pre100}).
+    The 1 participant in Group 4 scored less than 50\% in the summative assessment question.
+    Figure \ref{fig:exercise-scores-separate-treatements} shows the percentage scores across each
+    of the exercises and tretment group.
+
+    \begin{figure}[htb]
+        \centering
+        \includegraphics[width=0.9\textwidth]{figs/040-exercises/score\_prop-ex-treatment-no\_facet.png.png}
+        \caption[Graded Exercise Scores by treatment groups]
+        {Distribution of exercise scores.
+        Each participant's code submission was graded on a rubric.
+        Scores are reported as a percentage because each exercise has a different total score.
+        Score distributions were separate by whether or not a participatnt had a full score
+        in the pre-workshop exercise (pre),
+        since components of that are also used in the summative assessment question (sum).
+        The other 3 exercises (ex1, ex2, ex3) were giving during the workshop
+        as formative assessment questions.
+        Results are also compared across 4 treatment groups:
+        (1) Group 1: blank example with no auto code grader,
+        (2) Group 2: faded example with no auto code grader,
+        (3) Group 3: blank example with an auto code grader, and
+        (4) Group 4: faded example with an auto code grader.
+        Group 1 is the control group, and Group 4 is the main treatment of interest.
+
+        The low sample size in each of the groups makes it difficult to make definitive conclusions.
+        The data currently shows that participants who were able to get a full score
+        in the pre-workshop exercise tend to also do well on the remaining exercise questions
+        (Figure \ref{fig:exercise-scores-pre100}).
+        More variation between exercises exists with participants who did not receive a full score
+        in the pre-workshop exercise.
+        }
+        \label{fig:exercise-scores-separate-treatements}
+    \end{figure}
+
+    Some of the code solutions suggested that not every participant used the feature to execute their
+    code befor submission.
+    Since we were unable to confirm if the autograder was used in these exercise treatment groups,
+    a separate analysis was performed that ignored the autograder,
+    so treatment groups 1 and 3 were combined togther and treatment groups 2 and 4 were combined together
+    \ref{fig:exercise-scores-combined-treatments}.
+    These preliminary results seem to suggest that faded examples do not affect code results during the formative
+    assessments, but hinder results in the summative assessment question.
+    These differences disappear when pre-workshop exercise performance is taken into account
+    (Figure \ref{fig:exercise-scores-combined-groups-pre100}).
+
+    \begin{figure}[htb]
+        \centering
+        \includegraphics[width=0.9\textwidth]{figs/040-exercises/score\_prop-ex-treatment-no\_facet-combine\_treatments.png}
+        \caption[Graded Exercise Scores with combined treatment groups]
+        {Distribution of exercise scores with the treatment groups combined by
+        blank exercises (Groups 1 and 3) and faded examples (Groups 2 and 4).
+        These groups were collapsed together since there was no way to track whether or not
+        participants used the auto code grader.
+        Preliminary results show that the faded examples do not differ from non-faded examples during
+        the formative assessment questions,
+        but the groups that used faded examples performed worse than those who were not given a faded example
+        during the summative assessment question when all groups were provided an empty text field for the solution.
+        }
+        \label{fig:exercise-scores-combined-treatments}
+    \end{figure}
+
+\subsection{Time to Complete}
+
+    Next, we wanted to see if there were any differences between types of exercises and amount of time to complete an exercise.
+    Faded examples provide a skeleton of the code for learners to fillin instead of writing all of the code from scratch.
+    There did not seem to be any difference between time to exercise completion between the non-faded groups with the
+    faded example groupes.
+    However these results suggest more about the amount of time learners needed to work on exercises.
+
+    \begin{figure}[htb]
+        \centering
+        \includegraphics[width=0.9\textwidth]{figs/040-exercises/time\_to\_complete-ex-treatment-no\_facet-combine\_treatments.png}
+        \caption[Time to complete exercises with combined treatment groups]
+        {Distribution of time to complete exercises between treatment groups combined by
+        blank exercises (Groups 1 and 3) and faded examples (Groups 2 and 4).
+        These groups were collapsed together since there was no way to track whether or not
+        participants used the auto code grader.
+        }
+        \label{fig:time-to-complete-combined-treatments}
+    \end{figure}
+
+\end{document}
