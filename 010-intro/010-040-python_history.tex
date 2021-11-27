@@ -4,41 +4,45 @@
 
     \subsection{Common Tools in Data Science History: Python and the PyData Ecosystem}
 
-        Python started as a project by Guido van Rossum for developers to write in an interactive high-level programming language that can
+        Python started as a project by Guido van Rossum for developers
+        to write in an interactive high-level programming language that can
         talk to the underlying operating system but still able to interact with native C libraries
         \cite{severanceGuidoVanRossum2005}.
         Python was first released in 1991 and v1.0 was released in 1994
         \cite{severanceGuidoVanRossum2005}.
-        As Python gained in popularity, it started to make its way into the scientific research community.
-        In 1999, the \lstinline{multipack} library was released to bring scientific computation by wrapping around C and Fortan libraries.
+        As Python gained in popularity,
+        it started to make its way into the scientific research community.
+        In 1999, the \code{multipack} library was released to bring scientific computation to the language
+        by wrapping around C and Fortan libraries.
         As the scientific community began to grow,
         The SciPy community and Python package was created in 2001 by Eric jones, Travis Oliphant, and Enthought.
-        However, the scale of the \lstinline{scipy} project was too much to maintain
-        and spawned the creation of smaller \lstinline{scikit} projects.
+        However, the scale of the \code{scipy} project was too much to maintain
+        and spawned the creation of smaller \code{scikit} projects.
         During that time,
         a more interactive Read-Evaluate-Print-Loop (REPL),
-        \lstinline{IPython},
+        \code{IPython},
         similar to other mathematical and programming software like Wolfram Mathematica,
         was created by Fernando Pérez to make scientific computing and exploration easier
         \cite{iPythondevelopmentteamHistory}.
         Since much of scientific computation relied on matrix and array objects,
-        the scientific community was slowly being split between the \lstinline{numeric} and \lstinline{numarray} libraries.
-        In 2005, Travis Oliphant started creating the \lstinline{numpy} library to keep the array objects in Python cohesive,
-        since it was used by \lstinline{scipy}.
-        In 2006, \lstinline{numpy} was released.
+        the scientific community was slowly being split between the \code{numeric} and \code{numarray} libraries.
+        In 2005, Travis Oliphant started creating the \code{numpy} library to keep the array objects in Python cohesive,
+        since it was used by \code{scipy}.
+        In 2006, \code{numpy} was released.
         Since then, many other libraries have been built on top of the NumPy array:
-        \lstinline{theano} in 2008, \lstinline{pandas} in 2009, and \lstinline{scikit-learn} in 2010.
+        \code{theano} in 2008, \code{pandas} in 2009, and \code{scikit-learn} in 2010.
         These libraries have been paramount to the growth of Python in the data science space. % TODO Citation Needed.
+
         As a means to help sustain and support these critical open source libraries,
         NumFOCUS was founded in 2012 as a 501(c)(3) public charity status as a nonprofit in the United States along with the first PyData
         conference series, the educational program of NumFOCUS centered around community organization.
         Travis Oliphant and Peter Wang also found Anaconda Inc that year
         with the goal of supporting the open-source Python community and helping the SciPy ecosystem scale to ``big data''. % TODO [citation_needed].
-        In 2013, Anaconda released the \lstinline{blaze} package to help scale the SciPy ecosystem.
+        In 2013, Anaconda released the \code{blaze} package to help scale the SciPy ecosystem.
         The next iteration of scientific computing interactivity came with Project Jupyter in 2014
-        with the goal of bringing the interactivity of \lstinline{IPython} to other programming languages and with a common user interface,
+        with the goal of bringing the interactivity of \code{IPython} to other programming languages and with a common user interface,
         Jupyter Notebooks (Jupyter stands for the Julia, Python, and R programming languages).
-        The \lstinline{dask} project spins off of \lstinline{blaze} in 2015 with a focused on
+        The \code{dask} project spins off of \code{blaze} in 2015 with a focused on
         making multi-core parallelization and distributed computing easier in the SciPy ecosystem.
 
         As ``artificial intelligence'' gains popularity with the resurgence of neural networks,
