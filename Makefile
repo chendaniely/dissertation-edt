@@ -15,7 +15,8 @@ counts :
 ## pdf        : re-generate PDF
 pdf :
 	${LATEX} -synctex=1 -interaction=nonstopmode ${STEM}
-	makeindex main.nlo -s nomencl.ist -o main.nls
+#	# nomenclature/abbreviations
+	makeindex ${STEM}.nlo -s nomencl.ist -o ${STEM}.nls
 #	${BIBTEX} ${STEM}
 	${LATEX} -synctex=1 -interaction=nonstopmode ${STEM}
 	${LATEX} -synctex=1 -interaction=nonstopmode ${STEM}
@@ -24,3 +25,9 @@ pdf :
 clean :
 	rm -f $$(cat .gitignore)
 	rm -f ./*/*.synctex.gz ./*/*.xdv ./*/*.nlo
+
+## sync      : sync overleaf -> local -> GitHub
+sync:
+	git fetch --all --prune
+	git pull leaf master:main
+	git push origin main:main
