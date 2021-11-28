@@ -31,8 +31,11 @@ sync:
 	git fetch --all --prune
 	git pull leaf master:main
 	git push origin main:main
+	git log --oneline --graph --all -n 10
 
 ## push      : push local to GitHub and Overleaf
 push:
 	git push origin main:main
 	git push leaf main:master
+	git log --oneline --graph --all -n 10
+
