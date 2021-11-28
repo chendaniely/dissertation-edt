@@ -15,46 +15,25 @@
         \subfile{010-045-emerging_technologies}
         \subfile{010-050-swc_history}
 
-    \section{Education and Pedagogy}
+    \section{Data Science Education and Pedagogy Research}
+        \label{se:intro-ds-edu-ped}
+    
+        Computing and statistics education have both created their own sets of
+        higher education curriculum guidelines.
+        Many of these concepts have made their way down from higher education to K-12,
+        suggesting the top-down need for learning data science skills.
 
-        % TODO stacked heading
         \subfile{010-060-computing_education}
-        \subfile{010-070-data_science_education}
         \subfile{010-080-statistics_education}
-
-    \section{Domain specificity}
-
-        Incorporating computing skills and domain knowledge can be thought of
-        $\text{computing} + x$ and $x + \text{computing}$ (where $x$ is a knowledge domain)
-        \cite{cc2020}.
-        In `computing + x`, computing systems extend to non-computing disciplines.
-        These fields usually have "informatics" in the term
-        e.g., medical infomatics, bioinformatics, health informatics, legal informatics, etc [@CC2020].
-        In `x + computing`,
-        computing systems are extensions to an already existing and established field of study.
-        One promonent example is in computational biology,
-        where established laboratory methods expanded to computing.
-        Both mechanisms of combining computing and a discipline allow for the discovery of transformatinal relationships,
-        only thst starting point is different [@CC2020].
-
-
-        [@shortliffe1993adolescence]
-        The creation of this kind of infrastructure will require vision and resources from leaders who realize that the practice of medicine is inherently an information-management task and that biomedicine must make the same kind of coordinated commitment to computing technologies as have other segments of our society in which the importance of information management is well understood.
-
-        This dissertation focus around the core and fundamental skills
-        of computing, and how computing skills can better areas in the biomedical sciences (`x + computing`).
-        By combining domain, computing, and integrative knowledge and skills,
-        non-computing individuals can make the connections from their domain to the transformative opporunities
-        created by using computing [@CC2020].
-
-    \section{Gaps in Data Science Education}
-
-    \section{Personas}
+        \subfile{010-070-data_science_education}
+        
+    \section{Learner Personas and Pedagogical Backed Strategies for Creating Accessible Content in Data Science}
         \label{se:intro-personas}
 
         \subfile{010-110-personas}
-
+        
     \section{Best Practices in Teaching Data Science}
+        \label{se:intro-teaching-best-practices-ds}
 
         learning objectives, formative assessmsents, summative assessments, blooms taxonomy,
         cognitive load theory
@@ -97,33 +76,91 @@
         which is related to tidy data principles as it is the data processing needed to store data for databases and
         usually comes from tidy data
         \cite{wickhamTidyData2014}.
+        
+        \subsection{Mental Models}
+        
+        \subsection{Cognitive Load}
+        
+        \subsection{Learning Objectives}
+        
+        \subsection{Assessment}
+        
+        \subsection{Feedback}
+        
+        % TODO: Taken from ALA Book chapter Draft 1
+        Feedback gives students the chance to integrate new knowledge into further practice.
+        This loop between practice and feedback is how learners learn and improve their skills and also helps the instructor become a better instructor.
+        
+For the students, the DataBridge program has approached feedback in a variety of ways that are broadly applicable to library training in data science and data literacy. Feedback is weekly, and communication pathways allow for questions and feedback in real-time. This emphasizes the usefulness of bring-your-own data type workshops. Reflective exercises are integrated after different phases of the data life cycle and feedback is given in regards to the thought process taken by the student in order to impact more long term change and adaption of common data science and data literacy aspects.
 
-    \section{Need for Pedagogically Backed Curriculum}
-    \label{se:intro-curriculum}
+        \subsection{Teaching Live Coding}
+        
+        When teaching programming related tasks in a more formal setting, live-coding is an effective way to teach students . Instead of showing the correct solutions in a slide deck, live coding fosters more active teaching and learning and also promotes unintended knowledge transfer from the instructor by showing learners how things are done. Learners are able to see how problems are diagnosed when the instructor to make mistakes in front of the students (either on purpose or by accident) and forces the instructor to work and think through the error in front of the students. The process of live coding also slows down the instructor and gives students a way to follow along. This way multiple sensory inputs are working together to encode the same bit of information, and helps retain knowledge .
+        
+        \subsection{Pair-Programming}
+        
+        Pair programming is the process of “pairing” 2 people together on a task where one person does the actual programming, and the other person talks them through the process. Usually, the more experienced person is guiding the other person what to program, however, it can work if both people have the same experience or learning something together. This delegation of tasks allows the programmer to deal with the nuances of programming syntax, while the other member can think about the overall program flow. Separating these tasks is useful for new learners as it reduces the cognitive load of managing a workflow and data science tasks with the syntax and errors from programming. It also gives the opportunity for both members to learn together and from one another. What makes pair programming different from a traditional “group project” is that 2 people are working on the same part of the project at the same time. Only the cognitive load of accomplishing the task is delegated. In a group project, the entire project is delegated into separate tasks, so members in the group do not necessarily work on the same task. However, the main downside with pair programming is that it uses a lot of resources, two people need to be assigned to working on the same exact problem.
 
-    Industry and government can play a special role in generating modern programs through
-    professional advisory boards, work-study programs, and internships.
-    Academic institutions must also be proactive in
-    supporting strong, contemporary computing programs for the benefit of its graduates. [@cc2020]
+    \section{Domain specificity}
+        \label{se:intro-domain-specificity}
 
-    ``Many students of data science
-    go on to teach, but it is rare to find a course in university cumcula on pedagogy.
-    A
-    rigorous evaluation
-    of tools and their development applies to data science that which statisticians routinely advocate for
-    process improvement in other disciplines'' [@clevelandDataScienceAction2001]
+        Incorporating computing skills and domain knowledge can be thought of
+        $\text{computing} + x$ and $x + \text{computing}$ (where $x$ is a knowledge domain)
+        \cite{cc2020}.
+        In `computing + x`, computing systems extend to non-computing disciplines.
+        These fields usually have "informatics" in the term
+        e.g., medical infomatics, bioinformatics, health informatics, legal informatics, etc [@CC2020].
+        In `x + computing`,
+        computing systems are extensions to an already existing and established field of study.
+        One promonent example is in computational biology,
+        where established laboratory methods expanded to computing.
+        Both mechanisms of combining computing and a discipline allow for the discovery of transformatinal relationships,
+        only thst starting point is different [@CC2020].
+
+        [@shortliffe1993adolescence]
+        The creation of this kind of infrastructure will require vision and resources from leaders who realize that the practice of medicine is inherently an information-management task and that biomedicine must make the same kind of coordinated commitment to computing technologies as have other segments of our society in which the importance of information management is well understood.
+
+        This dissertation focus around the core and fundamental skills
+        of computing, and how computing skills can better areas in the biomedical sciences (`x + computing`).
+        By combining domain, computing, and integrative knowledge and skills,
+        non-computing individuals can make the connections from their domain to the transformative opporunities
+        created by using computing [@CC2020].
+
+    \section{The Need for Pedagogically-Backed Data Science Curriculum in Medicine}
+        \label{se:intro-ds-edu-gaps}
+        
+        Industry and government can play a special role in generating modern programs through
+        professional advisory boards, work-study programs, and internships.
+        Academic institutions must also be proactive in
+        supporting strong, contemporary computing programs for the benefit of its graduates. [@cc2020]
+    
+        ``Many students of data science
+        go on to teach, but it is rare to find a course in university cumcula on pedagogy.
+        A
+        rigorous evaluation
+        of tools and their development applies to data science that which statisticians routinely advocate for
+        process improvement in other disciplines'' [@clevelandDataScienceAction2001]
+        
+        Domain specific materials is what's missing
+        
 
     \section{Routes for Creating Interdisciplinary Data Science Education}
 
     \section{Building Community}
 
-    Data Science in Higher Education,
-    Data Science and Biomedical Sciences,
-    Gaps in Data Science Education,
-    Best Practices in Teaching Data Science,
-    Need for Pedagogically Backed Curriculum,
-    Routes for Creating Interdisciplinary Data Sci Education
+        Starting, building, maintaining a community.
 
     \section{Ethics}
+    
+    https://journalofethics.ama-assn.org/article/ethical-dimensions-using-artificial-intelligence-health-care/2019-02
+    
+    https://www.sciencedirect.com/science/article/pii/S0933365715000871?via%3Dihub
+    
+    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7332220/
+    
+    https://med.stanford.edu/news/all-news/2018/03/researchers-say-use-of-ai-in-medicine-raises-ethical-questions.html
 
+    https://www.theverge.com/2021/6/30/22557119/who-ethics-ai-healthcare
+    
+    
 \end{document}
