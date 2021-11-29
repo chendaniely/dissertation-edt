@@ -27,5 +27,4 @@ Replace:
             asdfasdf
 
             \begin{itemize}
-
             \end{itemize}
