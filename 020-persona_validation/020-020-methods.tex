@@ -58,7 +58,7 @@
             In order to track participant responses longitudinally and protect their privacy by not collect identifying information
             (e.g., names, email addresses, phone numbers, etc),
             participants created a unique identifier that was generated based on their results to demographic questions.
-            The IRB approved surveys can be found here in ( TODO SUPPLEMENTAL).
+            The IRB approved surveys can be found here in supplemental section \ref{sse:persona-survey-questions}.
         
         \subsubsection{Survey Dissemination}
 
@@ -97,11 +97,11 @@
 
             \paragraph{Factor Analysis}
         
-                The ``psych'' R package was used for factor analysis.
+                The \code{psych} R package was used for factor analysis.
                 The demographic, free-response, and prior programming languages used questions
                 were not used and the rest of the responses were scaled prior to running the analysis.
                 Items for factor analysis were picked based on how many other items they were significantly correlated with.
-                The scree plot from the R ``nFactors'' package suggested trying 1-factor to 5-factor models.
+                The scree plot from the R \code{nFactors} package suggested trying 1-factor to 5-factor models.
                 Different rotations and factoring methods were tested,
                 and the best model was picked based on
                 TLI, RMSEA, and BIC scores, in addition to model interoperability.
@@ -113,7 +113,7 @@
                 A separate Cronbach's alpha measure was calculated for each set of questions that loaded into each factor.
                 Kendall's kappa was not calculated because survey results were not paired.
 
-    \subsection{Clustering Responses to Identify Learner Personas}
+    \subsection{Identification of Biomedical-Specific Data Science Learner Personas}
 
         All survey questions were used for clustering;
         results from factor analysis did not select which questions would be used for clustering.
@@ -121,8 +121,6 @@
         Ward's clustering method was used to identify respondent groups.
         % TODO cite R packages
         These groups were then combined with demographic information and survey responses to create learner personas.
-
-    \subsection{Identification of Biomedical-Specific Data Science Learner Personas}
 
         Results from hierarchical clustering and survey responses were used to create the
         fictional learner persona characters.
