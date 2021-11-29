@@ -1,0 +1,200 @@
+\documentclass[010-intro.tex]{subfiles}
+
+\begin{document}
+
+    Graduates with university computing degrees are having difficulties in workplace settings.
+    This is from the discrepancy between teaching a knowledge-based learning paradigm and an application-based curriculum.
+    The latter incorporates more practical skills that apply knowledge
+    \cite{cc2005, cc2020}.
+    While modern students have grown up with computers and know how to use the internet for help,
+    more advanced programming skills should not take precedence over data analysis skills or statistical thinking
+    \cite{gaise2016}.
+
+    The GAISE 2016 report mentions that ``basic computer skills'' can be assumed
+    \cite{gaise2016},
+    however ``basic'' was not defined.
+    For example,
+    modern technologies have made the filesystem more abstract,
+    file sharing and cloud services (e.g., Dropbox, OneDrive, iCloud)
+    does not always make it clear where files may be stored on the filesystem
+    \cite{chinStudentsWhoGrew2021, macgregorStudentsDonKnow2021}.
+    This obfuscation of the file system does make it confusing when trying to point to datasets around the file system.
+    Additionally, more advanced programming skills would make the course more intimidating for novices
+    \cite{kelleherLoweringBarriersProgramming2005, thecarpentriesCarpentryTrainerTraining}.
+    While modern students do have the skills to search for help,
+    they may not know the correct jargon to search for help effectively,
+    if they do manage to find ax solution,
+    many of the solutions novices would find online would be incomprehensible
+    \cite{wilson2019teaching, Koch2016, thecarpentriesCarpentryTrainerTraining, ambrose2010learning, hermansProgrammerBrain2021}.
+    Parsing and reading error messages is also difficult for novices which would make asking questions online difficult
+    \cite{wilson2019teaching, Koch2016, thecarpentriesCarpentryTrainerTraining, hermansProgrammerBrain2021}.
+    The workshop materials created for this dissertation address this skills gap
+    by starting with spreadsheets and learning about how to load them into a programming language
+    by understanding a working directory and loading data using absolute and relative paths.
+
+    The Computing Competencies for Undergraduate Data Science Curricula 2021 report's
+    Data Cleaning Tier 1 knowledge in data transformation does not talk about tidy data principles
+    \cite{ccdsc2021}.
+    However, that knowledge tier does discuss data standardization and normalization,
+    which is related to tidy data principles as it is the data processing needed to store data for databases and
+    usually comes from tidy data
+    \cite{wickhamTidyData2014}.
+
+    The concepts around ``tidy data'' principles are a core component of data science
+    \cite{ccdsc2021, wickhamTidyData2014}.
+    The work in this dissertation explores how to develop a course around these tidy data principles
+    using persona methodology to identify a domain-specific subpopulation and identify gaps in their knowledge
+    and develop lesson materials to meet their needs.
+    This work aims to create a smaller set of learning materials for novices, not creating a full curriculum.
+    So, many of the knowledge areas (KAs) from a data science curriculum guideline does not need to be explicitly taught,
+    and identifying core knowledge and skills to meet our learner's needs and time constraints are a priority
+    in this dissertation work.
+    It is important to set a good foundation to learn and apply additional data science concepts
+    \cite{cc2005, cc2020, gaise2016, ambrose2010learning, wilson2019teaching, hermansProgrammerBrain2021}.
+    As a domain-specific course primarily aimed at new learners who are working professionals,
+    It's even more important to meet learners where they are, as they are not going to be primarily in a classroom environment
+    \cite{wilson2019teaching, Koch2016, thecarpentriesCarpentryTrainerTraining}.
+
+    \subsection{Designing Lesson Materials}
+
+        Tidy data principles are important because it feeds into the rest of the data science process
+        \cite{wickhamTidyData2014, ccdsc2021, wickhamR4ds}.
+        This dissertation creates the learning materials using a backwards design to keep the content focused
+        on its objective: teaching practicioners how to do data science in the biomedical sciences.
+        The backwards design process begins with identifying learner personas (Section \ref{se:intro-personas}).
+        In it's simpliest from, the seven (7) steps for a backward design, adapted from ``Teaching Tech Together'' are
+        \cite{wilson2019teaching}:
+
+        \begin{enumerate}[label=\textbf{L.\arabic*}]
+            \item \label{enum:persona} Create or recycle learner personas (Section \ref{se:intro-personas})
+                  to figure out who you are trying to help adn what will appeal to them.
+            \item \label{enum:brainstorm} Brainstorm to get a rough idea of what you want to cover,
+                  how you're goign to do it,
+                  what problems or misconceptions you expect to encounter,
+                  what's \emph{not} going to to be included, and so on.
+                  Drawing concept maps can help a lot at this stage.
+            \item \label{enum:summative} Create a summative assessment to define your overall goal.
+                  This can be the final exam for a course or the capstone project for a one-day workshop;
+                  regardless of its form or size, it shows how far you hope to get more clearly than a point-form list of objectives.
+            \item \label{enum:formative} Create formative assessments that will give people a chance to practice the things you're learning.
+                  These will also tell you (and them) whether they're making progress and where they need to focus their attention.
+                  The besst way to do this is to itemize the knowlege and skills used in the summative assessment you developed in the previous step
+                  and then create at least one formative assessmnet for each.
+            \item \label{enum:outline} Order the formative assessments to create a course outline based on
+                  their complexity, their dependencies, and how well topics will motivate your learners.
+            \item \label{enum:content} Write material to get learners from one formative assessment to the next.
+                  Each hour of instruction should consist of three (3) to five (5) such episodes.
+            \item \label{enum:summary} Write a summary description of the course to help its intended audience find it and figure out whether it's right for them.
+        \end{enumerate}
+
+    \subsubsection{Mental Models, Concept Maps, and Cognitive Load}
+        \label{sse:concept-maps}
+
+        Going throught the order of planning a lesson using a backwards design approach,
+        identifying who our learners are by using personas (\ref{enum:persona}) is the first step.
+        The persona methadoloy (Section \ref{se:intro-personas}) requires collecting information from potential
+        learners.
+        This process reuquires some planning between what needs to be covered (\ref{enum:brainstorm}).
+
+        Conept maps are one way to visualize all the relationships between concepts.
+        Similar similar activity to creating concept maps is task deconstruction.
+        Conept maps can be used to
+        help the instructor plan out learning materials by identifying:
+        (1) concepts to be covered in a lesson,
+        (2) ordering of lesson content,
+        (3) concepts that can be cut from a lesson.
+
+        From the learner's perspective, concept maps can help in identifying their mental model of how topics
+        are related to one another.
+        The number and density of connections is one way to disginsish competency of a topic.
+        The progression from novice to expert was first described in the Dreyfus model of skill acqusition
+        \cite{dreyfus1980five, bennerUsingDreyfusModel2004}.
+        The same cognitive transitions were described in looking at skill acqusition and clinical judgement in nurses
+        \cite{bennerUsingDreyfusModel2004}.
+
+        The original Computational Curriculum guidelines for knowledge-based learning is similar
+        to the differences between concepts from the learner's perspective, and the lesson's concept map
+        by Starting from the leraner's knowledge base, and adding new nodes of knowledge and connections to build up a knowledge base.
+        The competency-based approch is similar, but since it focuses more on integrated skills,
+        these guidelines point to using a backwards design approach to best teach computational skills.
+
+        The concept maps also reprsent the amount of information being taught at any moment during a lesson.
+        For any given point during the learning process,
+        there are three (3) main areas where confusion can occur:
+        knowledge, information, and processing power \cite{hermansProgrammerBrain2021}.
+        Each of these three areas relate to differet areas of memory:
+        long-term memory (LTM) stores knowledge,
+        short-term memory (STM) stores information, and
+        working memory (WM) is the processing power.
+        These concepts are not just specific to learning, but apply to all cognitive activities
+        \cite{hermansProgrammerBrain2021}.
+        For novices, because they lack the necessary density of connections and knowledge (LTM),
+        each new bit of information (STM) requires more processing power (WM).
+        Concept maps help plan how much working memory and short-term memory learners are using during a lesson,
+        and lessons should follow George Miller's $7\pm2$ rule of how many items people can store in their STM
+        \cite{miller1956magical}.
+        More recent research suggests that the STM is even smaller, $2-6$ items
+        \cite{hermansProgrammerBrain2021},
+        which means lessons need to be curated and presented to lower learner's cognitive load.
+        Concept maps are just one tool that can be used to plan how much cognitive load a learner may be experiencing.
+
+        The backwards design apprach used in this dissertation ended up with meeting learner's where they are,
+        spreadsheet applications like Excel.
+        This because the starting point for the learning materials by exploring common issues people encounter while
+        working with spreadsheets, and how to avoid them
+        \cite{bromanDataOrganizationSpreadsheets2018}.
+        The lessons here start with a common starting point to introduce tidy data concepts so by
+        the time the acual lesson on tidy data comes up,
+        enough of the rational, need, and concepts of tidy data have already been covered,
+        just not explicitly until that point.
+
+
+        \subsubsection{Learning Objectives, Formative Assessment, and Summative Assessments}
+
+
+
+    \subsection{Engaging Learners for Active Learning}
+
+        \subsubsection{Formative Assessment}
+
+
+            a small delay after learning can improve comprehension
+            \cite{andersonWhyDelayedSummaries2008,}.
+            Formative assessments and Summative assessments are givin at different time points in relation to
+            initial instruction
+
+
+
+        \subsubsection{Teaching Live Coding}
+
+        When teaching programming related tasks in a more formal setting, live-coding is an effective way to teach students . Instead of showing the correct solutions in a slide deck, live coding fosters more active teaching and learning and also promotes unintended knowledge transfer from the instructor by showing learners how things are done. Learners are able to see how problems are diagnosed when the instructor to make mistakes in front of the students (either on purpose or by accident) and forces the instructor to work and think through the error in front of the students. The process of live coding also slows down the instructor and gives students a way to follow along. This way multiple sensory inputs are working together to encode the same bit of information, and helps retain knowledge .
+
+        \subsubsection{Pair-Programming}
+
+        Pair programming is the process of “pairing” 2 people together on a task where one person does the actual programming, and the other person talks them through the process. Usually, the more experienced person is guiding the other person what to program, however, it can work if both people have the same experience or learning something together. This delegation of tasks allows the programmer to deal with the nuances of programming syntax, while the other member can think about the overall program flow. Separating these tasks is useful for new learners as it reduces the cognitive load of managing a workflow and data science tasks with the syntax and errors from programming. It also gives the opportunity for both members to learn together and from one another. What makes pair programming different from a traditional “group project” is that 2 people are working on the same part of the project at the same time. Only the cognitive load of accomplishing the task is delegated. In a group project, the entire project is delegated into separate tasks, so members in the group do not necessarily work on the same task. However, the main downside with pair programming is that it uses a lot of resources, two people need to be assigned to working on the same exact problem.
+
+        \subsubsection{Feedback}
+
+% TODO: Taken from ALA Book chapter Draft 1
+Feedback gives students the chance to integrate new knowledge into further practice.
+This loop between practice and feedback is how learners learn and improve their skills and also helps the instructor become a better instructor.
+
+For the students, the DataBridge program has approached feedback in a variety of ways that are broadly applicable to library training in data science and data literacy. Feedback is weekly, and communication pathways allow for questions and feedback in real-time. This emphasizes the usefulness of bring-your-own data type workshops. Reflective exercises are integrated after different phases of the data life cycle and feedback is given in regards to the thought process taken by the student in order to impact more long term change and adaption of common data science and data literacy aspects.
+
+
+        learning objectives, formative assessments, summative assessments, blooms taxonomy,
+        cognitive load theory
+        \cite{DonaldClarkPlan2020, dunloskyImprovingStudentsLearning2013}.
+
+
+
+
+
+
+
+
+
+
+
+\
+\end{document}

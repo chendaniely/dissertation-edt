@@ -1,8 +1,8 @@
-%       File: VTthesis_template.tex
+%     File: VTthesis_template.tex
 %     Created: Thu Mar 24 11:00 AM 2016 EDT
 %     Last Change: Thursday, December 19, 2019
 %     Author: Alan M. Lattimer, VT
-%	  With modifications by Carrie Cross, Robert Browder, and LianTze Lim.
+%     With modifications by Carrie Cross, Robert Browder, and LianTze Lim.
 %
 % This template is designed to operate with XeLaTeX.
 %
@@ -28,6 +28,7 @@
 \usepackage{subfiles}
 \usepackage{csquotes} % for block quotes (displayquote)
 \usepackage{listings} % inline "code"
+\usepackage{enumitem} % label enumerate items
 
 % https://tex.stackexchange.com/questions/36030/how-to-make-a-single-word-look-as-some-code
 \newcommand{\code}[1]{\lstinline{#1}}
@@ -96,16 +97,16 @@
   \tableofcontents
 
 % The list of figures and tables are now optional per the official ETD standards.  Unless you have a very good reason for removing them, you should leave these lists in the document. Comment them out to remove them.
-	\listoffigures
-	\listoftables
+    \listoffigures
+    \listoftables
     \printnomenclature %Creates a list of abbreviations. Comment out to remove it.
     \subfile{005-frontmatter/050-abbreviations}
 
 % The following sets up the document for the main part of the thesis or dissertation. Do not comment out or remove this line.
-	\mainmatter
+    \mainmatter
 
-	%now go ahead and start writing your thesis
-	\chapter{Introduction} \label{ch:introduction}
+    %now go ahead and start writing your thesis
+    \chapter{Introduction} \label{ch:introduction}
         \subfile{010-intro/010-intro}
 
     \chapter{Identification of Biomedical Data Science Learner Persons:
@@ -186,25 +187,25 @@
 
 
 
-	% This is the standard bibtex file. Do not include the .bib extension in <bib_file_name>.
-	% Uncomment the following lines to include your bibliography:
-	\bibliography{bib}
-	\bibliographystyle{plainnat}
+    % This is the standard bibtex file. Do not include the .bib extension in <bib_file_name>.
+    % Uncomment the following lines to include your bibliography:
+    \bibliography{bib}
+    \bibliographystyle{plainnat}
 
-	% This formats the chapter name to appendix to properly define the headers:
-	\appendix
+    % This formats the chapter name to appendix to properly define the headers:
+    \appendix
 
-	% Add your appendices here. You must leave the appendices enclosed in the appendices environment in order for the table of contents to be correct.
-	\begin{appendices}
+    % Add your appendices here. You must leave the appendices enclosed in the appendices environment in order for the table of contents to be correct.
+    \begin{appendices}
         \chapter{Participant Unique Identifier} \label{app:participant-id}
             \subfile{090-appendix/005-participant_id}
-		\chapter{Persona Validation and Creation} \label{app:persona_validation_creation}
+        \chapter{Persona Validation and Creation} \label{app:persona_validation_creation}
             \subfile{090-appendix/010-persona_validation_creation}
-		\chapter{Workshop Efficacy} \label{app:workshop_efficacy}
+        \chapter{Workshop Efficacy} \label{app:workshop_efficacy}
             \subfile{090-appendix/020-workshop_pre_post_long}
         \chapter{Assessment Study} \label{app:exercises}
             \subfile{090-appendix/030-exercises}
-	\end{appendices}
+    \end{appendices}
 
 \end{document}
 
@@ -216,19 +217,19 @@
 %    can refer back to sections, tables, figures, equations, etc.
 %    Usage \label{<prefix>:<label_name>} where some suggested
 %    prefixes are:
-%			ch: Chapter
-%     		se: Section
-%     		ss: Subsection
-%     		sss: Sub-subsection
-%			app: Appendix
-%     		ase: Appendix section
-%     		tab: Tables
-%     		fig: Figures
-%     		sfig: Sub-figures
-%     		eq: Equations
+%            ch: Chapter
+%             se: Section
+%             ss: Subsection
+%             sss: Sub-subsection
+%            app: Appendix
+%             ase: Appendix section
+%             tab: Tables
+%             fig: Figures
+%             sfig: Sub-figures
+%             eq: Equations
 %
 % 2. The VTthesis class provides for natbib citations. You should upload
-%	 one or more *.bib bibtex files. Suppose you have two bib files: some_refs.bib and
+%     one or more *.bib bibtex files. Suppose you have two bib files: some_refs.bib and
 %    other_refs.bib.  Then your bibliography line to include them
 %    will be:
 %      \bibliography{some_refs, other_refs}
@@ -248,66 +249,66 @@
 %    notice that we use booktabs formatting. You should not use vertical lines
 %    in your tables.
 %
-%				\begin{table}[htb]
-%					\centering
-%					\caption{Approximate computation times in hh:mm:ss for full order 						versus reduced order models.}
-%					\begin{tabular}{ccc}
-%						\toprule
-%						& \multicolumn{2}{c}{Computation Time}\\
-%						\cmidrule(r){2-3}
-%						$\overline{U}_{in}$ m/s & Full Model & ROM \\
-%						\midrule
-%						0.90 & 2:00:00 & 2:08:00\\
-%						0.88 & 2:00:00 & 0:00:03\\
-%						0.92 & 2:00:00 & 0:00:03\\
-%						\midrule
-%						Total & 6:00:00 & 2:08:06\\
-%						\bottomrule
-%					\end{tabular}
-%					\label{tab:time_rom}
-%				\end{table}
+%                \begin{table}[htb]
+%                    \centering
+%                    \caption{Approximate computation times in hh:mm:ss for full order                         versus reduced order models.}
+%                    \begin{tabular}{ccc}
+%                        \toprule
+%                        & \multicolumn{2}{c}{Computation Time}\\
+%                        \cmidrule(r){2-3}
+%                        $\overline{U}_{in}$ m/s & Full Model & ROM \\
+%                        \midrule
+%                        0.90 & 2:00:00 & 2:08:00\\
+%                        0.88 & 2:00:00 & 0:00:03\\
+%                        0.92 & 2:00:00 & 0:00:03\\
+%                        \midrule
+%                        Total & 6:00:00 & 2:08:06\\
+%                        \bottomrule
+%                    \end{tabular}
+%                    \label{tab:time_rom}
+%                \end{table}
 %
 % 4. Below are some sample figures. Notice the caption is centered below the
 %    figure.
 %    a. Single centered figure:
-%					\begin{figure}[htb]
-%						\centering
-%						\includegraphics[scale=0.5]{my_figure.eps}
-%						\caption{Average outlet velocity magnitude given an average
-%				        input velocity magnitude of 0.88 m/s.}
-%						\label{fig:output_rom}
-%					\end{figure}
+%                    \begin{figure}[htb]
+%                        \centering
+%                        \includegraphics[scale=0.5]{my_figure.eps}
+%                        \caption{Average outlet velocity magnitude given an average
+%                        input velocity magnitude of 0.88 m/s.}
+%                        \label{fig:output_rom}
+%                    \end{figure}
 %    b. Two by two grid of figures with subcaptions
-%					\begin{figure}[htb]
-%						\centering
-%						\begin{subfigure}[h]{0.45\textwidth}
-%							\centering
-%							\includegraphics[scale=0.4]{figure_1_1.eps}
-%							\caption{Subcaption number one}
-%							\label{sfig:first_subfig}
-%						\end{subfigure}
-%						\begin{subfigure}[h]{0.45\textwidth}
-%							\centering
-%							\includegraphics[scale=0.4]{figure_1_2.png}
-%							\caption{Subcaption number two}
-%							\label{sfig:second_subfig}
-%						\end{subfigure}
+%                    \begin{figure}[htb]
+%                        \centering
+%                        \begin{subfigure}[h]{0.45\textwidth}
+%                            \centering
+%                            \includegraphics[scale=0.4]{figure_1_1.eps}
+%                            \caption{Subcaption number one}
+%                            \label{sfig:first_subfig}
+%                        \end{subfigure}
+%                        \begin{subfigure}[h]{0.45\textwidth}
+%                            \centering
+%                            \includegraphics[scale=0.4]{figure_1_2.png}
+%                            \caption{Subcaption number two}
+%                            \label{sfig:second_subfig}
+%                        \end{subfigure}
 %
-%						\begin{subfigure}[h]{0.45\textwidth}
-%							\centering
-%							\includegraphics[scale=0.4]{figure_2_1.pdf}
-%							\caption{Subcaption number three}
-%							\label{sfig:third_subfig}
-%						\end{subfigure}
-%						\begin{subfigure}[h]{0.45\textwidth}
-%							\centering
-%							\includegraphics[scale=0.4]{figure_2_2.eps}
-%							\caption{Subcaption number four}
-%							\label{sfig:fourth_subfig}
-%						\end{subfigure}
-%						\caption{Here is my main caption describing the relationship between the 4 subimages}
-%						\label{fig:main_figure}
-%					\end{figure}
+%                        \begin{subfigure}[h]{0.45\textwidth}
+%                            \centering
+%                            \includegraphics[scale=0.4]{figure_2_1.pdf}
+%                            \caption{Subcaption number three}
+%                            \label{sfig:third_subfig}
+%                        \end{subfigure}
+%                        \begin{subfigure}[h]{0.45\textwidth}
+%                            \centering
+%                            \includegraphics[scale=0.4]{figure_2_2.eps}
+%                            \caption{Subcaption number four}
+%                            \label{sfig:fourth_subfig}
+%                        \end{subfigure}
+%                        \caption{Here is my main caption describing the relationship between the 4 subimages}
+%                        \label{fig:main_figure}
+%                    \end{figure}
 %
 %----------------------------------------------------------------------------
 %
