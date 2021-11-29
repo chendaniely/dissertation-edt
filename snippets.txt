@@ -20,3 +20,12 @@ Find:
 
 Replace:
 \\lstinline{$1}
+
+
+        \paragraph{asdf}
+
+            asdfasdf
+
+            \begin{itemize}
+
+            \end{itemize}
