@@ -13,19 +13,19 @@
     that shared a duplicate ID.
     Looking at the individual responses,
     it was determined that this particular set of IDs came from the same person.
-    Duplicate responses were backfilled for any missing values (i.e., coalesed),
+    Duplicate responses were back filled for any missing values (i.e., coalesced),
     and only the initial set of responses were kept for analysis.
     % from 03-pca_clustering saved to data/final/paper/num_obs_clustering.RDS
     57 complete observations % 03-pca_clustering.Rmd; uses data from validation
     were used for clustering.
 
     Items from exploratory factor analysis (EFA) grouped respondents
-    using hierrierical clustering with Euclidean distance and Ward's clustering method
+    using hierarchical clustering with Euclidean distance and Ward's clustering method
     to identify learner personas.
     Overall,
     we used the 3-factor model and the clustering results yielded 3 clusters for our personas.
 
-    \subsection{Survey Descriptives}
+    \subsection{Survey Study Participants}
 
         **** survey respondents self-reported their current occupation and career stage.
         These responses were further grouped into 3 overall occupations:
@@ -88,10 +88,10 @@
         (($p < 0.05$) and $\left|\rho\right| \ge 0.5$).
         Figure \ref{fig:persona-item-corr} shows the correlation matrix between all items.
         (only significant correlations are shown).
-        Items with a high correlation coefficient ($\left|\rho\right| \ge 0.5$) were candidcates to be selected for factor analysis.
+        Items with a high correlation coefficient ($\left|\rho\right| \ge 0.5$) were candidates to be selected for factor analysis.
         Item candidates that were both significant and highly correlated with at least 20\% of the other items were
         selected for factor analysis.
-        These parameters reducted the number of items for factor analysis,
+        These parameters reduced the number of items for factor analysis,
         while still keeping at least 1 item from each section of the survey.
 
         \begin{figure}[htb]
@@ -100,7 +100,7 @@
             \caption[Correlation matrix of persona items]
             {Correlation plot of all the items in the persona survey.
              Plot uses the same variable ordering as the clustering analysis,
-             hierarchial clustering with Euclidean distance using Ward's (ward.D2) clustering method.
+             hierarchical clustering with Euclidean distance using Ward's (ward.D2) clustering method.
              Only significant correlations are shown ($p < 0.05$).
              Items that had a high correlation coefficient ($\left|\rho\right| \ge 0.5$)
              were candidates to be used for factor analysis.
@@ -138,8 +138,9 @@
         Multiple factoring methods were tested using the 3-factor model,
         outside of the ML factoring method, the minimum chi-square (minchi) method had the lowest BIC score,
         and also had good cutoff values (TIL > 0.9, RMSEA < 0.08).
-        However we settled on a slighly lower fit model (TIL = 0.93, RMSEA = 0.09) using principal axis factoring (PA)
-        as it better suited our data (\ref{tab:all-good-3fa-varimax-models}).
+        However we settled on a slightly lower fit model (TIL = 0.93, RMSEA = 0.09) using principal axis factoring (PA)
+        as it better suited our data (Table \ref{tab:all-good-3fa-varimax-models})
+        \cite{arifinExploratoryFactorAnalysis2017}.
         % TODO mabe use oblimin rotation https://wnarifin.github.io/workshop/qvw2017/efa.pdf
         % TODO maybe keep the defualt score method
 
