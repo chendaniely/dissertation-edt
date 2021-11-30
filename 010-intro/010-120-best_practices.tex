@@ -60,26 +60,26 @@
         Tidy data principles are important because it feeds into the rest of the data science process
         \cite{wickhamTidyData2014, ccdsc2021, wickhamR4ds}.
         This dissertation creates the learning materials using a backwards design to keep the content focused
-        on its objective: teaching practicioners how to do data science in the biomedical sciences.
+        on its objective: teaching practitioners how to do data science in the biomedical sciences.
         The backwards design process begins with identifying learner personas (Section \ref{se:intro-personas}).
-        In it's simpliest from, the seven (7) steps for a backward design, adapted from ``Teaching Tech Together'' are
+        In its simplest form, the seven (7) steps for a backward design, adapted from ``Teaching Tech Together'' are
         \cite{wilson2019teaching}:
 
         \begin{enumerate}[label=\textbf{L.\arabic*}]
             \item \label{enum:persona} Create or recycle learner personas (Section \ref{se:intro-personas})
-                  to figure out who you are trying to help adn what will appeal to them.
+                  to figure out who you are trying to help and what will appeal to them.
             \item \label{enum:brainstorm} Brainstorm to get a rough idea of what you want to cover,
                   how you're goign to do it,
                   what problems or misconceptions you expect to encounter,
-                  what's \emph{not} going to to be included, and so on.
+                  what's \emph{not} going to to be included, and so on (Section \ref{sse:concept-maps}).
                   Drawing concept maps can help a lot at this stage.
             \item \label{enum:summative} Create a summative assessment to define your overall goal.
                   This can be the final exam for a course or the capstone project for a one-day workshop;
                   regardless of its form or size, it shows how far you hope to get more clearly than a point-form list of objectives.
-            \item \label{enum:formative} Create formative assessments that will give people a chance to practice the things you're learning.
-                  These will also tell you (and them) whether they're making progress and where they need to focus their attention.
-                  The besst way to do this is to itemize the knowlege and skills used in the summative assessment you developed in the previous step
-                  and then create at least one formative assessmnet for each.
+            \item \label{enum:formative} Create formative assessments that will give people a chance to practice the things you're [sic] learning.
+                  These will also tell you (and them) whether they're [sic] making progress and where they need to focus their attention.
+                  The besst way to do this is to itemize the knowledge and skills used in the summative assessment you developed in the previous step
+                  and then create at least one formative assessment for each.
             \item \label{enum:outline} Order the formative assessments to create a course outline based on
                   their complexity, their dependencies, and how well topics will motivate your learners.
             \item \label{enum:content} Write material to get learners from one formative assessment to the next.
@@ -126,7 +126,7 @@
         long-term memory (LTM) stores knowledge,
         short-term memory (STM) stores information, and
         working memory (WM) is the processing power.
-        These concepts are not just specific to learning, but apply to all cognitive activities
+        These concepts are not just specific to learning but apply to all cognitive activities
         \cite{hermansProgrammerBrain2021}.
         For novices, because they lack the necessary density of connections and knowledge (LTM),
         each new bit of information (STM) requires more processing power (WM).
@@ -138,22 +138,80 @@
         which means lessons need to be curated and presented to lower learner's cognitive load.
         Concept maps are just one tool that can be used to plan how much cognitive load a learner may be experiencing.
 
-        The backwards design apprach used in this dissertation ended up with meeting learner's where they are,
+        The backwards design approach used in this dissertation ended up with meeting learner's where they are,
         spreadsheet applications like Excel.
         This because the starting point for the learning materials by exploring common issues people encounter while
         working with spreadsheets, and how to avoid them
         \cite{bromanDataOrganizationSpreadsheets2018}.
         The lessons here start with a common starting point to introduce tidy data concepts so by
-        the time the acual lesson on tidy data comes up,
-        enough of the rational, need, and concepts of tidy data have already been covered,
+        the time the actual lesson on tidy data comes up,
+        enough of the rationale, need, and concepts of tidy data have already been covered,
         just not explicitly until that point.
 
 
         \subsubsection{Learning Objectives, Formative Assessment, and Summative Assessments}
+        % points to cover here
+        % \item \label{enum:summative} Create a summative assessment to define your overall goal.
+        % This can be the final exam for a course or the capstone project for a one-day workshop;
+        % regardless of its form or size, it shows how far you hope to get more clearly than a point-form list of objectives.
+        % \item \label{enum:formative} Create formative assessments that will give people a chance to practice the things you're learning.
+        % These will also tell you (and them) whether they're making progress and where they need to focus their attention.
+        % The besst way to do this is to itemize the knowlege and skills used in the summative assessment you developed in the previous step
+        % and then create at least one formative assessmnet for each.
 
+        After planning out the general concepts with a concept map (or similar task deconstruction process),
+        operationalizing and creating measures for whether or not concepts are being learned are the next
+        steps in a backwards design process for curriculum building
+        \cite{wilson2019teaching}.
+        The notion of whether or not a set of learning materials being ``effective'' is vaugue.
+        Learning objectives are explicit, measurable, actions that are student-centered
+        \cite{ambrose2010learning}.
+        They articulate the lessons' intensions to learners for them to direct learning efforts,
+        and provide a framework to organize lesson content and assessments to the instructor.
+
+        The measurable verbs that are used for learning objectives typically come from Bloom's Taxonomy
+        \cite{ambrose2010learning, wilson2019teaching, anderson2001taxonomy}.
+        The taxonomy is a popular framework that was originally published in 1956 and updated in 2001
+        as a framework for understanding that is often depicted as a pyramid
+        \cite{bloomTaxonomyEducationalObjectives1956, anderson2001taxonomy}.
+        The pyramid representation makes each part of the taxonomy seem as discrete steps part of a hierarchy
+        and cause issues with how to classify specific objectives
+        \cite{masapanta-carrionSystematicReviewUse2018}.
+        Daniel Willingham's diagram represents Bloom's taxonomy with knowledge as its foundational base,
+        with the other terms on top of ``knowledge'' without any heirarchy
+        \cite{DonaldClarkPlan2020}.
+        Fink's Taxonomy of Significant learning is another set of terms that looks at learning objectives as a complemetary
+        evolution of change and is typically represented in a non hierrerical manner
+        \cite{finkCreatingSignificantLearning2013}.
+
+        Regardless of how the learning frameworks are depicted,
+        they are still useful for creating explicit, measurable, student-centered actions
+        \cite{wilson2019teaching, ambrose2010learning}.
+        Because learning objectives are measureable, they lead to creading assessments that can guague
+        how much of the material has been retained by the leariner.
+        There are two (2) main froms of assessments, formative and summative.
+        Formative assessments are relatively quick and low-stakes questions that are presented to the learner
+        during the time of instruction.
+        These are typically represented as ``clicker'' questions, homework assignments, or questions asked in the middle of a lecture,
+        and are typically focused on a few concepts.
+        The goal of formative assessment questions is to provide both the instructor and learner
+        feedback about what needs to bo reviewed and focused on.
+        Summative assessments, on the other hand, are relatively longer and higher-stakes questions that are presented
+        to the learner at the end of an insturction period.
+        These are typically mid-term examinations, final examinations, or final projects
+        that encompass multiple topics and require the learner to consolotate what they have learned to answer the question.
+
+        In creating domain-specific data science learning materials for the biomedical sciences,
+        after identifing learner personas and core concepts that need to be taught,
+        this dissertation creates a set of learning objectives and a summative assessment question
+        and uses a backward design to plan out the learning materials with three (3) to five (5)
+        formative assessment questions roughly every instructional hour
+        \cite{wilson2019teaching}.
 
 
     \subsection{Engaging Learners for Active Learning}
+
+        Keeping learners enguaged and motivated
 
         \subsubsection{Formative Assessment}
 
