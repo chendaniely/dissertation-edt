@@ -197,7 +197,11 @@ before applying it to educational contexts
 
     \begin{table}[ht]
         \centering
-        \caption[Personas vs Learner Personas]{Personas vs Learner Personas}
+        \caption[Personas vs Learner Personas]{
+            How learners can be the ``user'' in product (i.e., lessson) design.
+            The personas column are reprocued from \citet{pruittPersonaLifecycleKeeping2006}
+            were corresponding list for learner personas were adapted from.
+        }
         \begin{tabular}{p{0.45\linewidth} | p{0.45\linewidth}}
             \hline
             Personas                                                                                         & Learner Personas                                                                           \\
@@ -211,10 +215,19 @@ before applying it to educational contexts
         \label{tab:persona-comparison}
     \end{table}
 
-    Creating learner personas is not a new topic in computing education.
-    Also, in data science education, there have also been personas created
-    What is lacking in the
-
+    Creating learner personas is not a new concept in education.
+    They have been created for teachers to identify what kind of professional development needs they have
+    (Figure \ref{fig:teaching-personas}) \cite{zagallo2019through},
+    and in industry to identify the kinds of learning resources and documentation
+    are needed to better use their products
+    (Figure \ref{fig:rstudio-learner-personas}) \cite{RStudio2019}.
+    The personas created by The Carpentries \cite{softwarecarpentryLearnerProfiles} and RStudio, PBC \cite{RStudio2019},
+    include ones that are looking for data science training.
+    What is lacking are explicit personas for specific domains.
+    This can help identify common knowledge bases to better curate learning materials
+    (Section \ref{se:intro-teaching-best-practices-ds}),
+    and also serve as marketing and outreach materials to help learners find resources
+    \cite{wilson2019teaching}.
 
     \begin{figure}[htb]
         \centering
@@ -222,6 +235,16 @@ before applying it to educational contexts
         \caption[RStudio Learner Personas]{
         Learner personas}
         \label{fig:rstudio-learner-personas}
+    \end{figure}
+
+    \begin{figure}[htb]
+        \centering
+        \includegraphics[width=\textwidth]{050-intro/zagallo-2019--fig_2.jpeg}
+        \caption[Teaching Personas Reproduced from \citet{zagallo2019through}]{
+        Teaching personas produced by \citet{zagallo2019through}.
+        These show the 4 personas created looking at professionaal development needs for teachers.
+        }
+        \label{fig:teaching-personas}
     \end{figure}
 
 
