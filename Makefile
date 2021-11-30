@@ -39,3 +39,9 @@ push:
 	git push leaf main:master
 	git log --oneline --graph --all -n 10
 
+
+## fetch    : fetch remotes origin + leaf
+fetch:
+	git fetch --all --prune
+	git log --oneline --graph --all -n 10
+
