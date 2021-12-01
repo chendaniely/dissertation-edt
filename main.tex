@@ -14,6 +14,7 @@
 
 \RequirePackage[final]{graphicx} % the do before documentclass and final makes the image show up in draft mode
 \documentclass[doublespace,draft,nopageskip]{VTthesis} % nopageskip - Removes arbitrary blank pages.
+%\documentclass[doublespace,final,nopageskip]{VTthesis} % nopageskip - Removes arbitrary blank pages.
 
 \usepackage{amsmath, amssymb}
 
@@ -22,7 +23,7 @@
 \usepackage{nomencl}  % for nomenclature
 \makenomenclature
 
-%\usepackage[]{graphicx} % if you set final here you'll get option clash error
+%\usepackage{graphicx} % if you set final here you'll get option clash error
 \usepackage{multirow} % for subfigure
 \usepackage{hyperref}
 \usepackage{subfiles}
@@ -75,13 +76,13 @@
 %\fifthreader{Fifth Committee Member}
 
 % The dedication and acknowledgment pages are optional. Comment them out to remove them.
-% TODO: FILL THIS OUT, commenting out for now
 %\dedication{This is where you put your dedications.}
 %\acknowledge{This is where you put your acknowledgments.}
+\dedication{}
+\acknowledge{}
 
 % The abstract is required.
-\abstract{
-    This dissertation explores
+\abstract{This dissertation explores
     creating a set of domain-specific learning materials for the biomedical sciences
     to meet the the educational gap in biomedical informatics,
     while also meeting the call for statisticians advocating for process improvements in other disciplines.
@@ -113,8 +114,7 @@
 }
 
 % The general audience abstract is required. There are currently no word limits.
-\abstractgenaud{
-    Regardless of the field and domain you are in, we are all
+\abstractgenaud{ Regardless of the field and domain you are in, we are all
     inundated with data. The more agency we can give individuals to work with data,
     the better equipped they will be to bring their own expertise to complex
     problems and work in multidisciplinary teams. There already exists a plethora
@@ -147,6 +147,8 @@
     and improve patient outcomes.
 }
 
+\pagenumbering{roman}
+
 \begin{document}
 % The following lines set up the front matter of your thesis or dissertation and are required to ensure proper formatting per the VT ETD standards.
   \frontmatter
@@ -160,7 +162,7 @@
     \subfile{005-frontmatter/050-abbreviations}
 
 % The following sets up the document for the main part of the thesis or dissertation. Do not comment out or remove this line.
-    \mainmatter
+	\mainmatter
 
     %now go ahead and start writing your thesis
     \chapter{Introduction}
@@ -251,7 +253,7 @@
 %
 %                \begin{table}[htb]
 %                    \centering
-%                    \caption{Approximate computation times in hh:mm:ss for full order                         versus reduced order models.}
+%                    \caption{Approximate computation times in hh:mm:ss for full order versus reduced order models.}
 %                    \begin{tabular}{ccc}
 %                        \toprule
 %                        & \multicolumn{2}{c}{Computation Time}\\
