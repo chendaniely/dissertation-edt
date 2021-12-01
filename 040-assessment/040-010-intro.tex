@@ -11,32 +11,74 @@ concrete tasks and goals learners are expected to meet at the end of teaching in
 The benefit of creating learning objectives is they are able to be measured and assessed.
 These assessments can be used to gauge the efficacy of a lesson.
 
-\subsection{Assessments}
+\subsection{Mental Models and Cognitive Load}
 
-    Assessments come in 2 main forms: formative and summative.
-    Formative assessments are the exercises students do during the course of instruction
-    in order to monitor student learning
-    \cite{universityFormativeVsSummative, wilson2019teaching}.
-    They can interweave within a single instructional period (e.g., clicker type questions),
-    or between instructional periods (e.g., quizzes, homework assignments).
-    The main goal of formative assessments is to keep the learner engaged with the learning materials,
-    and for both the instructor and learner to gauge learning by identifying areas that have not been grasped by the
-    learner or areas that need more review.
-    Formative assessments are typically low-stakes and given out frequently so the instructor
-    can get an accurate gauge of how well the learners are doing
-    \cite{universityFormativeVsSummative, wilson2019teaching}.
+The Dreyfus model of skill acqusition describes how competency is acquired from
+novies to expert practitioner
+\cite{dreyfus1980five, bennerUsingDreyfusModel2004}.
+Mental models are one way the bits of knowledge are connected together,
+with novices having a lower number of nodes and connections compared to the
+density of connections in expert practitioners.
+Mental models can be represented physcially as concept map diagrams
+\cite{Koch2016, wilson2019teaching}..
+Learner's existing mental models represent existing knowledge in their long-term memory (LTM).
+When teaching new concepts,
+more nodes are added to the model model of the learner.
+Before these new nodes can be solidified, they are stored in working memory (WM)
+before transitioning into short-term memory (STM) and LTM.
+\cite{Koch2016, hermansProgrammerBrain2021, wilson2019teaching}.
 
-    In contrast, summative assessments are given at the end of an instructional period
-    to evaluate student learning
-    \cite{universityFormativeVsSummative, wilson2019teaching}.
-    These types of assessments are the ``summation'' of multiple topics and can be given
-    during a course of instruction (e.g., midterm exam)
-    or towards the end of a course of instruction (e.g., final exam, thesis paper).
-    Summative assessments are typically high-stakes and
-    are used to gauge whether or not learners met learning objectives or
-    prerequisite knowledge for subsequent courses or lessons
-    \cite{universityFormativeVsSummative, wilson2019teaching}.
+Understanding how memory works in the context of teaching
+helps determine the amount of information presented.
+For novices, because they lack the necessary density of connections and knowledge (LTM),
+each new bit of information (STM) requires more processing power (WM).
+Concept maps help plan how much working memory and short-term memory learners are using during a lesson,
+and lessons should follow George Miller's $7\pm2$ rule of how many items people can store in their STM
+\cite{miller1956magical}.
+More recent research suggests that the STM is even smaller, two (2) to six (6) items
+\cite{hermansProgrammerBrain2021},
+or $4\pm1$ \cite{didauWhatEveryTeacher2016}.
 
-\subsection{Learning Objectives}
+\subsection{Assessments and Learning Objectives}
+
+One of the steps in planning out a lesson using a backward design is creating the assessment questions.
+Assessments come in 2 main forms: formative and summative.
+Formative assessments are the exercises students do during the course of instruction
+in order to monitor student learning
+\cite{universityFormativeVsSummative, wilson2019teaching}.
+They can interweave within a single instructional period (e.g., clicker type questions),
+or between instructional periods (e.g., quizzes, homework assignments).
+The main goal of formative assessments is to keep the learner engaged with the learning materials,
+and for both the instructor and learner to gauge learning by identifying areas that have not been grasped by the
+learner or areas that need more review.
+Formative assessments are typically low-stakes and given out frequently so the instructor
+can get an accurate gauge of how well the learners are doing
+\cite{universityFormativeVsSummative, wilson2019teaching}.
+
+In contrast, summative assessments are given at the end of an instructional period
+to evaluate student learning
+\cite{universityFormativeVsSummative, wilson2019teaching}.
+These types of assessments are the ``summation'' of multiple topics and can be given
+during a course of instruction (e.g., midterm exam)
+or towards the end of a course of instruction (e.g., final exam, thesis paper).
+Summative assessments are typically high-stakes and
+are used to gauge whether or not learners met learning objectives or
+prerequisite knowledge for subsequent courses or lessons
+\cite{universityFormativeVsSummative, wilson2019teaching}.
+
+When designing assessment questions, there are many differnt ways questions can be formated.
+Two that we explore the use of faded examples (i.e., fill in the blanks)
+and their performance to a ``blank'' problem.
+Faded exmaples are code questions with the solution partially removed (i.e., components faded out)
+and require the user to fill in the missing components to solve the question.
+This type of question focuses the learner on what is important about the question,
+and allows the instructor to lower the cognitive load of a question by filling in
+extraneous parts of the solution (e.g., function input parameters).
+This study then looks at time-to-completion and solution correctness
+when faded examples are compared to a regular question without pre-populated solutions,
+with and without an auto-code grader that can parse out the code submission and
+tell the student where
+exactly in their submission does not match the solution,
+instead of a binary correct-incorrect response.
 
 \end{document}
