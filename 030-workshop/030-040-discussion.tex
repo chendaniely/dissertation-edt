@@ -6,7 +6,7 @@
     The attrition through each step of the study means we need to roughly run ****
     workshops and reach about **** individuals to get enough power for our study.
     The work we presented in this study serves as a baseline set of values for future research.
-    The surveys and data are published so future researchers can exapand and combine their
+    The surveys and data are published so future researchers can expand and combine their
     data with this study.
 
     \subsection{Limitations}
@@ -22,24 +22,24 @@
         The lesson materials were created using learner personas.
         While, not directly measured in the initial persona survey,
         thinking about learner's special considerations helped make the materials
-        more accessiable,
+        more accessible,
         and has helped with improving the greater open-access set of materials.
 
         The learner personas guided the creation of the lesson content.
         Tidy data concepts were a core part of the lesson materials.
         Using a backwards design approach,
         The spreadsheet lesson was created to indirectly introduce tidy data concepts.
-        The concepts in this lesson were used throught all of the lesson materials.
+        The concepts in this lesson were used through all of the lesson materials.
         By starting from spreadsheets,
         the learners are presented with a data workflow that they are most familiar with.
         This transitioned into eventually loading an Excel dataset as one of the initial programming commands.
 
         However, before learners are able to load data into a programming language,
-        they needed to understand where files are on thier computers.
-        These concepts even pertain to younger audiances,
-        since operating systems have conflaited cloud storage with local storage,
-        and younger generations typically do not have an understaning of how files are stored on their computers
-        when compared those who leanred computer skills in the 90s and 00s. % TODO find that verge article
+        they needed to understand where files are on their computers.
+        These concepts even pertain to younger audiences,
+        since operating systems have conflated cloud storage with local storage,
+        and younger generations typically do not have an understanding of how files are stored on their computers
+        when compared those who learned computer skills in the 90s and 00s. % TODO find that verge article
         A separate lesson was created on project structures, working directories, and file paths
         so all learners can load up a dataset from the lesson, and potentially their own work.
 
@@ -54,7 +54,7 @@
         Not all programming libraries will have the ability to load up the same datasets from installing external packages.
         This also guided the lessons to show manually loading data as one of the first programming lessons.
         The lesson then goes into inspecting data, rather than going directly into plotting.
-        This gives us the foundation of understaning how to make summary statistics which can be visualized later.
+        This gives us the foundation of understanding how to make summary statistics which can be visualized later.
 
         Since the individual lessons are modular, these lessons can be re-arranged as needed.
         The current arrangement of
@@ -64,53 +64,53 @@
         (4) load data,
         (5) descriptive statistics
         takes about 2.5 hours to complete teaching.
-        Each of the remining topics in:
+        Each of the remaining topics in:
         (6) tidy data,
         (7) visualization, and
         (8) logistic regression
         takes about an hour to complete.
-        The currently presented order can be used for conference workshop blocks as is or with minor tweeks (usually 3 to 4 hours minimum).
+        The currently presented order can be used for conference workshop blocks as is or with minor tweaks (usually 3 to 4 hours minimum).
         This leaves statistics to be the last topic covered, and first topic to be cut out if more time is needed.
 
         \subsubsection{Aspects of Our Work Confirm Existing Bodies of Work.}
 
             The R for Data Science book is commonly referenced for new R learners.
-            This book places data visualization as the first main topic as a means to attrack learners and keep them movivated.
-            From there, the book slowly introduces workflow steps, and basic data transformation and explroatory data analysis
+            This book places data visualization as the first main topic as a means to attract learners and keep them motivated.
+            From there, the book slowly introduces workflow steps, and basic data transformation and exploratory data analysis
             steps using visualization as the guiding aid.
             The first part of the book ends with project workflow, where they talk about files and paths to load data.
             The ds4biomed materials are catered towards working practitioners that may be self-learning or participating in a workshop,
-            the visulization steps are defered inlieu of getting existing data loaded into the programming language.
+            the visualization steps are deferred in lieu of getting existing data loaded into the programming language.
 
             The Data Carpentry materials typically begin with lessons on spreadsheet and workflow management.
-            Since Data Carpentry lessons are organized by curriculumn domains,
+            Since Data Carpentry lessons are organized by curriculum domains,
             more domain-specific methods and techniques are presented.
             The ds4biomed follows the Data Carpentry ordering by providing a foundation on structuring data.
 
     \subsection{Data Science Lessons Differ from Computer Science Lessons}
 
-        The initial usecase of loading and workign with data makes teaching data science different from computer science classes.
-        Computer science is primiarly focused on the algorithims and implementation of ***** around basic data structures,
+        The initial use case of loading and working with data makes teaching data science different from computer science classes.
+        Computer science is primarily focused on the algorithms and implementation of ***** around basic data structures,
         data science typically work around the higher-order ``dataframe'' object.
         The implementation and internals of dataframes are typically not needed by novices,
-        and focsing on more data literacy convepts is a more direct need for data scienctists.
+        and focusing on more data literacy concepts is a more direct need for data scientists.
 
         Many concepts that are taught in introductory computer science classes will eventually be learned by novice data scientists,
         but framing many data manipulation steps around tidy data principles can circumvent
-        teaching topics like loops until much later when programatically curating data is needed.
-        Even knowing how to write functions can be delated in teaching data science topics.
+        teaching topics like loops until much later when pragmatically curating data is needed.
+        Even knowing how to write functions can be delayed in teaching data science topics.
         The ds4biomed materials does not cover functions until much later in the learning materials.
 
     \subsection{Intermediate Materials will be difficult to plan}
 
         Many of the core learning objectives related to tidy data principles can be relatively mapped out.
-        However, intermediate level materials may be harder to cater to broad and domain-specific audiances.
-        Even specific domains have subfields with their separate analysis needs.
+        However, intermediate level materials may be harder to cater to broad and domain-specific audiences.
+        Even specific domains have sub-fields with their separate analysis needs.
         In the biomedical sciences, informatics needs will differ from hospital billing needs.
         The tools, methods, and analysis techniques will begin to diverge, which make planning
         cohesive materials more difficult.
 
-        The Carpentries have apprached this problem by creating separate Data Carpentry curriculums.
+        The Carpentries have approached this problem by creating separate Data Carpentry curriculum.
         This allows common materials to be taught while proving lessons for specific techniques.
         After the core data programming skills are learned,
         learning and applying a different method should become much easier for learners.
@@ -118,7 +118,137 @@
 
     \subsection{Long-Term Practice is important}
 
-    ``
+        The longitudinal survey results show that there is an increase in confidence to complete certain data science tasks,
+        but the confidence wanes down to pre-workshop levels several months after the workshop.
+        Future adaptations of the long-term survey should ask more about programming usage to get a better understanding
+        of why long-term confidence in skills decreased.
+        One hypothesis is the skills taught at the workshop were not being used.
+        Since our target audience are working professionals,
+        this can be explained as not having the time to use the data science skills they were taught.
+        Another possibility is that the skills taught were not relevant for the kind of work they wanted to do.
+
+        Another hypothesis stems from unable to acquire data to explore.
+        Health data is generally highly protected and regulated.
+        Researchers and clinicians may not have the means to immediately work on a research project with medical data.
+
+    \subsubsection{Expanding ds4biomed Content}
+
+        Having example problems to work on is the best way to retain information and learn new skills.
+        The ds4biomed materials expanded beyond the content used in this study.
+        Later chapters went into more case-study based lessons with a main topic:
+        (1) 30-day re-admittance;
+        (2) working with multiple datasets;
+        (3) application programming interfaces (APIs);
+        (4) functions;
+        (5) survival analysis;
+        (6) machine learning.
+
+        The 30-day re-admittance mostly deals with the same selecting, filtering, and mutating columns
+        from the first programming chapter.
+        It builds on these same skills by introducing date columns and how to perform basic date arithmetic
+        to find patients in the SynThea dataset which had a 30-day re-admittance to the emergency department for a heart attack.
+        It asked the learners to explore more of the data to discover how to filter down the dataset for the problem.
+
+        The following lesson takes the results from 30-day re-admittance and combines the encounters dataset with
+        patient level information to look at age of heart-attack admittance to the emergency room.
+        This required knowledge on how to join and combine datasets on ``primary keys'',
+        a term used in databases that points to an ID column or columns that point to a unique observation.
+        Since hospitals store data in databases, and not flat Excel or CSV files,
+        we use this opportunity to show how concepts from the previous lessons translate into database querying,
+        and how to query data into a dataframe object.
+
+        We then go into APIs by using the US Census API to download census data and combine it with
+        leading causes of death data in the United States to calculate death rates.
+        This builds on the joining lesson from earlier,
+        but also teaches how rates always have a time factor involved (e.g., deaths over the last year),
+        how rates are calculated with a reference population,
+        and how rates with different reference populations cannot be adequately compared.
+
+        The functions chapter introduces string methods and how users can re-code values.
+        This reinforces tidy data principles by making sure only a variables are stored in one column.
+        The example shows how to prototype a representative example from the data,
+        how to test (i.e., unit test) the function's behavior to make it more robust to accidental changes,
+        and how to apply a function to a column of varibles.
+        If the dataset was not tidy,
+        apply a function to process data in a column would be more difficult.
+
+        The final two (2) examples are more statistics related.
+        The lesson materials shifts to understanding how to interpret statistical models.
+        Survival analysis is a common tool used to look at the efficacy between a treatment group and control group.
+        The lesson mainly works by loading a dataset that has been processed to perform this analysis,
+        and was more concerned about how to create Kaplan-Meier curves, and how to interpret survival models.
+        We finish off the lesson materials with a discussion about machine learning,
+        and defined machine learning as the process primarily focused on creating predictive models,
+        and not inferential models.
+        The lesson uses the same logistic regression model,
+        but introduces more machine learning concepts, such as training and testing data splits.
+        This is the process where users can simulate new data and compare how different models are able to predict data it was not trained (i.e., fitted) on.
+        Here we emphasize the importance of having a workflow that works on training and testing data separately,
+        and how data leakage can artificially boost the performance of a model.
+        We introduce many of the concepts that would be covered in a machine learning class,
+        but only focus on a single case-study.
+        This allows the materials to be more focused,
+        while being able to cover the main points.
+
+    \subsubsection{Work on Relevant Problems Solidify skills}
+
+        The results from the long-term study suggest that what may be more important is to have
+        more case-study problems that reinforces concepts from the introductory materials.
+        The second set of ds4biomed materials cover many of the core data science components.
+        What can be beneficial is to have more worked out examples that can be posed as problems.
+        Future workshops would spend more time working through these problems and can even be presented
+        where all participants work asynchronously.
+        Having relevant examples will motivate learning.
+
+
+    \subsection{Communities of Practice}
+
+        The Synthea project used in ds4biomed provide one mechanism to explore and practice working with health datasets.
+        Another resource is the the Observational Health Data Sciences and Informatics (OHDSI).
+        Leveraging these data sources can provide new examples for long-term learning.
+        The other challenge is finding a cohort of learners who are at roughly the same learning level to learn together.
+        For example, r4ds has an online slack learning community,
+        there are other communities that use slack where users can ask for help.
+        The Carpentries provide a mechanism through the curriculum development program to host similar learning materials together.
+        The organization also follows many of the best teaching practices that can help with scaling the maintenance and
+        teaching of domain-specific data science materials.
+        They already do so for ecology, genomics, social sciences, and geospatial data.
+        The medical and biomedical sciences could also be a curriculum program by using the ds4biomed materials as the introduction
+        for other lessons.
+        This feeds into the transdisciplinary approach of looking at health, One Health.
+        Another growing community in this space is the r/pharma and r/medicine groups where core learning materials
+        can be centralized.
+
+        One of the main benefits of The Carpentries is they are already a globally and funding agency recognized organization.
+        Lesson materials can be maintained by multiple people, and there are mechanisms to recruit new maintainers.
+        The lessons are also hosted openly and not bound to proprietary services.
+        This prevents the lesson from going stale after its initial conception,
+        which is usually the cause to re-create the same materials over.
+
+    \subsection{Conclusion}
+
+        The ds4biomed materials serve as a strong foundation for a data science curriculum in the biomedical sciences.
+        The methodologies used to create the learning materials can be applied to other domains.
+        Data sets can be swapped out to make the examples more relevant,
+        but the learning objectives would remain the same.
+        This study does not indent to create a completely self-contained lesson curriculum,
+        rather it serves as a foundation and hopes to link to already exiting materials for continuing education.
+        However, what may be more important for long-term learning
+        is to link to external learning resources but provide a series of case-study questions
+        where learners can continuously practice and improve on their data science skills.
+
+\end{document}
+
+[@shortliffe1993adolescence] The creation of this kind of infrastructure will
+require vision and resources from leaders who realize that the practice of
+medicine is inherently an information-management task and that biomedicine must
+make the same kind of coordinated commitment to computing technologies as have
+other segments of our society in which the importance of information management
+is well understood.
+As more data gets used in medicine,
+
+
+add to {Long-Term Practice is important} section
 
     Finding 6: Our community must be mindful of existing cores and services and determine how to leverage to infrastructures, rather than re-invent them, and therefore, reduce economies of scale.
 
@@ -145,133 +275,3 @@
         \cite{payneBiomedicalInformaticsMeets2018}
         NSF, PCORI, AHRQ, Foundations, Corporations, etc.
         BMI: biomedical informatics; DS: data science; NLM: National Library of Medicine; NIH: National Institutes of Health; NSF: National Science Foundation; PCORI: Patient Centered Outcomes Research Institute; AHRQ: Agency for Healthcare Research and Quality.
-
-        The longitudinal survey results show that there is an increase in confidence to complete certain data science tasks,
-        but the confidence wanes down to pre-workshop levels several months after the workshop.
-        Future adaptations of the long-term survey should ask more about programming useage to get a better understaning
-        of why long-term confidence in skills decreased.
-        One hypothesis is the skills taught at the workshop were not being used.
-        Since our target audiance are working professionals,
-        this can be explained as not having the time to use the data science skills they were taught.
-        Another possibility is that the skills taught were not relevant for the kind of work they wanted to do.
-
-        Another hypothesis stems from unable to acquire data to explore.
-        Health data is generally highly protected and regulared.
-        Researchers and clinicians may not have the means to immediately work on a research project with medical data.
-
-        \subsection{Expanding ds4biomed Content}
-
-            Having example problems to work on is the best way to retain information and learn new skills.
-            The ds4biomed materials expanded beyond the content used in this study.
-            Later chapters went into more case-study based lessons with a main topic:
-            (1) 30-day readmittance;
-            (2) working with multiple datasets;
-            (3) application programming interfaces (APIs);
-            (4) functions;
-            (5) survival analysis;
-            (6) machine learning.
-
-            The 30-day readmittance mostly deals with the same selecting, filtering, and mutating columns
-            from the first programing chapter.
-            It builds on these same skills by introding date columns and how to perform basic date arithmetic
-            to find patients in the SynThea dataset which had a 30-day reaitance to the emergency departmeent for a heart attack.
-            It asked the learners to explore more of the data to discover how to filter down the dataset for the problem.
-
-            The following lesson takes the results from 30-day readmittance and combines the encounters dataset with
-            patient level information to look at age of heart-attack admittance to the emergency room.
-            This required knowledge on how to join and combine datasets on ``primiary keys'',
-            a term used in databases that points to an ID column or columns that point to a unique observation.
-            Since hospitals store data in databases, and not flat Excel or CSV files,
-            we use this opportunity to show how concepts from the presious lessons translate into database querrying,
-            and how to querry data into a dataframe object.
-
-            We then go into APIs by using the US Census API to download census data and combine it with
-            leading causes of death data in the United States to calculate death rates.
-            This builds on the joining lesson from earler,
-            but also teaches how rates always have a time factor involved (e.g., deaths over the last year),
-            how rates are calculated with a reference population,
-            and how rates with different reference populations cannot be adequately compared.
-
-            The functions chapter introduces string methods and how users can write custeom code to
-            recode values.
-            This reinforces tidy data principles by making sure only a variables are stored in one column.
-            The example shows how to prototype a representative example from the data,
-            how to test (i.e., unit test) the function's behavior to make it more robust to accidential changes,
-            and how to apply a function to a column of varibles.
-            If the dataset was not tidy,
-            apply a funtion to provess data in a column would be more difficult.
-
-            The final two (2) examples are more statistics realated.
-            The lesson materials shifts to understanging how to interpret statistical models.
-            Survival analysis is a common tool used to look at the effacty between a treatment group and control group.
-            The lesson mainly works by loading a dataset that has been processed to perform this analysis,
-            and was more concerned about how to create kablin myer curves, and how to interpret survival models.
-            We finish off the lesson materials with a discussion about machine learning,
-            and defind machine learning as the process primiarly focused on creating predictive models,
-            and not inferential models.
-            The lesson uses the same logistic regression mdoel,
-            but introduces more machine learning concepts, such as training and testing data splits.
-            This is the process where users can simulate new data and compare how different models are able to predict data it was not trained (i.e., fitted) on.
-            Here we emphasize the importance of having a workflow that works on training and testing data separately,
-            and how data leakage can artifically boost the performance of a model.
-            We introduce many of the concepts that would be covered in a machine learning class,
-            but only focus on a single case-study.
-            This allows the materials to be more focused,
-            while being able to cover the main points.
-
-        \subsection{Work on Relevant Problems Solidify skills}
-
-            The results from the long-term study suggest that what may be more imporant is to have
-            more case-study problems that reinforces concepts from the introductory materials.
-            The second set of ds4biomed materials cover many of the core data science components.
-            What can be beneficial is to have more worked out examples that can be posed as problems.
-            Future workshops would spend more time working through these problems and can even be presented
-            where all participants work asynchronously.
-            Having relevant examples will motivate learning.
-
-
-    \subsection{Communities of Practice}
-
-        The Synthea project used in ds4biomed provide one mechanism to explore and practice working with healh datasets.
-        Another resource is the the Observational Health Data Sciences and Informatics (OHDSI).
-        Leveraging these data sources can provide new examples for long-term learning.
-        The other challenge is finding a cohort of learners who are at roughly the same learning level to learn together.
-        For example, r4ds has an online slack learning community,
-        there are other communities that use slack where users can ask for help.
-        The Carpentries provide a mechanism through the curriculumn development program to host similar learning materials together.
-        The organization also follows many of the best teaching practices that can help with scaling the maintence and
-        teaching of domin-specific data science materilas.
-        They already do so for ecology, genomics, social sciences, and geospatial data.
-        The medical and biomedical sciences could also be a curriculumn program by using the ds4biomed materials as the introduction
-        for other lessons.
-        This feeds into the transdisciplinary aprocah of looiking at health, One Health.
-        Another growing community in this space is the r/pharma and r/medicine groups where core learning materials
-        can be centeerialized.
-
-        One of the main benefits of The Carpentries is they are already a globally and funcing agency recoghzed organization.
-        Lesson materials can be maintained by multiple people, and there are mechanisms to recrtuit new maintiners.
-        The lessons are also hosted openly and not bound to priprioraty services.
-        This prevents the lesson from going stale after its initial conception,
-        which is ususly the cause to re-create the same materials over.
-
-    \subsection{Conclusion}
-
-        The ds4biomed materials serve as a strong foundation for a data science curriculm in the biomedical sciences.
-        The methodologies used to create the learning materials can be applied to other domains.
-        Data sets can be swapped out to make the examples more relevent,
-        but the learning objectives would remain the same.
-        This study does not indent to create a completely self-contained lesson curriculm,
-        rather it serves as a foundation and hopes to link to already exiting materials for continuting education.
-        However, what may be more important for long-term learning
-        is to link to external learning resources but provide a series of case-study questions
-        where learners can continuously practice and improve on their data science skills.
-
-\end{document}
-
-[@shortliffe1993adolescence] The creation of this kind of infrastructure will
-require vision and resources from leaders who realize that the practice of
-medicine is inherently an information-management task and that biomedicine must
-make the same kind of coordinated commitment to computing technologies as have
-other segments of our society in which the importance of information management
-is well understood.
-As more data gets used in medicine,

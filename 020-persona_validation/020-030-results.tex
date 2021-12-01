@@ -3,12 +3,12 @@
 \begin{document}
 
     % TODO calculate and fill in these numbers
-    There were a total of ***** responses to the persona survey.
-    **** were over 18 years old and also consented to the research study.
+    There were a total of 68 responses to the persona survey.
+    %**** were over 18 years old and also consented to the research study.
     57 complete observations % from 010-prep_survey_questions.R: dim(wide_survey_likert)
     were used for the factor analysis, Cronbach's alpha, and clustering analysis.
-    of the ***** incomplete responses,
-    **** completed ****\% of the survey.
+    %of the ***** incomplete responses,
+    %**** completed ****\% of the survey.
     The persona survey had 1 set of responses % 01-process_qualtrics.R
     that shared a duplicate ID.
     Looking at the individual responses,
@@ -27,7 +27,7 @@
 
     \subsection{Survey Study Participants}
 
-        **** survey respondents self-reported their current occupation and career stage.
+        67 survey respondents self-reported their current occupation and career stage.
         These responses were further grouped into 3 overall occupations:
         (1) student,
         (2) researcher, and
@@ -51,10 +51,10 @@
             \label{fig:groupeddemographics}
         \end{figure}
 
-        Of the **** respondents,
-        **** reported as being a student,
-        **** reported as being a clinician, and
-        **** were classified as being a researcher.
+        Of the 67 respondents,
+        29 reported as being a student,
+        21 reported as being a clinician, and
+        26 were classified as being a researcher.
 
         Overall (Figure \ref{fig:likert}),
         we count that the respondents agree and strongly agree with the statement
@@ -84,9 +84,11 @@
 
     \subsection{Survey Validation}
 
-        Factor Analysis
+        Factor Analysis and Cronbah's Alpha was performed on 14 of the the 23 survey items.
+        The results were used to validate the survey.
+        The clustering for persona identification was performed in a separate step.
 
-    \subsection{Factor Analysis}
+    \subsubsection{Factor Analysis}
 
         Survey items were selected for factor analysis based on its correlation with other variables and their significance
         (($p < 0.05$) and $\left|\rho\right| \ge 0.5$).
@@ -252,7 +254,7 @@
             \label{tab:fa-3}
         \end{table}
 
-    \subsection{Cronbah's Alpha}
+    \subsubsection{Cronbah's Alpha}
 
         Internal consistency was measured with Cronbah's alpha.
         A separate Alpha was calculated from each of the factor analysis results.
@@ -260,8 +262,13 @@
         The programming experience subscale (MC1) consisted of 8 items ($\alpha = 0.96$),
         the statistics subscale (MC2) consisted of 3 items ($\alpha = 0.9$), and
         the programming for data analysis subscale (MC3) consisted of 2 items ($\alpha = 0.98$).
+        
+    \subsection{Clustering and Persona Identification}
+    
+        Hierarchical clustering was used on all 23 survey items to identify personas.
+        Clusters were combined with survey demographic and item responses to create the learner personas.
 
-    \subsection{Clustering}
+    \subsubsection{Clustering}
 
         The agglomerative coefficient was used to select Ward's clustering method (0.88) over
         average (0.54), single (0.37), and complete (0.72).
@@ -288,8 +295,8 @@
                 \includegraphics[scale=0.4]{figs/020-persona/gap\_statistic-survey\_likert.png}
                 \caption[Gap statistic for determining optimal number of clusters.]
                 {Gap statistic comparing
-                    intracluster variation as compared to a distribution with no clustering (y-axis)
-                    for different number of clutsers, k (x-axis).
+                    intra-cluster variation as compared to a distribution with no clustering (y-axis)
+                    for different number of clusters, k (x-axis).
                 }
                 \label{sfig:cluster-gap}
             \end{subfigure}
@@ -397,7 +404,7 @@
         it did not provide enough details between our participants.
         The major splits were the student group (Group 2 in the 3 cluster results) and everyone else.
         When we looked at the 4-cluster results,
-        the additional split occured in the student group.
+        the additional split occurred in the student group.
         This split was difficult to interpret and the new cluster was unable to be distinguished from the other split group.
 
     \subsubsection{Persona Creation}
