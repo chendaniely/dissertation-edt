@@ -31,6 +31,9 @@
 \usepackage{listings} % inline "code"
 \usepackage{enumitem} % label enumerate items
 
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
+
 % https://tex.stackexchange.com/questions/36030/how-to-make-a-single-word-look-as-some-code
 \newcommand{\code}[1]{\lstinline{#1}}
 
@@ -194,7 +197,7 @@
     % This is the standard bibtex file. Do not include the .bib extension in <bib_file_name>.
     % Uncomment the following lines to include your bibliography:
     \bibliography{bib}
-    \bibliographystyle{plainnat}
+    %\bibliographystyle{plainnat}
 
     % This formats the chapter name to appendix to properly define the headers:
     \appendix
