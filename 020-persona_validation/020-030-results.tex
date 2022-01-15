@@ -35,12 +35,9 @@
         Clinical students were placed in the student category,
         and the ``researcher'' role was a catch-all for all the other responses.
         Figure \ref{fig:groupeddemographics} shows the grouped occupation counts.
-        The original ungrouped demographic counts are shown in Appendix Figure \ref{fig:demographics_occupation}.
+        The original ungrouped demographic counts are shown in Supplemental Figure \ref{fig:demographics_occupation}.
 
         \begin{figure}[htb]
-            % TODO this figure does not seem like it looked at only the results from validation + clustering.
-            % TODO: i think the actual validation and clustering data only had upper 50 num of respondents
-            % TODO: remake this figure without the N and num Responses subtitle values
             \centering
             \includegraphics[width=0.5\textwidth]{figs/020-persona/grouped\_demographics.png}
             \caption[Grouped demographics for persona survey respondents]{
@@ -65,8 +62,8 @@
         making analysis more efficient and easier to reproduce.
         Most respondents were also leaning towards an agreement about being able to search for technical help online.
 
-        % TODO i think these are enough of the raw responses,
-        % TODO the individual question responses will make more sense to show with the clusters
+        % TODO: i think these are enough of the raw responses,
+        % TODO: the individual question responses will make more sense to show with the clusters
         \begin{figure}[htb]
             \centering
             \includegraphics[width=0.95\textwidth]{figs/020-persona/likert.png}
@@ -91,7 +88,7 @@
     \subsubsection{Factor Analysis}
 
         Survey items were selected for factor analysis based on its correlation with other variables and their significance
-        (($p < 0.05$) and $\left|\rho\right| \ge 0.5$).
+        ($\left|\rho\right| \ge 0.5$ and $p < 0.05$).
         Figure \ref{fig:persona-item-corr} shows the correlation matrix between all items.
         (only significant correlations are shown).
         Items with a high correlation coefficient ($\left|\rho\right| \ge 0.5$) were candidates to be selected for factor analysis.
@@ -116,7 +113,7 @@
 
         14 items met the criteria for factor analysis.
         The scree plot (Figure \ref{fig:scree-fa-good}) suggested testing factor models between two (2) and four (4) factors
-        (Figure \ref{fig:scree-fa-all} shows the scree plot for all the survey items).
+        (Supplemental Figure \ref{fig:scree-fa-all} shows the scree plot for all the survey items).
 
         \begin{figure}[htb!]
             \centering
@@ -128,27 +125,27 @@
             \label{fig:scree-fa-good}
         \end{figure}
 
-        % TODO This is done to check for the normality of the data. If the data are normally distributed, we may use maximum
+        % TODO: This is done to check for the normality of the data. If the data are normally distributed, we may use maximum
         % likelihood (ML) for the EFA, which will allow more detailed analysis. Otherwise, the extraction method of
         % choice is principal axis factoring (PAF), because it does not require normally distributed data (Brown, 2015).
-        % TODO cite: https://wnarifin.github.io/workshop/qvw2017/efa.pdf
-        We settled on using a 3-factor model based on
+        % TODO: cite: https://wnarifin.github.io/workshop/qvw2017/efa.pdf
+        A 3-factor model was chosen based on
         varimax rotation and
         tenBerge scores.
         The type of rotation did not affect the results.
         The biggest differences occurred with the number of factors and factoring method.
 
         The maximum likelihood (ML) factoring method was ruled because data was not normally distributed
-        as confirmed by Q-Q plots and Shapiro Wilk's tests for teach item (Appendix \ref{ss:fa-data-normality}).
+        as confirmed by Q-Q plots and Shapiro Wilk's tests for teach item. % (Supplemntal \ref{ss:fa-data-normality}).
         The 3-factor model had the most interpretability, and was used for the final model.
         Multiple factoring methods were tested using the 3-factor model,
         outside of the ML factoring method, the minimum chi-square (minchi) method had the lowest BIC score,
         and also had good cutoff values (TIL > 0.9, RMSEA < 0.08).
-        However we settled on a slightly lower fit model (TIL = 0.93, RMSEA = 0.09) using principal axis factoring (PA)
-        as it better suited our data (Table \ref{tab:all-good-3fa-varimax-models})
+        However, a slightly lower fit model (TIL = 0.93, RMSEA = 0.09) using principal axis factoring (PA)
+        was chosen because it better suited our data (Table \ref{tab:all-good-3fa-varimax-models})
         \cite{arifinExploratoryFactorAnalysis2017}.
-        % TODO mabe use oblimin rotation https://wnarifin.github.io/workshop/qvw2017/efa.pdf
-        % TODO maybe keep the defualt score method
+        % TODO: mabe use oblimin rotation https://wnarifin.github.io/workshop/qvw2017/efa.pdf
+        % TODO: maybe keep the defualt score method
 
         % latex table generated in R 4.1.1 by xtable 1.8-4 package
         % Tue Oct 26 22:33:54 2021
@@ -159,6 +156,7 @@
              The maximum likelihood (ML) and minimum chi-square (minchi) factoring methods
              had the best cutoff values,
              but both had to be ruled out because the methods were not suitable for the data.
+             Principal axis factoring (PA) was choosen because it does not require normally distributed data.
              Only varimax rotations are shown, since the rotation did not change any of the cutoff scores,
              even when comparing orthogonal rotations to oblique transformations.
             }
@@ -191,11 +189,11 @@
                 All varimax rotation factor analysis models that met cutoff values of
                 $\text{TLI} \ge 0.9$ and $\text{RMSEA} < 0.08$ sorted by BIC.
             }
-            \begin{tabular}{rrllrrr}
+            \begin{tabular}{rcllrrr}
                 \hline
                & nfactors & rotation & fm & tli & rmsea & bic \\
                 \hline
-              1 &   3 & varimax & ml & 0.98 & 0.05 & -151.18 \\
+                1 &   3 & varimax & ml & 0.98 & 0.05 & -151.18 \\
                 2 &   3 & varimax & minchi & 0.97 & 0.06 & -145.35 \\
                 3 &   4 & varimax & ml & 1.02 & 0.00 & -130.86 \\
                 4 &   4 & varimax & minchi & 1.02 & 0.00 & -130.85 \\
@@ -213,9 +211,9 @@
 
         The results in Table \ref{tab:fa-3} show the item loadings for the 3-factor model.
         The factors can be interpreted as
-        programming experience (MC1),
-        statistics confidence (MC2), and
-        programming for data analysis (MC3).
+        programming experience (PA1),
+        statistics confidence (PA2), and
+        programming for data analysis (PA3).
 
         % Table generaged from the 05-fa_cart.Rmd file
         % latex table generated in R 4.1.1 by xtable 1.8-4 package
@@ -229,7 +227,8 @@
                 programming experience (PA1),
                 programming for data analysis (PA2), and
                 solving technical problems (PA3).
-                Loadings under 0.5 are suppressed.
+                Loadings $<$ 0.5 are suppressed.
+                Loadings $\ge$ to 0.6 were used for Cronbah's $\alpha$.
             }
             \begin{tabular}{rllllrrr}
                 \hline
@@ -259,12 +258,12 @@
         Internal consistency was measured with Cronbah's alpha.
         A separate Alpha was calculated from each of the factor analysis results.
         Questions that had a loading above 0.6 was used for the alpha calculation.
-        The programming experience subscale (MC1) consisted of 8 items ($\alpha = 0.96$),
-        the statistics subscale (MC2) consisted of 3 items ($\alpha = 0.9$), and
-        the programming for data analysis subscale (MC3) consisted of 2 items ($\alpha = 0.98$).
-        
+        The programming experience subscale (PA1) consisted of 7 items ($\alpha = 0.96$),
+        the programming for data analysis (PA2) consisted of 2 items ($\alpha = 0.98$), and
+        the solving technical problems subscale (PA3) consisted of 2 items ($\alpha = 0.75$).
+
     \subsection{Clustering and Persona Identification}
-    
+
         Hierarchical clustering was used on all 23 survey items to identify personas.
         Clusters were combined with survey demographic and item responses to create the learner personas.
 
@@ -272,14 +271,15 @@
 
         The agglomerative coefficient was used to select Ward's clustering method (0.88) over
         average (0.54), single (0.37), and complete (0.72).
-
-        The total within-cluster sum of squares was used to generate an elbow plot (Figure \ref{sfig:cluster-elbow}),
-        and gap statistic for different numbers of clusters (Figure \ref{sfig:cluster-gap}) were used to identify
-        the optimal number of clusters for the data.
-        Three (3) clusters were determined to be the most optimal number and also the most interpretable.
+        The total within-cluster sum of squares was used to generate an elbow plot (Figure \ref{sfig:cluster-elbow})
+        and gap statistic for different numbers of clusters (Figure \ref{sfig:cluster-gap}).
+        These results were were used to
+        determine that three (3) clusters were the most optimal number of clusters.
+        Three (3) clusters were and also the most interpretable
+        (Figure \ref{fig:cluster-gap-elbow}).
 
         %gap statistic: https://web.stanford.edu/~hastie/Papers/gap.pdf
-        % TODO the subfigures are not showing up in the figure listing
+        % TODO: the subfigures are not showing up in the figure listing
         \begin{figure}[htb!]
             \centering
             \begin{subfigure}[h]{0.45\textwidth}
@@ -308,12 +308,14 @@
                 (\ref{sfig:cluster-gap}) shows the gap statistic for the data.
                 The dotted line at $k=3$ shows the optimal number of k clusters.
             }
+        \label{fig:cluster-gap-elbow}
         \end{figure}
 
     \subsubsection{Persona Identification}
 
-        % TODO 67 values in persona, 57 had a cluster group value
-        Results from clustering were incorporated into the survey results in order to identify learner personas.
+        % TODO: 67 values in persona, 57 had a cluster group value
+        Results from clustering were incorporated into the survey results in order to identify learner personas
+        (Figure \ref{fig:cluster-results}).
         The highest loaded item in each factor
         (Figures \ref{sfig:cluster-q3-4}, \ref{sfig:cluster-q6-2}, \ref{sfig:cluster-q7-2-7})
         and the occupations demographic breakdowns
@@ -326,7 +328,7 @@
         however,
         Group 2 had the fewest number of clinicians (Figure \ref{sfig:cluster-grouped-demogrphics}).
         Group 3 were either clinicians or academics, with most of the Group 3 occupations being a clinician.
-        Original occupation breakdown are shown in Appendix Figure \ref{fig:demographics_occupation_cluster}.
+        Original ungrouped occupation breakdown are shown in Supplemental Figure \ref{fig:demographics_occupation_cluster}.
 
         Looking at programming experience, Group 2 had the most amount of experience
         and Groups 1 and 3 were predominately ``never'' programmers (Figure \ref{sfig:cluster-q3-4}).
@@ -361,9 +363,7 @@
                 \centering
                 \includegraphics[scale=0.4]{figs/020-persona/survey\_likert/Q3.4-group-3.png}
                 \caption[How often do you program (Q3.4) for 3 clusters]
-                {Responses for Q3.4 in the survey for each of the 3 clusters.
-                    The question asked ``how often do you currently use programming languages''.
-                }
+                {Clustered responses for Q3.4.}
                 \label{sfig:cluster-q3-4}
             \end{subfigure}
 
@@ -371,18 +371,14 @@
                 \centering
                 \includegraphics[scale=0.4]{figs/020-persona/survey\_likert/Q6.2-group-3.png}
                 \caption[Statistics question for logistic regression (Q6.2) for 3 clusters]
-                {Responses for Q6.2 in the survey for each of the 3 clusters.
-                    The question asked about a theoretical statistics problem involving a binary outcome variable.
-                }
+                {Clustered responses for Q6.2.}
                 \label{sfig:cluster-q6-2}
             \end{subfigure}
             \begin{subfigure}[h]{0.45\textwidth}
                 \centering
                 \includegraphics[scale=0.4]{figs/020-persona/survey\_likert/Q7.2\_7-3.png}
                 \caption[Data programming Q7.2-7 for 3 clusters.]
-                {Responses for likert question Q7.2-7 of the survey,:
-                    ``Using a programming language (like R or Python) can make my analyses easier to reproduce.''
-                }
+                {Clustered responses for Q7.2-7.}
                 \label{sfig:cluster-q7-2-7}
             \end{subfigure}
             \caption[Selected survey questions for 3 clusters]
@@ -392,10 +388,16 @@
                 Group 3 had the most number of clinicians.
                 Group 2 were predominantly students.
                 (\ref{sfig:cluster-q3-4})
+                The question asked ``how often do you currently use programming languages''.
                 Group 2 are more consistent users of programming languages than Group 1 and 3.
                 (\ref{sfig:cluster-q6-2})
+                The question asked about a theoretical statistics problem involving a binary outcome variable.
                 Group 3 were the only group of people who did not know where to start this kind of analysis.
                 Group 2 had the most number of responses for being able to do the analysis with minimal help.
+                (\ref{sfig:cluster-q7-2-7})
+                The question asked
+                ``Using a programming language (like R or Python) can make my analyses easier to reproduce.''
+                Results show the likert table responses for each of the 3 groups.
             }
             \label{fig:cluster-results}
         \end{figure}

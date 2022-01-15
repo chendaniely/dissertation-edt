@@ -13,13 +13,43 @@
     The factor analysis results were not used to shorten the survey questions.
     All duplicate response IDs were identified as coming from the same person.
     These responses were coalesced and only the first set of responses were kept for analysis.Survey design, validation, and analysis are discussed below.
-    
+    The R programming language was used for all data processing and analysis
+    \cite{allaireRmarkdownDynamicDocuments2021,
+    auguieGridExtraMiscellaneousFunctions2017,
+    bacheMagrittrForwardpipeOperator2020,
+    bernaardsGradientProjectionAlgorithms2005, corrplot2021,
+    csardiProgressTerminalProgress2019, dahlXtableExportTables2019,
+    devriesGgdendroCreateDendrograms2020, epskampSemPlotPathDiagrams2019,
+    firkeJanitorSimpleTools2021, gagolewskiStringiFastPortable2021,
+    gagolewskiStringiFastPortable2021a,
+    garnierViridisColorblindfriendlyColor2021,
+    ginnQualtRicsDownloadQualtrics2021a, gohelFlextableFunctionsTabular2021,
+    gohelOfficerManipulationMicrosoft2021, grolemundDatesTimesMade2011,
+    henryPurrrFunctionalProgramming2020, henryRlangFunctionsBase2021,
+    henryTidyselectSelectSet2021, hesterFsCrossplatformFile2021,
+    hesterGlueInterpretedString2021, kassambaraFactoextraExtractVisualize2020,
+    korkmazMVNPackageAssessing2014, maechlerClusterClusterAnalysis2021,
+    mullerHereSimplerWay2020, mullerTibbleSimpleData2021,
+    neuwirthRColorBrewerColorBrewerPalettes2014,
+    oomsJsonlitePackagePractical2014, oomsWritexlExportData2021,
+    perryUtf8UnicodeText2021, raicheNFactorsParallelAnalysis2020,
+    rcoreteamLanguageEnvironmentStatistical2021,
+    revellePsychProceduresPsychological2021, rosseelLavaanPackageStructural2012,
+    therneauRpartRecursivePartitioning2019, wickhamDplyrGrammarData2021,
+    wickhamForcatsToolsWorking2021, wickhamGgplot2ElegantGraphics2016,
+    wickhamReadrReadRectangular2021, wickhamRvestEasilyHarvest2021,
+    wickhamStringrSimpleConsistent2019, wickhamTidyrTidyMessy2021,
+    wickhamWelcomeTidyverse2019a, xieDynamicDocumentsKnitr2015,
+    xieKnitrComprehensiveTool2014, xieKnitrGeneralpurposePackage2021,
+    xieMarkdownCookbook2020, xieMarkdownDefinitiveGuide2018,
+    zhuKableExtraConstructComplex2021}
+
     \subsection{Learner Self-Assessment Survey (Persona Survey)}
-    
+
         Survey questions were adapted from
         ``How Learning Works'',
         ``Teaching Tech Together'', and
-        The Carpentries pre, post, and long-term workshop survey questions
+        The Carpentries pre-, post-, and long-term workshop survey questions
         \cite{ambrose2010learning, wilson2019teaching, jordanAnalysisSoftwareData2018, jordanAnalysisCarpentriesLongTerm2020, jordanAnalysisCarpentriesLongTerm2018, jordanAnalysisCarpentriesLongTerm2017}.
         Additional demographic questions were also added.
         A total of 33 questions across eight (8) topics were included in the final survey:
@@ -31,22 +61,23 @@
         (6) Statistics, 4
         (7) Data and programming Likert table, 7
         (8) Workshop framing and motivation, 3.
-        
+
         Two (2) of the workshop framing questions were used to design follow-up biomedical data workshops.
         These free-response questions asked:
-        (1) what learners hoped to learn in a biomedical data science workshop, and 
+        (1) what learners hoped to learn in a biomedical data science workshop, and
         (2) what they would they want to be able to do in working with data after a biomedical data science workshop
             or training event that they cannot do right now.
 
         \subsubsection{Survey Questions}
-    
-            Most questions (16) in the survey were ordinal Likert responses.
+
+            Of the 33 questions in the survey, 16 were on an ordinal Likert scale.
             All survey questions included in the survey can be seen in
-            (Figure, Table Supplemental X)
+            (Supplemental \ref{sse:persona-survey-questions}).
             In order to better relate to learners and aid in their assessment of skills,
             Likert table questions were not asked in the more common
-            ``disagree'', ``neither'', or ``agree'', etc,
-            bur rather asked
+            ``Disagree'', ``Neither'', or ``Agree'', etc,
+            format,
+            but rather asked,
             ``I wouldn't know where to start'',
             ``I could struggle through, but not confident I could do it'',
             ``I could struggle through by trial and error with a lot of web searches'',
@@ -54,16 +85,17 @@
             ``I could do it quickly with little or no use of external help''.
             These Likert responses were framed to aid in the clarity of selection of the survey taker,
             and potentially make the responses more consistent between participants.
-    
+
             This survey is also a part of a larger workshop longitudinal study.
             In order to track participant responses longitudinally and protect their privacy by not collect identifying information
             (e.g., names, email addresses, phone numbers, etc),
             participants created a unique identifier that was generated based on their results to demographic questions.
             The IRB approved surveys can be found here in supplemental section \ref{sse:persona-survey-questions}.
-        
+
         \subsubsection{Survey Dissemination}
 
-            Surveys were created in the Qualtrics platform and emailed out in two (2) rounds.
+            Surveys were created in the Qualtrics platform and emailed out in two (2) rounds
+            \cite{Qualtrics2005}.
             The first round was only sent to biomedical relevant university listservs
             or to departmental administrators to post on our behalf at Virginia Tech.
             The second round included the same listservs and contacts from the first round,
@@ -74,7 +106,7 @@
             Claude Moore Health Science Library at the University of Virginia.
 
         \subsubsection{Survey Validation}
-    
+
             % TODO maybe use the reference to the R packages her
             The learner self-assessment survey (i.e., persona survey)
             was created with the goal of becoming a tool for future instructors
@@ -97,19 +129,21 @@
                 These questions and their use case provided the face validity for the survey.
 
             \paragraph{Factor Analysis}
-        
-                The \code{psych} R package was used for factor analysis.
+
+                The \code{psych} R package was used for factor analysis
+                \cite{revellePsychProceduresPsychological2021}.
                 The demographic, free-response, and prior programming languages used questions
                 were not used and the rest of the responses were scaled prior to running the analysis.
                 Items for factor analysis were picked based on how many other items they were significantly correlated with.
-                The scree plot from the R \code{nFactors} package suggested trying 1-factor to 5-factor models.
+                The scree plot from the R \code{nFactors} package suggested trying 1-factor to 5-factor models
+                \cite{raicheNFactorsParallelAnalysis2020}.
                 Different rotations and factoring methods were tested,
                 and the best model was picked based on
                 TLI, RMSEA, and BIC scores, in addition to model interoperability.
 
 
             \paragraph{Internal Consistency}
-        
+
                 The \code{psych} R package was also used to calculate Cronbach's alpha for internal consistency.
                 A separate Cronbach's alpha measure was calculated for each set of questions that loaded into each factor.
                 Kendall's kappa was not calculated because survey results were not paired.
@@ -119,8 +153,8 @@
         All survey questions were used for clustering;
         results from factor analysis did not select which questions would be used for clustering.
         Hierarchical clustering with Euclidean distance and
-        Ward's clustering method was used to identify respondent groups.
-        % TODO cite R packages
+        Ward's clustering method was used to identify respondent groups
+        \cite{rcoreteamLanguageEnvironmentStatistical2021}.
         These groups were then combined with demographic information and survey responses to create learner personas.
 
         Results from hierarchical clustering and survey responses were used to create the

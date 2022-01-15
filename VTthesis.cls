@@ -8,7 +8,7 @@
 %
 % This program is distributed in the hope that it will be useful,
 % but WITHOUT ANY WARRANTY; without even the implied warranty of
-% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 %
 % Please see the GNU General Public License: <http://www.gnu.org/licenses/>.
 %
@@ -68,7 +68,7 @@
 \RequirePackage{amsmath,amsthm,amssymb,amsfonts}
 \RequirePackage[normalem]{ulem}
 \RequirePackage{enumerate}
-\RequirePackage[numbers,sort]{natbib}
+%\RequirePackage[numbers,sort]{natbib}
 \RequirePackage{paralist}
 \RequirePackage[titletoc,page]{appendix}
 \RequirePackage[nottoc]{tocbibind}
@@ -98,7 +98,7 @@
 % links for references
 \RequirePackage[final,colorlinks=true,allcolors=blue]{hyperref}
 
-% For including pdf images: 
+% For including pdf images:
 \usepackage{graphicx}
 \usepackage{csquotes}
 %\RequirePackage{float}
@@ -123,7 +123,7 @@
 \ifbool{@dft}{
   % \cofeAm{0.7}{0.75}{2}{0}{0}
   \usepackage[firstpage]{draftwatermark}
-  \SetWatermarkScale{1} % Smaller numbers decrease the size of the watermark text. Originally set to 6. 
+  \SetWatermarkScale{1} % Smaller numbers decrease the size of the watermark text. Originally set to 6.
   \SetWatermarkLightness{0.7}
 }
 
@@ -179,9 +179,9 @@ frame=single,
 \def\submitdate#1{\gdef\@submitdate{#1}}
 
 \ifnum\month>9
-    \@tempcnta=\year 
+    \@tempcnta=\year
     % Un-comment the following line to advance the date by one year:
-    %\advance\@tempcnta by 1 
+    %\advance\@tempcnta by 1
     \edef\@copyrightyear{\number\the\@tempcnta}
 \else
     \def\@copyrightyear{\number\the\year}
@@ -260,7 +260,7 @@ frame=single,
   \fancyfoot[C]{\thepage}
   \fancyfoot[L,R]{}
   \renewcommand\headrulewidth{0.0pt}}
-  
+
 \newcommand{\mainmatter}{
   \ifbool{@nopgskip}
     {\clearpage}
@@ -271,10 +271,10 @@ frame=single,
   \fancyhead[LO]{\sc \rightmark}
   \ifbool{@dft}{\fancyfoot[C]{\textbf{DRAFT}}}{\fancyfoot[C]{}}
   \renewcommand\headrulewidth{0.0pt}}
-  
+
 \newcommand{\biblio}{
   \fancyhead[C]{\bibname}}
-  
+
 \newcommand{\backmatter}{
   \ifbool{@nopgskip}
     {\clearpage}
@@ -329,13 +329,13 @@ frame=single,
   \end{center}
 
   \newpage % This applies to the numbering of the front matter.
-  \addtocounter{page}{1} 
+  \addtocounter{page}{1}
 }
 
 \def\abspage{
 \pagestyle{empty} % Suppresses page numbers for all abstract pages.
   \noindent {\Large \@title} \\
-    
+
   \vfill
   \noindent  \@author \\
   \vfill
