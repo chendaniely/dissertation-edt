@@ -7,7 +7,7 @@
     (1) adult working professionals,
     (2) work as a clinician and/or do research in the biomedical field, and
     (3) use Excel as the main, if not only, program for data work.
-    These parameters already put in constraints into the lesson development phase:
+    These parameters put in constraints into the lesson development phase:
     (1) The lesson needs to be modular and sections need to be taught within 1 hour blocks.
     This can account for busy work schedules and can possibly be given during break times (e.g., lunch).
     (2) Written lesson materials need to be provided online for asynchronous learning and can be used as reference material later on.
@@ -19,7 +19,7 @@
 
     These studies are learner-focused and does not focus on the skills needed to properly present the materials as an instructor.
     Teaching knowledge does play a factor in how materials are presented and how the instructor handles questions from the class.
-    Assessing content knowledge, pedagogical content knowledge of the instructor was not performed
+    Assessing content knowledge and pedagogical content knowledge of the instructor was not performed
     \cite{shulmanThoseWhoUnderstand1986},
     but since all the workshops will be taught by the same instructor, those components were consistent throughout out
     the future workshops that assess the learning materials.
@@ -49,8 +49,11 @@
         We performed a correlation analysis to reduce the number of items down to 14, for factor analysis
         but these values may change with more respondents.
         The main motivation to drop items from the factor analysis was due to the low number of responses.
-        A general rule of thumb is to have 10 observations per item,
+        A general rule of thumb is to have 10 observations per item
+        \cite{kyriazosAppliedPsychometricsSample2018, wolfSampleSizeRequirements2013, mundfromMinimumSampleSize2005},
         and the correlation analysis to select items was one way to mitigate the effects of having a low number of observations.
+        The survey questions, data, and results of this study are published for future reseachers and studies
+        to expand the responses have more power in validating the survey.
 
         One of the assumptions for the ML factoring method is the items need to be normally distributed.
         Our analysis showed that our data was not normal,
@@ -58,36 +61,50 @@
         The PA factoring method was selected because it does not assume the normality of data.
         This method better suited the data distribution and
         while it did not meet every cutoff value,
-        we felt this was enough to show some validity for the survey,
+        this was enough to show some validity for the survey
         and can be used in a future study to collect more data.
-        The Cronbah's alpha results gave us more confidence that our survey was adequately consistent and
-        can be a useful took for researchers moving forward.
+        The Cronbah's alpha results showed that the survey responses were consistent and
+        can be a useful tool for researchers moving forward.
 
     \subsection{Creation of Biomedical Data Science Learner Personas}
 
-        The demographic information was a main contributor on how the personas were named.
+        The demographic information was a main contributor on how the personas were named
+        (Figure \ref{sfig:cluster-grouped-demogrphics}).
+        The target audience for creating learning materials were clinicians.
+        This group also clustered into their own group from the survey responses.
         It is possible that the names and number of personas will change with more responses.
-        The benefits of creating these explicit learner personas are for future educators
+        The benefits of creating these explicit learner personas is so future educators
         can have a more concrete understanding of their audience.
         These personas can be used to cater and focus learning materials and better serve learners' needs.
-        The personas were primarily named by their occupation demographics.
         The overall differences between the personas are listed in Table \ref{tab:persona-summary-table}.
-        In theory, combination of differences in Table \ref{tab:persona-summary-table} would be its own learner persona,
+        In theory, each combination of differences in Table \ref{tab:persona-summary-table} would be its own learner persona,
         but not every combination would require a different set of learner needs.
+        Also trying to create a persona for every possible learner would be impractical
+        \cite{pruittPersonaLifecycleKeeping2006}.
 
         \begin{table}[htb]
             \centering
             \caption[Persona Data Science Skill Rating]
             {How each persona differs from one another. In terms of data science and data literacy skills.
-             Results come from persona survey results
+             Results come from persona survey results and are based off the representatice question from factor analysis.
+             The ``Programming'', ``Data Programming'', and ``Technical''
+             columns represent the relative results from the
+             programming experience (Q3.4 Figure \ref{sfig:cluster-q3-4}),
+             programming for analysis (Q7.2-7 Figure \ref{sfig:cluster-q7-2-7}), and
+             solving technical problems (Q4.2 \ref{sfig:cluster-q4-2})
+             questions that had the highest loadings in each factor.
+             The ``Statistics'' and ``Excel'' columns represesnt the relative responses
+             from a statistics question and Excel proficency question that the survey also asked in the survey
+             (Q6.2 and Q4.1 in Supplemental Figures \ref{sfig:cluster-q6-2} and \ref{sfig:cluster-q4.1}, respectively).
+
             }
-            \begin{tabular}{llll}
+            \begin{tabular}{clllll}
             \hline
-            Group & Programming & Statistics & Data Programming \\%& Finding Technical Help \\
+            Group & Programming & Data Programming & Technical & Statistics & Excel  \\
             \hline
-            1     & Low         & Medium     & Medium           \\%&                        \\
-            2     & High        & High       & High             \\%& High                   \\
-            3     & Low         & Low        & Low              \\%&                        \\
+            1     & Low         & Medium           & Medium    & Medium     & Medium \\
+            2     & High        & High             & High      & High       & Medium \\
+            3     & Low         & Low              & Low       & Low        & Medium \\
             \hline
             \end{tabular}
             \label{tab:persona-summary-table}
@@ -108,17 +125,20 @@
             This will also reinforce their own understanding of the materials being covered,
             while keeping them engaged in the class.
             In a virtual setting,
-            these students can provide help and answer questions in the text chat.
+            these students can provide help and answer questions in the text chat
+            \ref{Koch2016, wilson2019teaching}.
 
             This bimodal learner experience is also confirmed when comparing the
-            2-cluster model with the 3-cluster model. % TODO put an image here
-            Samir Student was also the first clustering split with survey responses showing
+            Where the clusters are split.
+            Samir Student was the first clustering split with survey responses showing
             they had the most experience with data science concepts.
-            The 3-cluster model partitioned the less experienced programmers.
+            The 3-cluster model partitioned the less experienced programmers
+            (Supplemental Figure \ref{sfig:dendro-cluster-3}).
 
             Making the lessons modular and publicly available
             gives these types of learners the chance to judge if the materials are suited for their needs
             and experience levels.
+            More advanded learners can self-learn at their own pace and use the learning materials as a reference.
 
         \subsubsection{Clare Clinician (Group 3)}
 
@@ -126,6 +146,7 @@
             What distinguishes group 3 from the rest, is they are also not confident in
             their ability to perform a statistical analysis,
             and may not agree that programming makes analyses easier to reproduce (Table \ref{tab:persona-summary-table}).
+            This group was also predominantly clinicians.
 
         \subsubsection{Ash Academic (Group 1)}
 
@@ -139,9 +160,11 @@
         The persona survey was given in 2 waves.
         The results in the first wave had 4 clusters: Expert, Clinician, Academic, and Student.
         The expert and student clusters combined into a single group with the addition of wave 2 data.
-        We feel that as more data gets collected and the persona survey gets distributed to more
-        instructors, we better stratify the respondents and more accurately identify learner personas and
-        needs.
+        As more data gets collected and the persona survey gets distributed to more instructors,
+        a more accurate stratification of the reponses can be created and more accurately identify learner personas and needs.
+        One of the main reasons the data from this study is published is for future research to add to the results
+        and perform the same analysis again with more observations.
+        This would help create a more generalizable set of personas and potentially identify more specific learning needs.
 
     \subsection{Domain-Specific Learner Personal Survey Validation}
 
@@ -154,26 +177,63 @@
         As educators, these learner personas provide a starting point to curate, create, and design
         domain-specific learning materials for the biomedical sciences.
         The primary user group of Clare Clinician can be used to focus on content and examples.
-        The personas created are still in their initial conception phase,
+        The personas created in this study are still in their initial conception phase,
         but they should have enough detail to begin planning lesson materials.
         Even if the personas are ``wrong'',
         the lesson materials will still be consistent for learners
         \cite{pruittPersonaLifecycleKeeping2006}.
+        The survey questions from this study is also published along with the reponse data as a means
+        to pool together future research attempts to validate this survey.
+        Responses from the survey can not only help with creating more targeted learning materials,
+        but also help balance the prior knowledge experience of learners in the classroom.
+
+    \subsection{Propagating Results to Other Domains}
+
+        The results from this study are highly focsed for the medical and biomedical sciences.
+        When designing domain-specific learning curriculumn, it is possible to systematically
+        and objectively collect information on the learner's prior relevant knowledge to begin the process of
+        creating a targeted learning curriculumn.
+        The personas from this study will help future instructors in the biomedical sciences
+        focus on what their learners need.
+        Several suggestions where the survey, data, results, and personas can be hosed are
+        The National Library of Medicine (NLM),
+        The National Institutes of Health (NIH),
+        Patient Centered Outcomes Research Institute (PCORI),
+        Agency for Healthcare Research and Quality (AHRQ), or the
+        The National Science Foundation (NSF)
+        \cite{payneBiomedicalInformaticsMeets2018}.
+
+        The process and methods used from this study can also be expanded to
+        to help improve data science education in other domains.
+        The sturcutre of writing a learner persona in this study was adapted from existing personas
+        used by RStudio, PBC and The Carpentries
+        \cite{rstudioLearnerPersonas2019, softwarecarpentryLearnerProfiles}.
+        This shows that even though domains may differ,
+        there are many commonalities between data science learners across many disciplines.
+        The personas, data, and results from this study can used in other disciplines and
+        hosed in their respective foundation or research agency to share with other potential instructors
+        in their dowmin.
 
 \end{document}
 
-
-
-
     resuability pardox wile2003, tttgreag. better to remix materials than constantly re-use
 
-    Need Two subsections in the Discussion if you have One. The second subsection should be Domain-Specific Learner Personal Survey Validation and talk about how this can be used in the future. A lot of the discussion needs to connect back to the problems the work is addressing and the impact it has, then the TLDR conclusions of what we really learned. that has to come out more clearly
+    Need Two subsections in the Discussion if you have One.
+    The second subsection should be Domain-Specific Learner Personal Survey Validation
+    and talk about how this can be used in the future.
+
+    A lot of the discussion needs to connect back to the problems the work is addressing and the impact it has,'
+    then the TLDR conclusions of what we really learned. that has to come out more clearly
 
 "Case studies that show the explicit and implicit value of data reuse" \cite{payneBiomedicalInformaticsMeets2018}
 ''
 
-The National Library of Medicine is one sugestion where biomedical infomratics and data science materials can be housed \cite{payneBiomedicalInformaticsMeets2018} after inital federal funding (e.g., NIH BD2K program) ends.
+The National Library of Medicine is one sugestion where biomedical infomratics and data science materials can be housed
+\cite{payneBiomedicalInformaticsMeets2018} after inital federal funding (e.g., NIH BD2K program) ends.
 Beyond NIH,
 \cite{payneBiomedicalInformaticsMeets2018}
 NSF, PCORI, AHRQ, Foundations, Corporations, etc.
-BMI: biomedical informatics; DS: data science; NLM: National Library of Medicine; NIH: National Institutes of Health; NSF: National Science Foundation; PCORI: Patient Centered Outcomes Research Institute; AHRQ: Agency for Healthcare Research and Quality.
+BMI: biomedical informatics; DS: data science; NLM: National Library of Medicine;
+NIH: National Institutes of Health; NSF: National Science Foundation;
+PCORI: Patient Centered Outcomes Research Institute;
+AHRQ: Agency for Healthcare Research and Quality.

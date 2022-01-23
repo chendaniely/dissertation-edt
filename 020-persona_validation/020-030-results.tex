@@ -37,7 +37,7 @@
         Figure \ref{fig:groupeddemographics} shows the grouped occupation counts.
         The original ungrouped demographic counts are shown in Supplemental Figure \ref{fig:demographics_occupation}.
 
-        \begin{figure}[htb]
+        \begin{figure}[!htbp]
             \centering
             \includegraphics[width=0.5\textwidth]{figs/020-persona/grouped\_demographics.png}
             \caption[Grouped demographics for persona survey respondents]{
@@ -64,7 +64,7 @@
 
         % TODO: i think these are enough of the raw responses,
         % TODO: the individual question responses will make more sense to show with the clusters
-        \begin{figure}[htb]
+        \begin{figure}[!htbp]
             \centering
             \includegraphics[width=0.95\textwidth]{figs/020-persona/likert.png}
             \caption[Summary Likert scale responses]
@@ -97,7 +97,7 @@
         These parameters reduced the number of items for factor analysis,
         while still keeping at least 1 item from each section of the survey.
 
-        \begin{figure}[htb!]
+        \begin{figure}[!htbp]
             \centering
             \includegraphics[width=0.9\textwidth]{figs/010-validation/efa\_item\_correlations.png}
             \caption[Correlation matrix of persona items]
@@ -115,7 +115,7 @@
         The scree plot (Figure \ref{fig:scree-fa-good}) suggested testing factor models between two (2) and four (4) factors
         (Supplemental Figure \ref{fig:scree-fa-all} shows the scree plot for all the survey items).
 
-        \begin{figure}[htb!]
+        \begin{figure}[!htbp]
             \centering
             \includegraphics[width=0.5\textwidth]{figs/010-validation/efa_eigen_scree_good.png}
             \caption[Scree plot for factor analysis]
@@ -131,21 +131,20 @@
         % TODO: cite: https://wnarifin.github.io/workshop/qvw2017/efa.pdf
         A 3-factor model was chosen based on
         varimax rotation and
-        tenBerge scores.
+        ``ten Berge'' scores.
         The type of rotation did not affect the results.
         The biggest differences occurred with the number of factors and factoring method.
 
-        The maximum likelihood (ML) factoring method was ruled because data was not normally distributed
+        The maximum likelihood (ML) factoring method was ruled out because data was not normally distributed
         as confirmed by Q-Q plots and Shapiro Wilk's tests for teach item. % (Supplemntal \ref{ss:fa-data-normality}).
         The 3-factor model had the most interpretability, and was used for the final model.
         Multiple factoring methods were tested using the 3-factor model,
         outside of the ML factoring method, the minimum chi-square (minchi) method had the lowest BIC score,
         and also had good cutoff values (TIL > 0.9, RMSEA < 0.08).
         However, a slightly lower fit model (TIL = 0.93, RMSEA = 0.09) using principal axis factoring (PA)
-        was chosen because it better suited our data (Table \ref{tab:all-good-3fa-varimax-models})
-        \cite{arifinExploratoryFactorAnalysis2017}.
-        % TODO: mabe use oblimin rotation https://wnarifin.github.io/workshop/qvw2017/efa.pdf
-        % TODO: maybe keep the defualt score method
+        was chosen because it better suited our data
+        (Table \ref{tab:all-good-3fa-varimax-models}, \ref{tab:all-good-varimax-models})
+        \cite{arifinExploratoryFactorAnalysis2017, brownConfirmatoryFactorAnalysis2015}.
 
         % latex table generated in R 4.1.1 by xtable 1.8-4 package
         % Tue Oct 26 22:33:54 2021
@@ -156,11 +155,12 @@
              The maximum likelihood (ML) and minimum chi-square (minchi) factoring methods
              had the best cutoff values,
              but both had to be ruled out because the methods were not suitable for the data.
-             Principal axis factoring (PA) was choosen because it does not require normally distributed data.
+             Principal axis factoring (PA) was choosen because it does not require normally distributed data
+             \cite{arifinExploratoryFactorAnalysis2017, brownConfirmatoryFactorAnalysis2015}.
              Only varimax rotations are shown, since the rotation did not change any of the cutoff scores,
              even when comparing orthogonal rotations to oblique transformations.
             }
-            \begin{tabular}{rrllrrr}
+            \begin{tabular}{rcllrrr}
                 \hline
                 & nfactors & rotation & fm & tli & rmsea & bic \\
                 \hline
@@ -188,6 +188,10 @@
             {
                 All varimax rotation factor analysis models that met cutoff values of
                 $\text{TLI} \ge 0.9$ and $\text{RMSEA} < 0.08$ sorted by BIC.
+                The 4-factor model had less interpretability than the 3-factor model.
+                However, the maximum likelihood and minimum chi-squarefactoring methods of the
+                3-factor model did not suit the data
+                \cite{arifinExploratoryFactorAnalysis2017, brownConfirmatoryFactorAnalysis2015}.
             }
             \begin{tabular}{rcllrrr}
                 \hline
@@ -257,7 +261,9 @@
 
         Internal consistency was measured with Cronbah's alpha.
         A separate Alpha was calculated from each of the factor analysis results.
-        Questions that had a loading above 0.6 was used for the alpha calculation.
+        Questions that had a loading above $0.6$ was used for the alpha calculation.
+        The $0.6$ cutoff was mainly selected to make sure all the major question groups in the survey was represented
+        and each factor had more than 1 question.
         The programming experience subscale (PA1) consisted of 7 items ($\alpha = 0.96$),
         the programming for data analysis (PA2) consisted of 2 items ($\alpha = 0.98$), and
         the solving technical problems subscale (PA3) consisted of 2 items ($\alpha = 0.75$).
@@ -266,6 +272,8 @@
 
         Hierarchical clustering was used on all 23 survey items to identify personas.
         Clusters were combined with survey demographic and item responses to create the learner personas.
+        Questions with high factor loadings along with demographic results were used to guide the clustering interpretations
+        (Figure \ref{fig:cluster-results}).
 
     \subsubsection{Clustering}
 
@@ -277,10 +285,12 @@
         determine that three (3) clusters were the most optimal number of clusters.
         Three (3) clusters were and also the most interpretable
         (Figure \ref{fig:cluster-gap-elbow}).
+        The dendogram of the three (3) clusters are shown in
+        Supplemental Figure \ref{fig:dendro-cluster-3}.
 
         %gap statistic: https://web.stanford.edu/~hastie/Papers/gap.pdf
         % TODO: the subfigures are not showing up in the figure listing
-        \begin{figure}[htb!]
+        \begin{figure}[!htbp]
             \centering
             \begin{subfigure}[h]{0.45\textwidth}
                 \centering
@@ -307,6 +317,8 @@
                 suggests that the optimal number of clusters is between $k=2$ and $k=4$.
                 (\ref{sfig:cluster-gap}) shows the gap statistic for the data.
                 The dotted line at $k=3$ shows the optimal number of k clusters.
+                The three (3) cluster model had the best interpretation from the survey data.
+                Each cluster became its own learner persona.
             }
         \label{fig:cluster-gap-elbow}
         \end{figure}
@@ -317,12 +329,12 @@
         Results from clustering were incorporated into the survey results in order to identify learner personas
         (Figure \ref{fig:cluster-results}).
         The highest loaded item in each factor
-        (Figures \ref{sfig:cluster-q3-4}, \ref{sfig:cluster-q6-2}, \ref{sfig:cluster-q7-2-7})
+        (Figures \ref{sfig:cluster-q3-4}, \ref{sfig:cluster-q7-2-7}, \ref{sfig:cluster-q4-2})
         and the occupations demographic breakdowns
         (Figure \ref{sfig:cluster-grouped-demogrphics})
         give an overview of the clusters.
 
-        Clinicians (our target audience) were primarily in Groups 1 and 3.
+        Clinicians (the target audience) were primarily in Groups 1 and 3.
         There were no students in Group 3.
         Groups 1 and 2 were spread out across the 3 occupations,
         however,
@@ -330,30 +342,23 @@
         Group 3 were either clinicians or academics, with most of the Group 3 occupations being a clinician.
         Original ungrouped occupation breakdown are shown in Supplemental Figure \ref{fig:demographics_occupation_cluster}.
 
-        Looking at programming experience, Group 2 had the most amount of experience
-        and Groups 1 and 3 were predominately ``never'' programmers (Figure \ref{sfig:cluster-q3-4}).
-        In Q6.2 of the survey,
-        participants were asked if they were able to perform an analysis with a binary outcome variable (Figure \ref{sfig:cluster-q6-2}).
-        Typically, logistic regression would be performed for this kind of problem,
-        but the authors were less concerned with identifying a particular analysis,
-        and more focused if participants could perform any analysis.
-        Group 3 were the only group that would not know how to start this kind of analysis,
-        and also leaned towards struggling through this kind of analysis.
-        Groups 1 and 2 leaned towards being able to perform this analysis task,
-        with Group 2 having the most responses for performing the task with minimal external help.
-        Group 2 also had a high number of responses for completing the task with some struggle,
-        but Group 1 had the most frequent number of responses.
-
+        Looking at programming experience
+        (Q3.4, Figure \ref{sfig:cluster-q3-4}),
+        Group 2 had the most amount of experience
+        and Groups 1 and 3 were predominately ``never'' programmers.
         Group 2 had the most number of respondents strongly agreeing to the statement that
-        using a programming language can make an analysis easier to reproduce (Figure \ref{sfig:cluster-q7-2-7}).
+        using a programming language can make an analysis easier to reproduce
+        (Q 7.2-7, Figure \ref{sfig:cluster-q7-2-7}).
         Groups 1 and 3 are mostly neutral towards the statement and are the only respondents who disagree and strongly disagree
         with the statement.
+        Looking at solving technical questions
+        (Q4.2, Figure \ref{sfig:cluster-q4-2}).
 
-        \begin{figure}[htb!]
+        \begin{figure}[!htbp]
             \centering
             \begin{subfigure}[h]{0.45\textwidth}
                 \centering
-                \includegraphics[scale=0.4]{figs/020-persona/survey\_likert/group_cluster_occupation_3.png}
+                \includegraphics[scale=0.35]{figs/020-persona/survey\_likert/group_cluster_occupation_3.png}
                 \caption[Grouped demographics for 3 clusters]
                 {Grouped demographics for 3 clusters.
                 }
@@ -361,25 +366,28 @@
             \end{subfigure}
             \begin{subfigure}[h]{0.45\textwidth}
                 \centering
-                \includegraphics[scale=0.4]{figs/020-persona/survey\_likert/Q3.4-group-3.png}
+                \includegraphics[scale=0.35]{figs/020-persona/survey\_likert/Q3.4-group-3.png}
                 \caption[How often do you program (Q3.4) for 3 clusters]
-                {Clustered responses for Q3.4.}
+                {Clustered responses for Q3.4: Programming experience factor.
+                ``How often do you currently use programming languages (R Python, etc.)?''.}
                 \label{sfig:cluster-q3-4}
             \end{subfigure}
-
             \begin{subfigure}[h]{0.45\textwidth}
                 \centering
-                \includegraphics[scale=0.4]{figs/020-persona/survey\_likert/Q6.2-group-3.png}
-                \caption[Statistics question for logistic regression (Q6.2) for 3 clusters]
-                {Clustered responses for Q6.2.}
-                \label{sfig:cluster-q6-2}
+                \includegraphics[scale=0.35]{figs/020-persona/survey\_likert/Q7.2\_7-3.png}
+                \caption[Data programming Q7.2-7 for 3 clusters.]
+                {Clustered responses for Q7.2-7: Programming for analysis factor.
+                ``Using a programming language (like R or Python) can make my analyses easier to reproduce.''}
+                \label{sfig:cluster-q7-2-7}
             \end{subfigure}
             \begin{subfigure}[h]{0.45\textwidth}
                 \centering
-                \includegraphics[scale=0.4]{figs/020-persona/survey\_likert/Q7.2\_7-3.png}
-                \caption[Data programming Q7.2-7 for 3 clusters.]
-                {Clustered responses for Q7.2-7.}
-                \label{sfig:cluster-q7-2-7}
+                \includegraphics[scale=0.35]{figs/020-persona/survey\_likert/Q4.2-group-3.png}
+                \caption[Statistics question for logistic regression (Q6.2) for 3 clusters]
+                {Clustered responses for Q4.2: Solving technical problems factor.
+                ``If you were given a dataset (e.g., Excel file, CSV file) and asked to do some preliminary analysis on it,
+                which of these best describe how easily you can accomplish the task?''}
+                \label{sfig:cluster-q4-2}
             \end{subfigure}
             \caption[Selected survey questions for 3 clusters]
             {Survey responses for each of the 3 clusters.
@@ -388,37 +396,40 @@
                 Group 3 had the most number of clinicians.
                 Group 2 were predominantly students.
                 (\ref{sfig:cluster-q3-4})
-                The question asked ``how often do you currently use programming languages''.
                 Group 2 are more consistent users of programming languages than Group 1 and 3.
-                (\ref{sfig:cluster-q6-2})
-                The question asked about a theoretical statistics problem involving a binary outcome variable.
-                Group 3 were the only group of people who did not know where to start this kind of analysis.
-                Group 2 had the most number of responses for being able to do the analysis with minimal help.
                 (\ref{sfig:cluster-q7-2-7})
-                The question asked
-                ``Using a programming language (like R or Python) can make my analyses easier to reproduce.''
                 Results show the likert table responses for each of the 3 groups.
+                Group 2 feel programming will make analyses easier to reproduce than Group 1 and 3.
+                (\ref{sfig:cluster-q4-2})
+                Group 3 were the only group of people who did not how to start an analysis.
+                Group 2 had the most number of responses for being able to do the analysis with minimal help.
+                These results were similar to the question that asked a more specific statistics related question
+                (Supplemental Figure \ref{sfig:cluster-q6-2})
             }
             \label{fig:cluster-results}
         \end{figure}
 
         The 2-cluster results did not provide enough details between our participants.
         The major splits were the student group (Group 2 in the 3 cluster results) and everyone else.
-        In the 4-cluster results,
+        In the 4-cluster results
+        (Supplemental Figure \ref{sfig:dendro-4}),
         the additional split occurred in the student group.
         This split was difficult to interpret and the new cluster was unable to be distinguished from the other split group.
 
     \subsubsection{Persona Creation}
 
-        Using the clustering data with the survey results, we created 3 learner personas:
+        Using the clustering data (Supplemental Figure \ref{sfig:dendro-cluster-3})
+        with the survey results, three (3) learner personas were created:
         Alex Academic (Group 1), Samir Student (Group 2), Claire Clinician (Group 3).
         Each persona had 4 components: (1) background, (2) relevant prior knowledge or experience,
-        (3) perception of needs, and (4) special considerations.
+        (3) perception of needs, and (4) special considerations
+        \cite{rstudioLearnerPersonas2019, softwarecarpentryLearnerProfiles, wilson2019teaching}.
         The results from the survey were used to write out the
         relevant prior knowledge or experience and perception of needs sections.
-        The background and special considerations were written to make each learner persona more complete.
+        The background and special considerations were written to make each learner persona more complete
+        \cite{pruittPersonaLifecycleKeeping2006}.
         Full write-ups with each persona's
         background, relevant prior knowledge or experience, perception of needs, and special considerations
-        can be found in Appendix \ref{se:learner-personas}.
+        can be found in Supplemental \ref{sse:learner-personas}.
 
 \end{document}
