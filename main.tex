@@ -31,9 +31,11 @@
 \usepackage{listings} % inline "code"
 \usepackage{enumitem} % label enumerate items
 
+% https://tex.stackexchange.com/questions/2275/keeping-tables-figures-close-to-where-they-are-mentioned
+\usepackage[section]{placeins} % place figures in the setion they're mentioned
+
 % see https://tex.stackexchange.com/questions/3871/citing-a-range-of-papers-using-numeric-keys-as-in-citea-b-c-1-3
 \usepackage[numbers,sort&compress]{natbib} %% this is set (changed from sort to sort%compress) in the VT template file
-
 
 % https://tex.stackexchange.com/questions/36030/how-to-make-a-single-word-look-as-some-code
 \newcommand{\code}[1]{\lstinline{#1}}
