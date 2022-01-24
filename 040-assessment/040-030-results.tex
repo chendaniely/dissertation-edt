@@ -38,7 +38,7 @@ In general, none of the results had any statistical significance.
         \centering
         \caption[Number of responses by group and exercise]
         {Number of code submissions for each group and exercise.
-         There were a total of 16 randomized participants submitted at least 1 of the 5 exercises for analysis.
+         There were a total of 16 randomized participants submitted at least one (1) of the five (5) exercises for analysis.
          The values listed in the \code{Total} column are the exercise response counts,
          and the values listed in the \code{sum} column are the group counts.
          The columns represent the
@@ -76,7 +76,20 @@ In general, none of the results had any statistical significance.
     Figure \ref{fig:exercise-scores-separate-treatements} shows the percentage scores across each
     of the exercises and tretment group.
 
-    \begin{figure}[htb]
+    \begin{figure}[!htbp]
+        \centering
+        \includegraphics[width=0.9\textwidth]
+        {figs/040-exercises/score\_prop-ex-treatment-facet_pre.png}
+        \caption[Exercise scores of full scores and non full scores in pre-workshop exercise by treatment]
+        {Distribution of scores for each treatment group across each exercise of
+         respondents who received and did not recieve a full score in the pre-workshop exercise.
+         Participants who scored well on the pre-workshop exercise also did well in all the other exercises.
+         The 1 participant in Group 4 scored less than 50\% in the summative assessment question.
+        }
+        \label{fig:exercise-scores-pre100}
+    \end{figure}
+
+    \begin{figure}[!htbp]
         \centering
         \includegraphics[width=0.9\textwidth]{figs/040-exercises/score\_prop-ex-treatment-no\_facet.png.png}
         \caption[Graded Exercise Scores by treatment groups]
@@ -110,13 +123,13 @@ In general, none of the results had any statistical significance.
     Since we were unable to confirm if the autograder was used in these exercise treatment groups,
     a separate analysis was performed that ignored the autograder,
     so treatment groups 1 and 3 were combined together and treatment groups 2 and 4 were combined together
-    \ref{fig:exercise-scores-combined-treatments}.
+    (Figure \ref{fig:exercise-scores-combined-treatments}).
     These preliminary results seem to suggest that faded examples do not affect code results during the formative
     assessments, but hinder results in the summative assessment question.
     These differences disappear when pre-workshop exercise performance is taken into account
     (Figure \ref{fig:exercise-scores-combined-groups-pre100}).
 
-    \begin{figure}[htb]
+    \begin{figure}[!htbp]
         \centering
         \includegraphics[width=0.9\textwidth]{figs/040-exercises/score\_prop-ex-treatment-no\_facet-combine\_treatments.png}
         \caption[Graded Exercise Scores with combined treatment groups]
@@ -132,6 +145,19 @@ In general, none of the results had any statistical significance.
         \label{fig:exercise-scores-combined-treatments}
     \end{figure}
 
+    \begin{figure}[!htbp]
+        \centering
+        \includegraphics[width=0.9\textwidth]
+        {figs/040-exercises/score\_prop-ex-treatment-facet\_pre-combine\_treatments.png}
+        \caption[Exercise scores of full scores and non full scores in pre-workshop exercise by combined treatment]
+        {Distribution of scores for combinded treatment groups across each exercise of
+         respondents who received and did not recieve a full score in the pre-workshop exercise.
+         Participants who scored well on the pre-workshop exercise also did well in all the other exercises.
+         The 1 participant in Group 4 scored less than 50\% in the summative assessment question.
+        }
+        \label{fig:exercise-scores-combined-groups-pre100}
+    \end{figure}
+
 \subsection{Time to Complete}
 
     Next, we wanted to see if there were any differences between types of exercises and amount of time to complete an exercise.
@@ -140,7 +166,7 @@ In general, none of the results had any statistical significance.
     faded example groups.
     However these results suggest more about the amount of time learners needed to work on exercises.
 
-    \begin{figure}[htb]
+    \begin{figure}[!htbp]
         \centering
         \includegraphics[width=0.9\textwidth]{figs/040-exercises/time\_to\_complete-ex-treatment-no\_facet-combine\_treatments.png}
         \caption[Time to complete exercises with combined treatment groups]
