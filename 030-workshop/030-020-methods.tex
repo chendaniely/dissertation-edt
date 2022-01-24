@@ -2,13 +2,24 @@
 
 \begin{document}
 
+  A backward design apprach was used to create the lesson materials.
+  The overall steps of backward design are:
+  (1) Identify your learners,
+  (2) Plan out your lesson content,
+  (3) Define overall goals,
+  (4) Outline the course, and
+  (5) Write a summary of the course
+  \cite{wilson2019teaching}.
+  The first step of indentifying learners was done in a previuos study where leaner personas were identified.
+  This study uses the rest of the backward design apprach to create and assess the effacity of learning materials.
 
   \subsection{Creating Learning Objectives}
 
     The initial persona survey showed that many of the potential learners who do not
-    have existing data programming experience use Excel for basic calculations.
+    have existing data programming experience use Excel for basic calculations
+    (Supplemental Figure \ref{sfig:cluster-q4.1}).
     We used the information from the persona survey to create a roadmap of topics
-    to get learners from zero programming experience to fit a logistic regression model.
+    to get learners from no programming experience to being able to fit a logistic regression model.
     These learning objectives were used to write the lesson materials
     and used as a Likert scale question in the pre-workshop and post-workshop surveys.
 
@@ -28,15 +39,15 @@
   \subsection{Workshop Surveys}
 
     Workshop effectiveness was assessed using a series of pre-workshop, post-workshop, and long-term workshop surveys.
-    Some of the questions in the surveys were paired to perform a longitudinal analysis.
+    Some of the questions in the surveys were paired and repeated to perform a longitudinal analysis.
 
   \subsubsection{Pre-Workshop Survey}
 
-      The pre-workshop survey had 6 main sections:
+      The pre-workshop survey had 4 main sections:
       (1) demographics,
       (2) persona,
-      (3) Prior and background knowledge
-      (4) Workshop Framing and Motivation
+      (3) prior and background knowledge, and
+      (4) workshop framing and motivation
 
       The ``Persona'' questions presented participants with 4 learner personas:
       (1) Alex Academic,
@@ -45,14 +56,16 @@
       (4) Samir Student
       These personas were created using only data from the first of two waves of survey responses from the learner persona survey.
       Participants were asked to pick which one of the personas most resonated with them.
-      %The initial 4-persona text can be found in Appendix ****. % TODO put in all 4 personas somewhere
+      %The initial 4-persona text can be found in Appendix ****. % TODO: put in all 4 personas somewhere
       Subsequent persona analysis clustered into 3 groups, where Patricia Programmer was removed.
 
       The ``prior and background knowledge'' questions were taken from
-      a 3-factor model from the first wave of the persona survey. % TODO put in original 3 factor model results into this paper? or previous?
+      a 3-factor model from the first wave of the persona survey. % TODO: put in original 3 factor model results into this paper? or previous?
       These questions were the highest loaded items in each factor.
       Later results from the persona factor analysis had a different set of item loadings,
       but the new items were still captured in the ``Workshop Framing and Motivation'' questions.
+      The full survey can be found in
+      Supplemental \ref{sse:preworkshop-survey-questions}
 
   \subsubsection{Post-Workshop Survey}
 
@@ -61,13 +74,43 @@
       (2) workshop environment,
       (3) workshop framing and motivation,
       (4) summative assessment,
-      (5) workshop content
+      (5) workshop content, and
       (6) open feedback.
 
       Questions around workshop environment, content, and open feedback
       were not used to assess workshop efficiency,
       rather, they served as feedback to the instructor for things they may need to change while teaching.
-      The full survey can be found in Appendix \ref{ase:long-term-survey}.
+      The ``workshop framing and motivation'' questions were the same from the pre-workshop survey.
+      These questions were used to determine if there were changes in self-reported confidence in
+      completing tasks specified in the learning objectives.
+      The summative assessment question provided a small data task that also asked
+      the participants self-reported ability to complete data tasks.
+      The full survey can be found in Supplemental \ref{sse:postworkshop-survey-questions}.
+
+  \subsubsection{Long-term Workshop Survey}
+
+    The long-term survey had 4 main sections:
+
+    (1) demographics,
+    (2) workshp framing and motivation,
+    (3) summative assessment, and
+    (4) impact
+
+    The ``workshop framing and motivation'' and ``summative assessment'' questions were
+    the same ones from the post-workshop survey.
+    This provided a way to longitudinally track long-term results.
+    The full survey can be found in Supplemental \ref{sse:longtermworkshop-survey-questions}.
+
+  \subsection{Workshop Survey Analysis Questions}
+
+    Participants provided a unique identifier that would be used to track their results across the 3 longitudinal surveys.
+    Since participants were not forced to take any of the surveys,
+    2 sets of analyses can be performed:
+    (1) a longitudinal study looking at survey responses between paired responses across all the surveys, or
+    (2) a series of cross-sectional studies that does incorporate participants that took multiple surveys.
+    The longitudinal analysis would be highly dependant on the number of participants taking at least one of the surveys.
+    Composite scores for each type of analysis were created by summing up survey Likert scale responses;
+    None of the survey questions analysed were reverse-coded.
 
       \paragraph{Workshop Framing and Motivation}
 
@@ -119,27 +162,13 @@
           (3) I could struggle through by trial and error with a lot of web searchers, and
           (4) I could do it quickly with little or no use of external help.
 
-  \subsubsection{Long-term Workshop Survey}
+  % \subsubsection{Paired Responses}
 
+  %     A mixed model was performed for paired results.
 
+  % \subsubsection{Un-Paired Responses}
 
-  \subsection{Workshop Survey Analysis}
-
-    Participants provided a unique identifier that would be used to track their results across the 3 longitudinal surveys.
-    Since participants were not forced to take any of the surveys,
-    2 sets of analyses were performed:
-    (1) just looking at survey responses between paired responses, and
-    (2) dropped the paired survey participants and only compared unpaired survey responses.
-    Composite scores for each type of analysis were created by summing up survey Likert scale responses;
-    None of the survey questions analysed were reverse-coded.
-
-  \subsubsection{Paired Responses}
-
-      A mixed model was performed for paired results.
-
-  \subsubsection{Un-Paired Responses}
-
-      The non-parametric alternative to the t-test, Wilcoxon Rank Sum Test,
-      was performed on the unpaired survey responses between pre-workshop and post-workshop results.
+  %     The non-parametric alternative to the t-test, Wilcoxon Rank Sum Test,
+  %     was performed on the unpaired survey responses between pre-workshop and post-workshop results.
 
 \end{document}

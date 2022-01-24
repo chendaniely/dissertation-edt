@@ -8,36 +8,41 @@
     % TODO are footnotes allowed for stuff like this?
     \footnote{Brown Lab YouTube channel URL: \url{https://www.youtube.com/channel/UCStv5ui5yBc6_kH91h2o_qA}}
     with the ``ds4biomed'' tag.
-
     There were 8 workshop sessions with a total of 279 registrants,
     with a total of 200 learners across all workshop days,
-    and 124 just counting day 1 participants.
+    and 124 just counting day 1 participants
+    (Table \ref{tab:workshop-counts}).
 
     % anaysis/040-workshop/005-attendee_counts.Rmd
     % latex table generated in R 4.1.2 by xtable 1.8-4 package
     % Wed Jan 12 22:57:38 2022
-    \begin{table}[ht]
+    \begin{table}[!hbtp]
         \centering
-        \caption[Workshop Registration and Survey Counts]
-            {Number of registrants, workshop attendees, and survey responses showing the amount of attrition along the way.
-             More participants need to be enrolled into the study for better statistical power,
-             however, that requires many more workshop iterations.
+        \caption[Workshop Registration and Attendance Counts]
+            {Number of registrants and workshop attendees.
+            Table shows when each of the 8 workshops were given, the programming language taught during the workshop (type),
+            Number of registrants of the workshop, and the attendee count virtually (V) and in-person (IP).
+            There were a total of 200 non-unique participants across all the 2 workshop days,
+            and 124 unique attendees on the first day.
+            The workshop on 2020-12-09 was taught in a single session.
+            More participants need to be enrolled into the study for better statistical power,
+            however, that requires many more workshop iterations.
             }
-        \begin{tabular}{rlrrlrrrrr}
-            \hline
-            & Workshop & Day 1 & Day 2 & Language & Registrants & Day 1 Virtual & Day 1 In-person & Day 2 Virtual & Day 2 In-Person \\
-            \hline
-            1 & 1 & 18555 & 18556 & R &  27 &  20 &  &  11 &  \\
-            2 & 2 & 18605 &  & R &  11 &   5 &  &  &  \\
-            3 & 3 & 18660 & 18661 & R &  45 &  19 &  &  16 &  \\
-            4 & 4 & 18764 & 18765 & R &  40 &  18 &  &  15 &  \\
-            5 & 5 & 18807 & 18808 & R &  43 &  10 &  18 &  11 &  10 \\
-            6 & 6 & 18890 & 18891 & R &  33 &  14 &   1 &   4 &   1 \\
-            7 & 7 & 18892 & 18893 & Python &  36 &   9 &   2 &   4 &   0 \\
-            8 & 8 & 18897 & 18898 & R &  44 &   8 &   0 &   4 &   0 \\
-            9 & Total & 150070 & 131472 & - & 279 & 103 &  21 &  65 &  11 \\
-            \hline
-        \end{tabular}
+        \begin{tabularx}{\textwidth}{ccccccccc}
+            \toprule
+              & Date 1 & Date 2 & Type & Registrants & D1-V & D1-IP & D2-V & D2-IP \\
+            \midrule
+            1 & 2020-10-20 & 2020-10-21 & R &  27 & 20 & - & 11 & - \\
+            2 & 2020-12-09 & - & R &  11 & 5 & - & - & - \\
+            3 & 2021-02-02 & 2021-02-03 & R &  45 & 19 & - & 16 & - \\
+            4 & 2021-05-17 & 2021-05-18 & R &  40 & 18 & - & 15 & - \\
+            5 & 2021-06-29 & 2021-06-30 & R &  43 & 10 & 18 & 11 & 10 \\
+            6 & 2021-09-20 & 2021-09-21 & R &  33 & 14 & 1 & 4 & 1 \\
+            7 & 2021-09-22 & 2021-09-23 & Python &  36 & 9 & 2 & 4 & 0 \\
+            8 & 2021-09-27 & 2021-09-28 & R &  44 & 8 & 0 & 4 & 0 \\
+            Total & - & - & - & 279 & 103 & 21 & 65 & 11 \\
+            \bottomrule
+            \end{tabularx}
         \label{tab:workshop-counts}
     \end{table}
 
@@ -48,9 +53,10 @@
     28 respondents took a combination of the surveys.
     2 respondents took all 3 surveys,
     25 respondents took only the pre-workshop survey and post-workshop survey, and
-    1 respondent took only the pre-workshop and long-term survey (Figure \ref{fig:pre-post-long-response-counts}).
+    1 respondent took only the pre-workshop and long-term survey
+    (Figure \ref{fig:pre-post-long-response-counts}).
 
-    \begin{figure}[htb]
+    \begin{figure}[!hbtp]
         % from 020-pre_post_long_differences.Rmd
         \centering
         \includegraphics[]{figs/030-logitudinal/pre-post-long-response-counts}
@@ -81,7 +87,8 @@
         An open set of workshop materials were created, ``Data Science for the Biomedical Sciences'' (ds4biomed),
         and published with a CC0 1.0 Universal (CC0 1.0) license. % TODO cite: https://creativecommons.org/publicdomain/zero/1.0/
         At the time of writing, the book has 15 programming language agnostic chapters.
-        The full table of contents is listed in Appendix \ref{ase:ds4biomed-toc}.
+        The full table of contents is listed in
+        Supplemental \ref{sse:ds4biomed-toc}.
         The workshop teaching materials begin with basic spreadsheet concepts and
         best practices where it introduces ``tidy data'' concepts
         without using the jargon term.
@@ -114,22 +121,28 @@
         which take tidy data as inputs.
         Teaching tidy data, plotting, model fitting, and conclusion also take 3 hours.
 
-    \subsection{Longitudinal study}
+    \subsection{Longitudinal and Cross-Sectional Study}
 
-        There were 3 main sets of longitudinal studies:
+        Since there were only 2 participants who took all 3 surveys,
+        a proper longitudinal study could not be performed.
+        Instead, a series of cross-sectional observations were analyzed.
+        To make all the results compariable across each of the cross-sections (i.e., surveys),
+        only the participants who took that particuar survey were used for the analysis.
+        Any participant who took more than 1 survey was not included in these results.
+        This meant that only
+        39 observations were used in the pre-workshop analysis,
+        16 in the post-workshop analysis, and
+        8 in the long-term analysis
+        (Figure \ref{fig:pre-post-long-response-counts}).
+
+        There were 3 main sets of cross-sectional observations:
         (1) summary and learning objective Likert responses across all 3 surveys
         (Figure \ref{fig:pre-post-long-summary-lo})
         ,
         (2) summative assessment likert questions across just the post-workshop and long-term workhsop surveys
         (Figure \ref{fig:post-long-summative}), and
         (3) a sub-analysis looking at just summary and learning objective results from the pre-workshop and post-workshop surveys
-        (Figure \ref{fig:pre-post-propprop-summary-lo} and Figure \ref{fig:pre-post-prop-summary-lo})
-        .
-        All any participant who took multiple surveys were dropped from the analysis.
-        This was because there were not enough respondents who took all the surveys to perform a paired longitudinal analysis.
-        39 responses were used for the pre-workshop study,
-        16 responses were used for the post-workshop study, and
-        8 responses were used for the long-term study (Figure \ref{fig:pre-post-long-response-counts}).
+        (Figure \ref{fig:pre-post-propprop-summary-lo} and Supplemental Figure \ref{fig:pre-post-prop-summary-lo}).
 
         Figure \ref{fig:pre-post-long-summary-lo} looks at each of the Likert questions in the
         summary and learning objective Likert questions across all 3 surveys.
@@ -137,9 +150,9 @@
         but confidence wanes off in the long-term survey.
         The same post-workshop to long-term findings applied for the summative assessment question,
         where participants were asked about their confidence to accomplish a particular data task
-        (Figure (\ref{fig:post-long-summative}))
+        (Figure \ref{fig:post-long-summative})
 
-        \begin{figure}[htb]
+        \begin{figure}[!hbtp]
             \centering
             \begin{subfigure}[h]{0.45\textwidth}
                 \centering
@@ -157,7 +170,7 @@
                 \label{sfig:pre-post-long-lo}
             \end{subfigure}
             \caption[Summary table and learning objective likert questions (pre, post, long-term)]
-            {Results for 2 likert table questions in the
+            {Cross-sectional results for 2 likert table questions in the
                 pre-workshop, post-workhsop, and long-term workshop surveys.
                 Results show a general increase in confidence across all questions between pre-workshop and post-workshop responses,
                 and a drop in conficence across all questions between post-workshop and long-term workshop responses.
@@ -165,11 +178,11 @@
             \label{fig:pre-post-long-summary-lo}
         \end{figure}
 
-        \begin{figure}[htb]
+        \begin{figure}[!hbtp]
             \centering
             \includegraphics[scale=0.4]{figs/030-logitudinal/post\_long\_summative.png}
             \caption[Summative assessment likert questions (post, long-term)]
-            {Results for summative assesssment questions in the
+            {Cross-sectional results for summative assesssment questions in the
                 post-workhsop and long-term survey.
                 Results show a decline in confidence to complete a particular data task.
             }
@@ -184,7 +197,7 @@
         These results show that there was a general trend to "Agree" and "Strongly Agree" to each of the Likert questions
         between the 2 longitudinal points.
 
-        \begin{figure}[htb]
+        \begin{figure}[!hbtp]
             \centering
             \begin{subfigure}[h]{0.45\textwidth}
                 \centering
@@ -202,7 +215,7 @@
                 \label{sfig:pre-post-propprop-lo}
             \end{subfigure}
             \caption[Summary table and learning objective likert proportion of proportions (pre, post)]
-            {Results for 2 likert table questions in the
+            {Cross-sectional results for 2 likert table questions in the
                 pre-workshop and post-workhsop surveys.
 
             }
@@ -217,7 +230,7 @@
             learners felt more confident in the post-workshop results than the pre-workshoshop,
             and confidence waned off in the long-term survey (Figure \ref{fig:pre-post-long-composite-summary-lo}).
 
-            \begin{figure}[htb]
+            \begin{figure}[!hbtp]
                 \centering
                 \begin{subfigure}[h]{0.45\textwidth}
                     \centering
@@ -245,11 +258,12 @@
 
     \subsection{Learning Environment}
 
-        We know that the environment plays a critical role in a learner's ability to learn.
+        The environment plays a critical role in a learner's ability to learn.
         There were a few instructor feedback questions in the post-workshop survey to make sure
         the presentations and learning environment was welcoming.
         Due to COVID-19 quarantine guidelines,
         the vast majority of workshop classes were held virtually.
         The classes that were able to be held in-person were also given virtually in a hybrid setting.
+        The same instructor was used across all the workshops, to ensure consistency between teaching sessions.
 
 \end{document}
