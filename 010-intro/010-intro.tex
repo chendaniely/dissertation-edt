@@ -84,10 +84,78 @@
         community of practice
         \cite{shulmanThoseWhoUnderstand1986, greenBuildingBetterTeacher2014, wilson2019teaching}.
 
-    % \section{Ethics}
+    \section{Ethics}
+
+    One of the more prominent data science workflow figures comes from the R4DS book reproducted in
+    Figure \ref{fig:r4ds-data_science} \cite{wickhamR4ds}.
+    Many of these figures that discuss the data science workflow miss the opporunity to discuss how
+    the data products that come out of data science and the decisions that come from communicating findings,
+    affects the world ((e.g., Figures \ref{fig:conway-venn} and \ref{fig:gaisek-12})).
+
+    \begin{figure}[!hbtp]
+        \centering
+        \includegraphics[scale=0.5]{figs/050-intro/r4ds-data-science}
+        \caption[R4DS: Data Science Workflow]{
+        Reproduction of the data science workflow from R4DS \cite{wickhamR4ds}.
+        }
+        \label{fig:r4ds-data_science}
+    \end{figure}
+
+    In practice, there many cycles within the data science process; it is typically not a linear process from
+    data collection to communicating results for a decision.
+    Each of the steps within the data science process has the potential for errors and biases.
+    Among one of the cycles within the data science process is the cycle between how decisions made from the data science process affect the world
+    (Figure \ref{fig:data_science_consequences}).
+    Many of the data ethics issues can be accounted for by being more mindful of how data science have real-world consequences.
+
+    \begin{figure}[!hbtp]
+        \centering
+        \includegraphics[scale=0.5]{figs/050-intro/data_science_figure}
+        \caption[Data Science and It's Consequences]{
+        The data science process showing the same cycles as previous data science figures.
+        This figure puts an emphasis on how the decisions from data products have real-world consequences that feedback into
+        the data science process \cite{Chen2020}.
+        }
+        \label{fig:data_science_consequences}
+    \end{figure}
+
+    Reproducibility failures (Figure \ref{fig:data_science_consequences} adapted
+    from \cite{ostblomOpinionatedPracticesTeaching2021}) are one way where data
+    science can have consequences in the real-world
+    \cite{aboumatarNoticeRetractionAboumatar2019, ExcelWhyUsing2020,
+    ostblomOpinionatedPracticesTeaching2021,
+    wallensteenRetractionNoticeEvaluation2018,
+    whitehouseRetractionNoteComplex2021, zeebergMistakenIdentifiersGene2004,
+    ziemannGeneNameErrors2016}.
+
+    \begin{figure}[!hbtp]
+        \centering
+        \includegraphics[scale=0.5]{figs/050-intro/data_science_figure}
+        \caption[Data Science and It's Consequences]{
+        The data science process showing the same cycles as previous data science figures.
+        This figure puts an emphasis on how the decisions from data products have real-world consequences that feedback into
+        the data science process \cite{Chen2020}.
+        }
+        \label{fig:data_science_consequences}
+    \end{figure}
+
+    Aside from technical issues that can cause adverse real-world impacts, data
+    science and healthcare have numerous ethical questions as well
+    \cite{gerkeEthicalLegalChallenges2020, peekThirtyYearsArtificial2015,
+    phannonstanford.eduResearchersSayUse, rigbyEthicalDimensionsUsing2019,
+    wetsmanWHOOutlinesPrinciples2021}.
+    In healthcare, there are primiarly 4 ethical challenges:
+    (1) informed consent to use,
+    (2) safety and transparency,
+    (3) algorithmic fairness and biases, and
+    (4) data privacy
+    \cite{gerkeEthicalLegalChallenges2020}.
+    While data science has the potential to revolutionalize medical research,
+    a high level of scruteny must be employed to adequately and safely work with
+    data that will have real impacts on patients.
 
 
-    % \cite{Chen2020}
+    %
 
 
     % \cite{ostblomOpinionatedPracticesTeaching2021}
